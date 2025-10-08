@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-интенсив по наращиванию ресниц</title>
+    <link rel="shortcut icon" href="./images/icons/eyelash_curler.svg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="/submit" class="form" method="POST" novalidate>
+        <div class="form__container">
+
+            <div class="form__tabs">
+                <a href="login.html" class="form__tab">Вход</a>
+                <a href="registration.html" class="form__tab form__tab--active">Регистрация</a>
+            </div>
+                
+            <div class="form__container--group">
+
+                <div class="form__field">
+                    <label for="name" class="label">Имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="surname" class="label">Фамилия</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="telephone" class="label">Телефон</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="password" class="label">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn__register">Регистрация</button>
+
+            <hr class="hr">
+
+            <a href="#" class="btn__continue"><i class='bx bxl-google'></i>Продолжить с Google</a>
+        </div>
+    </form>
+</body>
+</html>

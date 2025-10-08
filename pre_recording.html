@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-интенсив по наращиванию ресниц</title>
+    <link rel="shortcut icon" href="./images/icons/eyelash_curler.svg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="/submit" class="form">
+        <div class="form__container">
+
+            <div class="form__tabs--recording">
+                <h3 class="form__tabs-recording--title">Предварительная запись на интенсив по скоростному наращиванию ресниц</h3>
+            </div>
+                
+            <div class="form__container--group">
+
+                <div class="form__field">
+                    <label for="name" class="label">Имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="surname" class="label">Фамилия</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="telephone" class="label">Телефон</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="name__for-telegram" class="label">Укажи ник в Telegram</label>
+                    <input type="text" id="telegram-username" name="telegram_username" required>
+                </div>
+
+                <label for="policy-agreement" class="remembers__me"><input type="checkbox" id="policy-agreement" name="policy-agreement" required class="checkbox">Ознакомлен(а) с текстом Политики обработки персональных данных</label>
+
+                <label for="age-agreement" class="remembers__me"><input type="checkbox" id="age-agreement" name="age-agreement" required class="checkbox">Мне есть 18 лет, и я даю Согласие на обработку моих персональных данных</label>
+            </div>
+
+            <button type="submit" class="btn__pre--recording" aria-label="pre_recording">Предзапись</button>
+        </div>
+    </form>
+</body>
+</html>
