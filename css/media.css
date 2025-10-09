@@ -1,10 +1,16 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
-        body {
-            /* Убираем стандартные отступы браузера */
-            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-        }
+        html {
+    background-color: var(--primary-color);
+    height: 100%;
+}
+
+body {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
 
     /* Анимация загрузки */
     @media (max-width: 392px) {
@@ -225,9 +231,6 @@
 
     /* Шапка */
     .header {
-        position: relative;
-        z-index: 1000;
-        background-color: var(--primary-color);
         padding-top: calc(89px + env(safe-area-inset-top, 20px));
     }
 
@@ -356,10 +359,7 @@
     /* Главный экран */
     .banner {
         text-align: center;
-        background-color: var(--primary-color);
         padding-top: calc(60px + env(safe-area-inset-top, 20px));
-        min-height: 100vh;
-        margin-top: calc(-1 * env(safe-area-inset-top, 0px)); /* Компенсируем padding body */
     }
 
     .banner__title {
@@ -1291,6 +1291,7 @@
     }
 
 }
+
 
 
 
