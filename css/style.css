@@ -1,19 +1,6 @@
 /* Сброс всех стилей, которые идут по умолчанию */
 @import "./reset.css";
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Основной фон сайта */
-body {
-    background-color: var(--primary-color);
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
 /* Объявление переменной root для свойств */
 :root {
     --primary-color: #4C3D74;
@@ -315,11 +302,8 @@ html {
 
 /* Шапка */
 .header {
-    position: relative;
-    z-index: 1000;
+    padding-top: 105px;
     background-color: var(--primary-color);
-    padding-top: calc(89px + env(safe-area-inset-top, 20px));
-    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
 }
 
 .header__wrapper {
@@ -368,10 +352,8 @@ html {
 
 /* Главный экран */
 .banner {
+    padding-top: 103px;
     background-color: var(--primary-color);
-    padding-top: calc(60px + env(safe-area-inset-top, 20px));
-    min-height: 100vh;
-    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
 }
 
 .banner__mini--title {
@@ -1702,5 +1684,4 @@ html {
     color: var(--secondary-color);
     border-color: var(--primary-color-button);
     box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
-
 }
