@@ -6,7 +6,7 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color); /* Цвет фона как у шапки */
+    
 }
 
 body {
@@ -367,10 +367,8 @@ body {
 
     /* Главный экран */
     .banner {
-        background-color: var(--primary-color);
-    padding-top: calc(60px + env(safe-area-inset-top, 20px));
+       padding-top: calc(103px + env(safe-area-inset-top));
     min-height: 100vh;
-    margin-top: calc(-1 * env(safe-area-inset-top, 0px)); /* Компенсируем padding body */
     }
 
     .banner__title {
@@ -1306,6 +1304,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
