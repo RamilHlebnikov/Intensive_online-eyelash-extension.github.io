@@ -1,6 +1,22 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+        
     /* Анимация загрузки */
     @media (max-width: 392px) {
     .preloader {
@@ -1282,3 +1298,4 @@
     }
 
 }
+
