@@ -6,7 +6,6 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    
 }
 
 body {
@@ -321,8 +320,12 @@ body {
 
     /* Когда меню открыто */
     .nav.active {
-        padding-top: calc(100px + env(safe-area-inset-top, 20px));
-        height: calc(100vh - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 20px));
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: calc(100px + env(safe-area-inset-top, 20px));
+    height: calc(100vh - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 20px));
     }
 
     .nav__menu {
@@ -1304,6 +1307,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
