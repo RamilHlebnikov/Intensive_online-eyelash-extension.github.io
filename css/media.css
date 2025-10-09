@@ -1,13 +1,6 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
     
-    body {
-        top: 0;
-        left: 0;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-    
     /* Просто добавляем небольшой отступ сверху для системной панели */
     .header {
         padding-top: 110px; /* Чуть увеличиваем отступ */
@@ -1315,6 +1308,7 @@
     }
 
 }
+
 
 
 
