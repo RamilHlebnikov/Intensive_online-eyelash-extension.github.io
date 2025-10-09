@@ -1,6 +1,10 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
+    html, body {
+        background-color: var(--primary-color);
+    }
+
     /* Анимация загрузки */
     @media (max-width: 392px) {
     .preloader {
@@ -220,7 +224,10 @@
 
     /* Шапка */
     .header {
-        padding-top: 89px;
+        position: relative;
+        z-index: 1000;
+        background-color: var(--primary-color);
+        padding-top: calc(89px + env(safe-area-inset-top, 20px));
     }
 
     .container {
@@ -297,10 +304,8 @@
 
     /* Когда меню открыто */
     .nav.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+        padding-top: calc(100px + env(safe-area-inset-top, 20px));
+        height: calc(100vh - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 20px));
     }
 
     .nav__menu {
@@ -346,7 +351,10 @@
     /* Главный экран */
     .banner {
         text-align: center;
-        padding-top: 60px;
+        background-color: var(--primary-color);
+        padding-top: calc(60px + env(safe-area-inset-top, 20px));
+        min-height: 100vh;
+        margin-top: calc(-1 * env(safe-area-inset-top, 0px)); /* Компенсируем padding body */
     }
 
     .banner__title {
@@ -467,6 +475,7 @@
     /* Для кого */
     .for-whom {
         padding-top: 91px;
+        background-color: var(--secondary-color);
     }
 
     .for-whom__title {
@@ -686,6 +695,11 @@
     }
 
     /* Лист уроков интенсива */
+
+    .list__lessons {
+        background-color: var(--secondary-color);
+    }
+        
     .list__lessons--title {
         margin-top: -35px;
         text-transform: uppercase;
@@ -988,6 +1002,11 @@
     }
 
     /* А такие вопросы могут быть у вас */
+
+    .questions {
+        background-color: var(--secondary-color);
+    }
+        
     .questions__title {
         width: 321px;
         font-size: 29px;
@@ -1271,3 +1290,4 @@
         padding: 0;
     }
 }
+
