@@ -1,37 +1,6 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
-    html, body {
-        background-color: var(--primary-color) !important;
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    }
-    
-    /* Только эти секции имеют фиолетовый фон в безопасной зоне */
-    .header,
-    .banner,
-    .program,
-    .about,
-    .pricing {
-        background-color: var(--primary-color);
-    }
-
-    /* Белые секции - оставляем как есть */
-    .for-whom,
-    .list__lessons,
-    .questions {
-        background-color: var(--secondary-color) !important;
-        /* Убираем лишние отступы от safe area */
-        margin-left: calc(-1 * env(safe-area-inset-left, 0px));
-        margin-right: calc(-1 * env(safe-area-inset-right, 0px));
-        padding-left: env(safe-area-inset-left, 0px);
-        padding-right: env(safe-area-inset-right, 0px);
-    }
-    
     /* Анимация загрузки */
     @media (max-width: 392px) {
     .preloader {
@@ -251,8 +220,7 @@
 
     /* Шапка */
     .header {
-        padding-top: calc(89px + env(safe-area-inset-top, 20px));
-        margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+        padding-top: 89px;
     }
 
     .container {
@@ -377,9 +345,8 @@
 
     /* Главный экран */
     .banner {
-        padding-top: calc(60px + env(safe-area-inset-top, 20px));
-        margin-top: calc(-1 * env(safe-area-inset-top, 0px));
-        min-height: 100vh;
+        text-align: center;
+        padding-top: 60px;
     }
 
     .banner__title {
@@ -1053,11 +1020,11 @@
 
     /* Подвал */
     .footer {
+        padding-top: 125px;
+        padding-bottom: 280px;
         background-color: var(--background-color-footer);
-        margin-left: calc(-1 * env(safe-area-inset-left, 0px));
-        margin-right: calc(-1 * env(safe-area-inset-right, 0px));
-        padding-left: env(safe-area-inset-left, 0px);
-        padding-right: env(safe-area-inset-right, 0px);
+        width: 100%;
+        position: relative;
     }
 
     .footer__content {
@@ -1304,4 +1271,3 @@
         padding: 0;
     }
 }
-
