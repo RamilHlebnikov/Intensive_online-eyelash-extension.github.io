@@ -1,13 +1,6 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-
         body {
             /* Убираем стандартные отступы браузера */
             padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -1298,5 +1291,6 @@
     }
 
 }
+
 
 
