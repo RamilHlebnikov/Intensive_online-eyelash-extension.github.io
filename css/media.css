@@ -1,15 +1,6 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
-        html {
-    background-color: var(--primary-color);
-    height: 100%;
-}
-
-body {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
     /* Анимация загрузки */
     @media (max-width: 392px) {
     .preloader {
@@ -357,6 +348,8 @@ body {
     /* Главный экран */
     .banner {
         text-align: center;
+        min-height: 100vh;
+        height: auto;
         padding-top: calc(60px + env(safe-area-inset-top, 20px));
     }
 
@@ -1289,8 +1282,3 @@ body {
     }
 
 }
-
-
-
-
-
