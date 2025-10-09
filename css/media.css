@@ -1,28 +1,6 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
-    html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    /* Убираем стандартные отступы браузера */
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-        body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    z-index: -1;
-}
-
     /* Анимация загрузки */
     @media (max-width: 392px) {
     .preloader {
@@ -242,8 +220,7 @@ body {
 
     /* Шапка */
     .header {
-        padding-top: calc(89px + env(safe-area-inset-top));
-    background-color: var(--primary-color);
+        padding-top: 89px;
     }
 
     .container {
@@ -321,12 +298,9 @@ body {
     /* Когда меню открыто */
     .nav.active {
         display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: calc(100px + env(safe-area-inset-top, 20px));
-    padding-bottom: env(safe-area-inset-bottom, 20px);
-    min-height: 100vh; /* или min-height: 100vh */
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .nav__menu {
@@ -371,8 +345,8 @@ body {
 
     /* Главный экран */
     .banner {
-       padding-top: calc(103px + env(safe-area-inset-top));
-    min-height: 100vh;
+        text-align: center;
+        padding-top: 60px;
     }
 
     .banner__title {
@@ -493,7 +467,6 @@ body {
     /* Для кого */
     .for-whom {
         padding-top: 91px;
-        background-color: var(--secondary-color);
     }
 
     .for-whom__title {
@@ -713,11 +686,6 @@ body {
     }
 
     /* Лист уроков интенсива */
-
-    .list__lessons {
-        background-color: var(--secondary-color);
-    }
-        
     .list__lessons--title {
         margin-top: -35px;
         text-transform: uppercase;
@@ -1020,11 +988,6 @@ body {
     }
 
     /* А такие вопросы могут быть у вас */
-
-    .questions {
-        background-color: var(--secondary-color);
-    }
-        
     .questions__title {
         width: 321px;
         font-size: 29px;
@@ -1212,7 +1175,7 @@ body {
     /* Файлы Cookie */
     .cookie__notifications {
         position: fixed;
-        bottom: calc(10px + env(safe-area-inset-bottom, 10px));
+        bottom: 20px;
         left: 49.5%;
         transform: translateX(-50%);
         width: calc(100% - 40px);
@@ -1308,15 +1271,3 @@ body {
         padding: 0;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
