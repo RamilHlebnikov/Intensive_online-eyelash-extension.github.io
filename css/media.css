@@ -325,7 +325,7 @@ body {
     /* Когда меню открыто */
     .nav.active {
         padding-top: calc(100px + env(safe-area-inset-top, 20px));
-        height: 100vh;
+        height: calc(100vh - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 20px));
     }
 
     .nav__menu {
@@ -1309,6 +1309,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
