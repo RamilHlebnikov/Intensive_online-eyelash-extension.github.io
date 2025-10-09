@@ -1,31 +1,5 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
-    
-    /* Просто добавляем небольшой отступ сверху для системной панели */
-    .header {
-        padding-top: 110px; /* Чуть увеличиваем отступ */
-    }
-    
-    /* ВСЕ ОСТАЛЬНЫЕ СТИЛИ ОСТАЮТСЯ КАК БЫЛИ! */
-    .container {
-        box-sizing: border-box;
-        max-width: 392px;
-        margin: 0 auto;
-        padding: 0 45px;
-        width: 100%;
-        /* НИЧЕГО НЕ МЕНЯЕМ! */
-    }
-    
-    /* Все ваши фоны остаются как есть */
-    .for-whom, .list__lessons, .questions {
-        /* белый фон - остается */
-        background-color: var(--secondary-color);
-    }
-    
-    .program, .about, .pricing, .footer {
-        /* фиолетовый фон - остается */ 
-        background-color: var(--primary-color);
-    }
         
     /* Анимация загрузки */
     @media (max-width: 392px) {
@@ -1308,6 +1282,7 @@
     }
 
 }
+
 
 
 
