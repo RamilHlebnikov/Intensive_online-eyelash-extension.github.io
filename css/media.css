@@ -1,11 +1,5 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
-
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
     
     body {
         top: 0;
@@ -1321,6 +1315,7 @@
     }
 
 }
+
 
 
 
