@@ -325,7 +325,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding-top: calc(100px + env(safe-area-inset-top, 20px));
-    height: calc(100vh - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 20px));
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    height: 100vh; /* или min-height: 100vh */
     }
 
     .nav__menu {
@@ -1307,6 +1308,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
