@@ -1,50 +1,19 @@
 /* Медиазапрос для мобильных (до 392px) */
     @media (max-width: 392px) {
 
-        /* Safe Area Insets для современных iPhone */
-@supports(padding: max(0px)) {
-    .container {
-        padding-left: max(45px, env(safe-area-inset-left));
-        padding-right: max(45px, env(safe-area-inset-right));
+    :root {
+        --safe-area-inset-top: env(safe-area-inset-top, 0px);
+        --safe-area-inset-right: env(safe-area-inset-right, 0px);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-area-inset-left: env(safe-area-inset-left, 0px);
     }
-    
-    .header {
-        padding-top: max(89px, env(safe-area-inset-top));
-    }
-    
-    .footer {
-        padding-bottom: max(280px, env(safe-area-inset-bottom));
-    }
-    
-    /* Для fixed элементов */
-    .cookie__notifications {
-        bottom: max(20px, env(safe-area-inset-bottom));
-    }
-    
-    .nav {
-        padding-top: max(100px, env(safe-area-inset-top));
-        padding-left: max(20px, env(safe-area-inset-left));
-        padding-right: max(20px, env(safe-area-inset-right));
-        padding-bottom: max(20px, env(safe-area-inset-bottom));
-    }
-}
 
-/* Дополнительные стили для полноэкранного режима */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* Обеспечиваем отступы от безопасных зон */
-.safe-area-padding {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-}
-
-.safe-area-margin {
-    margin-top: env(safe-area-inset-top);
-    margin-bottom: env(safe-area-inset-bottom);
-}
+    body {
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
+        padding-top: var(--safe-area-inset-top);
+        padding-bottom: var(--safe-area-inset-bottom);
+    }
 
     /* Анимация загрузки */
     @media (max-width: 392px) {
@@ -265,15 +234,12 @@ body {
 
     /* Шапка */
     .header {
-        padding-top: 89px;
+        padding-top: max(89px, var(--safe-area-inset-top));
     }
 
     .container {
-        box-sizing: border-box;
-        max-width: 392px;
-        margin: 0 auto;
-        padding: 0 45px;
-        width: 100%;
+        padding-left: max(45px, var(--safe-area-inset-left));
+        padding-right: max(45px, var(--safe-area-inset-right));
     }
 
     .header__wrapper {
@@ -329,15 +295,10 @@ body {
 
     /* Навигация - скрыта по умолчанию */
     .nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--primary-color);
-        z-index: 999;
-        padding: 100px 20px 20px;
+        padding-top: max(100px, var(--safe-area-inset-top));
+        padding-left: max(20px, var(--safe-area-inset-left));
+        padding-right: max(20px, var(--safe-area-inset-right));
+        padding-bottom: max(20px, var(--safe-area-inset-bottom));
     }
 
     /* Когда меню открыто */
@@ -390,8 +351,8 @@ body {
 
     /* Главный экран */
     .banner {
-        text-align: center;
-        padding-top: 60px;
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
     }
 
     .banner__title {
@@ -1065,11 +1026,9 @@ body {
 
     /* Подвал */
     .footer {
-        padding-top: 125px;
-        padding-bottom: 280px;
-        background-color: var(--background-color-footer);
-        width: 100%;
-        position: relative;
+        padding-bottom: max(280px, var(--safe-area-inset-bottom));
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
     }
 
     .footer__content {
@@ -1219,20 +1178,12 @@ body {
 
     /* Файлы Cookie */
     .cookie__notifications {
-        position: fixed;
-        bottom: 20px;
-        left: 49.5%;
-        transform: translateX(-50%);
-        width: calc(100% - 40px);
-        max-width: 310px;
-        background: var(--primary-color);
-        border: 2px solid var(--secondary-color);
-        border-radius: 20px;
-        padding: 15px;
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-        z-index: 10000;
-        opacity: 0;
-        transform: translateX(-50%) translateY(100px);
+        bottom: max(20px, var(--safe-area-inset-bottom));
+        left: max(20px, var(--safe-area-inset-left));
+        right: max(20px, var(--safe-area-inset-right));
+        width: calc(100% - max(20px, var(--safe-area-inset-left)) - max(20px, var(--safe-area-inset-right)));
+        max-width: none;
+        transform: none;
         animation: slideInUpMobile 0.5s ease-out 4.5s forwards;
     }
 
@@ -1316,6 +1267,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
