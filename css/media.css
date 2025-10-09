@@ -1213,7 +1213,7 @@ body {
     /* Файлы Cookie */
     .cookie__notifications {
         position: fixed;
-        bottom: 20px;
+        bottom: calc(10px + env(safe-area-inset-bottom, 10px));
         left: 49.5%;
         transform: translateX(-50%);
         width: calc(100% - 40px);
@@ -1309,6 +1309,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
