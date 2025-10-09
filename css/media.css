@@ -13,6 +13,16 @@ body {
     /* Убираем стандартные отступы браузера */
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
+        body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
 
     /* Анимация загрузки */
     @media (max-width: 392px) {
@@ -233,10 +243,8 @@ body {
 
     /* Шапка */
     .header {
-        position: relative;
-    z-index: 1000;
+        padding-top: calc(89px + env(safe-area-inset-top));
     background-color: var(--primary-color);
-    padding-top: calc(89px + env(safe-area-inset-top, 20px));
     }
 
     .container {
