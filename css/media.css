@@ -326,7 +326,7 @@ body {
     justify-content: flex-start;
     padding-top: calc(100px + env(safe-area-inset-top, 20px));
     padding-bottom: env(safe-area-inset-bottom, 20px);
-    height: 100vh; /* или min-height: 100vh */
+    min-height: 100vh; /* или min-height: 100vh */
     }
 
     .nav__menu {
@@ -1308,6 +1308,7 @@ body {
         padding: 0;
     }
 }
+
 
 
 
