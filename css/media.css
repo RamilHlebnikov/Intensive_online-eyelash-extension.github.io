@@ -347,6 +347,12 @@
     .banner {
         text-align: center;
         padding-top: 60px;
+        background: linear-gradient(
+        to bottom,
+        var(--primary-color) 0%,
+        var(--primary-color) 80%,
+        var(--secondary-color) 100%
+    );
     }
 
     .banner__title {
@@ -1271,3 +1277,4 @@
         padding: 0;
     }
 }
+
