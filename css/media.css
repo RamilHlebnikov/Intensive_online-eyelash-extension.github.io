@@ -472,7 +472,7 @@
     .for-whom__title {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 30px;
+        font-size: 23px;
         line-height: 1.3;
         text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
@@ -736,7 +736,7 @@
     }
 
     .lesson-title {
-        font-size: 10px;
+        font-size: 18px;
         font-weight: 500;
         color: var(--primary-color);
         font-family: var(--font-family);
@@ -862,7 +862,7 @@
     .pricing__title {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 30px;
+        font-size: 26px;
         text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -1271,20 +1271,3 @@
         padding: 0;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
