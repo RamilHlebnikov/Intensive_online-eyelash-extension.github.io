@@ -631,7 +631,7 @@
     .program__desc {
         font-family: var(--font-family);
         font-weight: 500;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 150%;
         color: var(--secondary-color);
         text-transform: uppercase;
@@ -1271,6 +1271,7 @@
         padding: 0;
     }
 }
+
 
 
 
