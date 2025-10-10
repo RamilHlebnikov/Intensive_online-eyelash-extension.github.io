@@ -736,7 +736,7 @@
     }
 
     .lesson-title {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         color: var(--primary-color);
         font-family: var(--font-family);
@@ -1271,6 +1271,7 @@
         padding: 0;
     }
 }
+
 
 
 
