@@ -381,7 +381,7 @@
     .banner__desc {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 150%;
         color: var(--secondary-color);
         text-align: center;
@@ -1271,5 +1271,6 @@
         padding: 0;
     }
 }
+
 
 
