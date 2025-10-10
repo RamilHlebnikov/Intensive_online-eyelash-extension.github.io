@@ -530,7 +530,7 @@
     .for-whom__desc {
         font-family: var(--font-family);
         font-weight: 500;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 1.4;
         color: var(--primary-color);
         text-transform: uppercase;
@@ -1271,6 +1271,7 @@
         padding: 0;
     }
 }
+
 
 
 
