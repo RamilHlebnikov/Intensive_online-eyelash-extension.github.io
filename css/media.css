@@ -1271,3 +1271,287 @@
         padding: 0;
     }
 }
+
+
+/* Медиазапрос для планшетов (от 393px до 768px) */
+@media (min-width: 393px) and (max-width: 768px) {
+
+    /* Контейнер */
+    .container {
+        max-width: 700px;
+        padding: 0 20px;
+    }
+
+    /* Шапка */
+    .header {
+        padding-top: 30px;
+    }
+
+    /* Главный экран */
+    .banner {
+        padding-top: 80px;
+    }
+
+    .banner__title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .banner__desc {
+        font-size: 22px;
+    }
+
+    .btn__container {
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 100px;
+    }
+
+    .button,
+    .btn {
+        width: auto;
+        min-width: 220px;
+    }
+
+    .images {
+        width: 400px;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Для кого */
+    .for-whom__title {
+        font-size: 28px;
+    }
+
+    .for-whom__content--item {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .for-whom__card-wrapper {
+        width: 45%;
+        min-width: 250px;
+    }
+
+    .for-whom__card {
+        max-width: 100%;
+        min-height: 140px;
+    }
+
+    .for-whom__desc {
+        font-size: 14px;
+    }
+
+    .for-whom__text {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .super__woman--images {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Что будет на интенсиве? */
+    .program__content--title {
+        font-size: 36px;
+        width: 100%;
+    }
+
+    .program__content--menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .program__content--list {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .program__images {
+        width: 60px;
+        height: 60px;
+    }
+
+    .program__desc {
+        font-size: 18px;
+    }
+
+    /* О Юлии Ворман */
+    .about__title {
+        font-size: 36px;
+        width: 100%;
+    }
+
+    .about__text,
+    .about__text--item,
+    .about__text--footer {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .about__main--images {
+        width: 400px;
+        height: 500px;
+        top: -100px;
+        margin-bottom: -50px;
+    }
+
+    /* Лист уроков интенсива */
+    .list__lessons--title {
+        font-size: 36px;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .accordion {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .lesson-title {
+        font-size: 20px;
+    }
+
+    .list__lessons__content--items {
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .list__lessons__desc {
+        order: 0;
+        width: 50%;
+        font-size: 24px;
+        text-align: left !important;
+    }
+
+    /* Тарифы участия */
+    .pricing__title {
+        font-size: 32px;
+    }
+
+    .pricing__content__card--wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .pricing__content--card {
+        width: 320px;
+    }
+
+    .pricing__content__card--title {
+        font-size: 16px;
+    }
+
+    .pricing__content--desc {
+        font-size: 14px;
+    }
+
+    .pricing__content--duration {
+        font-size: 16px;
+    }
+
+    .pricing__content--images {
+        left: 260px;
+    }
+
+    .pricing__content__stories--text {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Вопросы */
+    .questions__title {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .questions__text {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Подвал */
+    .footer {
+        padding-top: 80px;
+        padding-bottom: 150px;
+    }
+
+    .footer__content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .footer__center {
+        margin-top: 80px;
+    }
+
+    /* Форма предзаписи */
+    .form {
+        max-width: 500px;
+    }
+
+    .form__tabs-recording--title {
+        font-size: 20px;
+    }
+
+    .form__container--group {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form__field {
+        width: 48%;
+    }
+
+    .form__field:nth-child(3) {
+        width: 100%;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    /* Cookie уведомления */
+    .cookie__notifications {
+        max-width: 400px;
+        left: 50%;
+    }
+
+    .cookie__content {
+        flex-direction: row;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .cookie__text {
+        order: 1;
+        flex: 1;
+    }
+
+    .bx.bxs-cookie {
+        order: 0;
+    }
+
+    .cookie__container--label {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .cookie__accept,
+    .cookie__decline {
+        width: auto;
+        min-width: 120px;
+    }
+}
