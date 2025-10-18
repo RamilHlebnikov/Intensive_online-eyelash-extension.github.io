@@ -1098,6 +1098,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        background-color: transparent;
     }
 
     .label {
@@ -1108,25 +1109,25 @@
         text-transform: uppercase;
     }
 
-    .form__field input[type="text"],
-    .form__field input[type="email"],
-    .form__field input[type="tel"] {
-        width: 100%;
-        padding: 15px;
-        border: 2px solid var(--primary-color-button);
-        border-radius: 10px;
-        font-family: var(--font-family);
-        font-size: 14px;
-        background: var(--input-color);
-        color: var(--primary-color);
-        box-sizing: border-box;
+    .form__field {
+        background-color: var(--input-color);
+        border-radius: var(--border-radius-btn-register-login);
+        padding: 2px 0 8px 16px;
+        border: 2px solid transparent;
         transition: var(--transition);
     }
 
-    .form__field input:focus {
+    .form__field input {
+        width: 100%;
+        border: none;
+        background: transparent;
         outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 10px rgba(163, 135, 196, 0.3);
+        font-family: var(--font-family);
+        font-size: 16px;
+    }
+
+    .form__field:focus-within {
+        border-color: var(--primary-color-button);
     }
 
     .remembers__me {
@@ -1271,3 +1272,4 @@
         padding: 0;
     }       
 }
+
