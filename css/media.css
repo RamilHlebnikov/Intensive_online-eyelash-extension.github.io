@@ -680,7 +680,6 @@
         right: 0;
         width: 303px;
         height: auto;
-        max-height: 350px;
         top: -165px;
         margin-bottom: -30px;
         border-radius: 0;
@@ -1278,6 +1277,7 @@
         padding: 0;
     }       
 }
+
 
 
 
