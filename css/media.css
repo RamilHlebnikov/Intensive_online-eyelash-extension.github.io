@@ -381,7 +381,7 @@
     .banner__desc {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 17px;
+        font-size: 19px;
         line-height: 150%;
         color: var(--secondary-color);
         text-align: center;
@@ -916,7 +916,9 @@
 
     .pricing__content--condition,
     .pricing__content--price {
-        display: flex;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: normal !important;
         margin: 11px 0;
     }
 
@@ -1274,6 +1276,7 @@
         padding: 0;
     }       
 }
+
 
 
 
