@@ -1141,10 +1141,11 @@
         gap: 12px;
         cursor: pointer;
         font-family: var(--font-family);
-        font-size: 12px;
+        font-size: 11px;
         color: var(--primary-color);
         margin-top: 15px;
         line-height: 1.4;
+        text-align: left;
     }
 
     .checkbox {
@@ -1276,6 +1277,7 @@
         padding: 0;
     }       
 }
+
 
 
 
