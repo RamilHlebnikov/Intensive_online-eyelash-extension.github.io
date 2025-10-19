@@ -679,10 +679,11 @@
         left: 0;
         right: 0;
         width: 303px;
-        height: 373px;
+        height: 250px;
         top: -165px;
         margin-bottom: -30px;
         border-radius: 0;
+        object-fit: cover;
     }
 
     /* Лист уроков интенсива */
@@ -1276,6 +1277,7 @@
         padding: 0;
     }       
 }
+
 
 
 
