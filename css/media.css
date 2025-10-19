@@ -352,7 +352,7 @@
     .banner__title {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 25px;
+        font-size: 23px;
         line-height: 40px;
         color: var(--secondary-color);
         margin-bottom: 27px;
@@ -1274,5 +1274,6 @@
         padding: 0;
     }       
 }
+
 
 
