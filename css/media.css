@@ -1137,7 +1137,7 @@
 
     .remembers__me {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 12px;
         cursor: pointer;
         font-family: var(--font-family);
@@ -1145,7 +1145,6 @@
         color: var(--primary-color);
         margin-top: 15px;
         line-height: 1.4;
-        text-align: left;
     }
 
     .checkbox {
@@ -1277,6 +1276,7 @@
         padding: 0;
     }       
 }
+
 
 
 
