@@ -799,8 +799,10 @@
 
     /* Когда аккордеон открыт */
     .accordion-toggle:checked ~ .accordion-content {
-        max-height: 300px;
+        max-height: none;
+        height: auto;
         padding: 5px 25px 20px;
+        overflow: visible;
     }
 
     .content-wrapper {
@@ -1272,4 +1274,5 @@
         padding: 0;
     }       
 }
+
 
