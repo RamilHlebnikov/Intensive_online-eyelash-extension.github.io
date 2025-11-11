@@ -1696,7 +1696,8 @@
     .questions,
     .footer,
     .form {
-        display: none !important;
+        display: none;
     }
 }
+
 
