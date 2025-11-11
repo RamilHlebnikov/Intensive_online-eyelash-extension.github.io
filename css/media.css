@@ -1687,4 +1687,16 @@
     .bg-effect {
         display: none;
     }
+
+    .for-whom,
+    .program,
+    .about,
+    .list__lessons,
+    .pricing,
+    .questions,
+    .footer,
+    .form {
+        display: none !important;
+    }
 }
+
