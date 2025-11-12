@@ -1,8 +1,8 @@
 /* Медиазапрос для мобильных (до 392px) */
-    @media (max-width: 392px) {
+    @media (min-width: 320px) and (max-width: 480px) {
 
     /* Анимация загрузки */
-    @media (max-width: 392px) {
+    @media (min-width: 320px) and (max-width: 480px) {
     .preloader {
         position: fixed;
         top: 0;
@@ -225,7 +225,7 @@
 
     .container {
         box-sizing: border-box;
-        max-width: 392px;
+        max-width: 400px;
         margin: 0 auto;
         padding: 0 45px;
         width: 100%;
@@ -678,8 +678,8 @@
         margin: 0 auto;
         left: 0;
         right: 0;
-        width: 303px;
-        height: 343px;
+        width: auto;
+        height: auto;
         top: -165px;
         margin-bottom: -30px;
         border-radius: 0;
@@ -1061,9 +1061,11 @@
     /* Для предзаписи */
     .form {
         width: 100%;
-        max-width: 392px;
+        max-width: 480px;
         margin: 0 auto;
         padding: 0 20px;
+        padding-top: 45px;
+        padding-bottom: 45px;
         box-sizing: border-box;
     }
 
@@ -1277,3 +1279,4 @@
         padding: 0;
     }       
 }
+
