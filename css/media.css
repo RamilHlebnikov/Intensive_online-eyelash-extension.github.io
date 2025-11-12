@@ -1090,7 +1090,7 @@
         text-align: center;
         padding: 0 10px;
         font-weight: 700;
-        color: var(--primary-color);
+        color: var(--background-color-footer);
     }
 
     .form__container--group {
@@ -1279,5 +1279,6 @@
         padding: 0;
     }       
 }
+
 
 
