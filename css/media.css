@@ -1290,7 +1290,7 @@
     
     .header {
         display: block !important;
-        padding-top: 89px;
+        padding-top: 15px;
     }
     
     body {
@@ -1310,8 +1310,8 @@
     }
     
     .header__logo {
-        z-index: 1002;
         position: relative;
+        z-index: 1; /* Обычный z-index */
     }
     
     .logo {
@@ -1327,8 +1327,8 @@
         width: 28px;
         height: 20px;
         cursor: pointer;
-        z-index: 1001;
         position: relative;
+        z-index: 1; /* Обычный z-index */
     }
     
     .burger-menu span {
@@ -1346,7 +1346,7 @@
         opacity: 1;
     }
     
-    /* Навигация */
+    /* Навигация - ДОЛЖНА БЫТЬ ПОВЕРХ всего */
     .nav {
         display: none;
         position: fixed;
@@ -1355,8 +1355,8 @@
         width: 100%;
         height: 100vh;
         background-color: var(--primary-color);
-        z-index: 1000;
-        padding: 80px 25px 25px; /* Уменьшил верхний отступ */
+        z-index: 1000; /* Высокий z-index чтобы быть поверх шапки */
+        padding: 80px 25px 25px;
         overflow-y: auto;
     }
     
@@ -1371,7 +1371,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Меньше отступ между ссылками */
+        gap: 20px;
         width: 100%;
         list-style: none;
         margin: 0;
@@ -1384,8 +1384,8 @@
     }
     
     .nav__item {
-        font-size: 17px; /* Чуть меньше шрифт */
-        padding: 12px 0; /* Меньше отступы */
+        font-size: 17px;
+        padding: 12px 0;
         text-align: center;
         display: block;
         width: 100%;
@@ -1434,5 +1434,6 @@
         order: 2;
     }
 }
+
 
 
