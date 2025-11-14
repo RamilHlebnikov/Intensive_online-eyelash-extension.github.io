@@ -1300,7 +1300,7 @@
     
     .container {
         max-width: 100%;
-        padding: 0 35px;
+        padding: 0 25px;
     }
     
     .header__wrapper {
@@ -1311,7 +1311,14 @@
     
     .header__logo {
         position: relative;
-        z-index: 1; /* Обычный z-index */
+        z-index: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Скрываем логотип когда меню открыто */
+    .header__logo.hidden {
+        opacity: 0;
+        pointer-events: none;
     }
     
     .logo {
@@ -1319,7 +1326,7 @@
         line-height: 22px;
     }
     
-    /* Бургер-меню */
+    /* Бургер-меню - фиксированная позиция справа */
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -1327,8 +1334,10 @@
         width: 28px;
         height: 20px;
         cursor: pointer;
-        position: relative;
-        z-index: 1; /* Обычный z-index */
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        z-index: 1001;
     }
     
     .burger-menu span {
@@ -1340,13 +1349,7 @@
         transition: var(--transition);
     }
     
-    /* Без анимации в крестик */
-    .burger-menu.active span {
-        transform: none;
-        opacity: 1;
-    }
-    
-    /* Навигация - ДОЛЖНА БЫТЬ ПОВЕРХ всего */
+    /* Навигация */
     .nav {
         display: none;
         position: fixed;
@@ -1355,7 +1358,7 @@
         width: 100%;
         height: 100vh;
         background-color: var(--primary-color);
-        z-index: 1000; /* Высокий z-index чтобы быть поверх шапки */
+        z-index: 1000;
         padding: 80px 25px 25px;
         overflow-y: auto;
     }
@@ -1434,6 +1437,7 @@
         order: 2;
     }
 }
+
 
 
 
