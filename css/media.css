@@ -1283,12 +1283,19 @@
 /* Медиазапрос для мобильных (от 481px до 768px) */
     @media (min-width: 481px) and (max-width: 768px) {
     
+    /* Скрываем все секции кроме шапки */
     body > *:not(.header) {
         display: none !important;
     }
-
+    
     .header {
-        padding-top: 25px;
+        
+        padding-top: 89px;
+    }
+    
+    body {
+        height: 100vh;
+        overflow: hidden;
     }
     
     .container {
@@ -1309,7 +1316,7 @@
     
     .logo {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 22px;
     }
     
     /* Бургер-меню */
@@ -1317,8 +1324,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 30px;
-        height: 22px;
+        width: 28px;
+        height: 20px;
         cursor: pointer;
         z-index: 1001;
         position: relative;
@@ -1326,27 +1333,20 @@
     
     .burger-menu span {
         display: block;
-        height: 3px;
+        height: 2.5px;
         width: 100%;
         background-color: var(--secondary-color);
-        border-radius: 2px;
+        border-radius: 1px;
         transition: var(--transition);
     }
     
-    /* Анимация крестика */
-    .burger-menu.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
+    /* Без анимации в крестик */
+    .burger-menu.active span {
+        transform: none;
+        opacity: 1;
     }
     
-    .burger-menu.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .burger-menu.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-    
-    /* Навигация - ВЫРАВНИВАЕМ ПО ЦЕНТРУ */
+    /* Навигация */
     .nav {
         display: none;
         position: fixed;
@@ -1356,21 +1356,22 @@
         height: 100vh;
         background-color: var(--primary-color);
         z-index: 1000;
-        padding: 100px 35px 35px;
+        padding: 80px 25px 25px; /* Уменьшил верхний отступ */
+        overflow-y: auto;
     }
     
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; /* Меняем на center */
+        justify-content: center;
     }
     
     .nav__menu {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 20px; /* Меньше отступ между ссылками */
         width: 100%;
         list-style: none;
         margin: 0;
@@ -1383,8 +1384,8 @@
     }
     
     .nav__item {
-        font-size: 18px;
-        padding: 16px 0;
+        font-size: 17px; /* Чуть меньше шрифт */
+        padding: 12px 0; /* Меньше отступы */
         text-align: center;
         display: block;
         width: 100%;
@@ -1433,3 +1434,4 @@
         order: 2;
     }
 }
+
