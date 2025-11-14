@@ -1283,14 +1283,17 @@
 /* Медиазапрос для мобильных (от 481px до 768px) */
     @media (min-width: 481px) and (max-width: 768px) {
     
-    /* Скрываем все секции кроме шапки */
-    body > *:not(.header) {
+    body > *:not(.header):not(.preloader) {
         display: none !important;
+    }
+    
+    .preloader {
+        display: flex !important;
     }
     
     .header {
         display: block !important;
-        padding-top: 15px;
+        padding-top: 69px;
     }
     
     body {
@@ -1437,6 +1440,7 @@
         order: 2;
     }
 }
+
 
 
 
