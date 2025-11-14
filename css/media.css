@@ -1504,50 +1504,43 @@
 
     .header {
         display: block !important;
-        padding-top: 20px;
+        padding-top: 15px;
     }
-    
-    .preloader {
-        display: flex !important;
-    }
-    
+
     body {
         height: 100vh;
         overflow: hidden;
     }
-    
+
     .container {
         max-width: 100%;
-        padding: 0 30px;
+        padding: 0 25px;
     }
-    
+
     .header__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 40px; /* Фиксированная высота для выравнивания */
     }
-    
+
     .header__logo {
         position: relative;
         z-index: 1;
         transition: opacity 0.3s ease;
-        display: flex;
-        align-items: center;
     }
-    
+
     /* Скрываем логотип когда меню открыто */
-    .header__logo.hidden {
+    .nav.active ~ .container .header__logo {
         opacity: 0;
         pointer-events: none;
     }
-    
+
     .logo {
         font-size: 16px;
         line-height: 22px;
     }
-    
-    /* Бургер-меню - выровнен по центру с логотипом */
+
+    /* Бургер-меню */
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -1556,10 +1549,9 @@
         height: 20px;
         cursor: pointer;
         position: relative;
-        z-index: 1001;
-        align-self: center; /* Выравнивание по центру */
+        z-index: 1001; /* Высокий z-index для крестика */
     }
-    
+
     .burger-menu span {
         display: block;
         height: 2.5px;
@@ -1567,9 +1559,23 @@
         background-color: var(--secondary-color);
         border-radius: 1px;
         transition: var(--transition);
+        transform-origin: center;
     }
-    
-    /* Навигация */
+
+    /* Анимация в крестик */
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Навигация - поверх всего */
     .nav {
         display: none;
         position: fixed;
@@ -1579,17 +1585,17 @@
         height: 100vh;
         background-color: var(--primary-color);
         z-index: 1000;
-        padding: 80px 30px 30px;
+        padding: 80px 25px 25px;
         overflow-y: auto;
     }
-    
+
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
+
     .nav__menu {
         display: flex;
         flex-direction: column;
@@ -1600,12 +1606,12 @@
         margin: 0;
         padding: 0;
     }
-    
+
     .nav__list {
         width: 100%;
         text-align: center;
     }
-    
+
     .nav__item {
         font-size: 17px;
         padding: 12px 0;
