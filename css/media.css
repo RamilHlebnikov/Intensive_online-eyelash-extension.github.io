@@ -1289,7 +1289,7 @@
     }
     
     .header {
-        
+        display: block !important;
         padding-top: 89px;
     }
     
@@ -1434,4 +1434,5 @@
         order: 2;
     }
 }
+
 
