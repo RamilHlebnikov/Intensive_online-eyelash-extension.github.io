@@ -1288,6 +1288,7 @@
         display: none !important;
     }
 
+    /* Анимация загрузки */
     .preloader {
         position: fixed;
         top: 0;
@@ -1455,6 +1456,41 @@
         100% {
             opacity: 0;
             transform: translateY(28px);
+        }
+    }
+
+    /* Текст загрузки - ВСЕ НА ОДНОЙ СТРОКЕ */
+    .loading-text {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--secondary-color);
+        font-size: 12px;
+        opacity: 0;
+        animation: textAppearTablet 2s ease-in-out 1s forwards;
+        font-family: var(--font-family);
+        text-align: center;
+        white-space: nowrap; /* Запрет переноса на новую строку */
+        width: auto; /* Автоматическая ширина */
+    }
+
+    @keyframes textAppearTablet {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(6px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+
+    /* Исчезновение прелоадера */
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
@@ -2445,5 +2481,6 @@
         box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 }
+
 
 
