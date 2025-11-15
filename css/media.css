@@ -1283,11 +1283,6 @@
 /* Медиазапрос для мобильных (от 481px до 768px) */
     @media (min-width: 481px) and (max-width: 768px) {
 
-    /* Скрываем все секции кроме шапки и прелоадера */
-    body > *:not(.header):not(.preloader):not(.banner):not(.for-whom):not(.program):not(.about):not(.list__lessons):not(.pricing):not(.questions):not(.footer):not(.form) {
-        display: none !important;
-    }
-
     /* Анимация загрузки */
     .preloader {
         position: fixed;
@@ -1496,7 +1491,7 @@
 
     .header {
         display: block !important;
-        padding-top: 65px;
+        padding-top: 25px;
     }
 
     body {
@@ -2480,7 +2475,49 @@
         border-color: var(--primary-color-button);
         box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
+
+    /* Файлы Cookie */
+    .cookie__notifications {
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 60px); /* Больше отступы от краёв */
+        max-width: 600px; /* Максимальная ширина */
+        padding: 20px; /* Больше внутреннего пространства */
+        border-radius: 24px; /* Слегка округляем углы */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .cookie__text {
+        font-size: 12px; /* Чуть крупнее текст */
+        line-height: 1.5;
+    }
+
+    .bx.bxs-cookie {
+        font-size: 50px; /* Иконка побольше */
+    }
+
+    .cookie__container--label {
+        gap: 16px; /* Больше пространства между кнопками */
+        margin-top: 20px;
+    }
+
+    .cookie__accept,
+    .cookie__decline {
+        max-width: 240px; /* Кнопки шире, но не на всю ширину */
+        padding: 14px 24px; /* Больше таргет‑зона */
+        font-size: 15px; /* Шрифт кнопки */
+        border-radius: 12px; /* Слегка округляем кнопки */
+    }
+
+    /* Принудительный порядок элементов (на случай глюков flex) */
+    .cookie__content {
+        order: 1;
+    }
+    .cookie__container--label {
+        order: 2;
+    }
 }
+
 
 
 
