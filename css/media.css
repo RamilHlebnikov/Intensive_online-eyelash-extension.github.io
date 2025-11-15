@@ -2487,8 +2487,8 @@
     }
 
     .cookie__text {
-        font-size: 12px; /* Чуть крупнее текст */
-        line-height: 1.5;
+        font-size: 14px; /* Чуть крупнее текст */
+        line-height: 1.4;
     }
 
     .bx.bxs-cookie {
@@ -2516,6 +2516,7 @@
         order: 2;
     }
 }
+
 
 
 
