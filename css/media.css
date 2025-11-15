@@ -1282,12 +1282,12 @@
 
 /* Медиазапрос для мобильных (от 481px до 768px) */
     @media (min-width: 481px) and (max-width: 768px) {
-    
+
     /* Скрываем все секции кроме шапки и прелоадера */
-    body > *:not(.header):not(.preloader) {
+    body > *:not(.header):not(.preloader):not(.banner):not(.for-whom):not(.program):not(.about):not(.list__lessons):not(.pricing):not(.questions):not(.footer):not(.form):not(.cookie__notifications) {
         display: none !important;
     }
-    
+
     .preloader {
         position: fixed;
         top: 0;
@@ -1458,63 +1458,19 @@
         }
     }
 
-    /* Текст загрузки */
-    .loading-text {
-        position: absolute;
-        bottom: -35px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: var(--secondary-color);
-        font-size: 12px;
-        opacity: 0;
-        animation: textAppearTablet 2s ease-in-out 1s forwards;
-        font-family: var(--font-family);
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    @keyframes textAppearTablet {
-        0% {
-            opacity: 0;
-            transform: translateX(-50%) translateY(6px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-    }
-
-    /* Исчезновение прелоадера */
-    @keyframes fadeOut {
-        to {
-            opacity: 0;
-            visibility: hidden;
-        }
-    }
-
-    /* Контент сайта */
-    .content {
-        opacity: 0;
-        animation: fadeIn 0.5s ease-in-out 4.5s forwards;
-    }
-
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-
     .header {
         display: block !important;
-        padding-top: 15px;
+        padding-top: 65px;
     }
 
     body {
         height: 100vh;
-        overflow: hidden;
+        overflow: auto;
     }
 
     .container {
         max-width: 100%;
-        padding: 0 25px;
+        padding: 0 55px;
     }
 
     .header__wrapper {
@@ -1621,6 +1577,874 @@
         border-bottom: 1px solid var(--primary-color-button);
     }
 
+    /* Главный экран */
+    .banner {
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .banner__title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 48px;
+        color: var(--secondary-color);
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+    }
+
+    .banner__mini--title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--secondary-color);
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        text-align: center !important; /* Принудительно */
+        width: 100% !important;
+    }
+
+    .banner__desc {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        color: var(--secondary-color);
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        text-align: center !important; /* Принудительно */
+        margin-left: auto;
+        margin-right: auto;
+        width: 100% !important;
+        max-width: 600px;
+    }
+
+    .btn__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding-bottom: 200px;
+    }
+
+    .button {
+        text-align: center;
+        padding: 22px 70px;
+        font-size: 18px;
+        width: 100%;
+        max-width: 350px;
+        background-color: var(--primary-color-button);
+        border-radius: var(--border-radius);
+        font-family: var(--font-family);
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        transition: var(--transition);
+        border: 3px solid var(--primary-color-button);
+        cursor: pointer;
+    }
+
+    .button:hover {
+        border: 3px solid var(--primary-color-button);
+        background-color: transparent;
+        color: var(--secondary-color);
+        box-shadow: 0 0 15px rgba(163, 135, 196, 0.6), inset 0 0 15px rgba(163, 135, 196, 0.1);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
+    }
+
+    .btn {
+        text-align: center;
+        padding: 22px 70px;
+        font-size: 18px;
+        width: 100%;
+        max-width: 350px;
+        border-radius: var(--border-radius);
+        background-color: transparent;
+        color: var(--secondary-color);
+        font-weight: 700;
+        font-family: var(--font-family);
+        border: 3px solid var(--primary-color-button);
+        text-transform: uppercase;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: var(--primary-color-button);
+        color: var(--secondary-color);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
+    }
+
+    .images {
+        margin: 0 auto;
+        position: relative;
+        width: 400px;
+        top: -150px;
+        left: auto;
+        right: 0;
+        transform: none !important;
+    }
+
+    .bg-effect {
+        display: none !important;
+    }
+
+    /* Для кого */
+    .for-whom {
+        padding-top: 91px;
+    }
+
+    .for-whom__title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.3;
+        text-align: center !important; /* Принудительно */
+        width: 100% !important;
+        color: var(--primary-alternaite-color);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .for-whom__content--item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .for-whom__card-wrapper {
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .for-whom__card {
+        background: var(--background-color-card);
+        border: 3px solid var(--primary-color);
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        min-height: 140px;
+        padding: 25px 20px 25px 60px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .for-whom__images {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: -35px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .for-whom__desc {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        margin: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .for-whom__span {
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .for-whom__content--items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 120px;
+        margin-top: 50px;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .for-whom__text {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 1.4;
+        text-align: center;
+        color: var(--primary-color);
+        width: 100%;
+        max-width: 400px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .button__for-whom {
+        background-color: var(--primary-color-button);
+        border-radius: var(--border-radius);
+        padding: 20px 70px;
+        font-family: var(--font-family);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        border: 3px solid var(--primary-color-button);
+        text-align: center;
+        text-decoration: none;
+        width: auto;
+    }
+
+    .super__woman--images {
+        display: block;
+        width: 220px;
+        height: 220px;
+        margin: 30px auto 0;
+        position: relative;
+        top: 0;
+    }
+
+    /* Что будет на интенсиве? */
+    .program {
+        display: block !important;
+        padding-top: 80px;
+    }
+
+    .program__content--title {
+        margin-bottom: 40px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center !important; /* Принудительно */
+        width: 100% !important;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+    }
+
+    .program__content--menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .program__content--list {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        min-width: 0;
+    }
+
+    .program__images {
+        width: 60px;
+        height: 60px;
+        transform: none !important;
+        flex-shrink: 0;
+    }
+
+    .program__desc {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .program__span {
+        font-size: 18px;
+    }
+
+    /* О Юлии Ворман */
+    .about {
+        display: block !important;
+        padding-top: 100px;
+    }
+
+    .about__title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        width: 100%;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .about__text {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 35px;
+        font-family: var(--font-family);
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .about__text--item {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 30px;
+        font-family: var(--font-family);
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .about__indicators {
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+        margin: 0 auto 35px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .about__text--footer {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 50px;
+        font-family: var(--font-family);
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .about__main--images {
+        position: relative;
+        margin: 0 auto !important;
+        display: block;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        top: -150px;
+        margin-bottom: 50px;
+        border-radius: var(--border-radius);
+    }
+
+    /* Лист уроков интенсива */
+    .list__lessons {
+        display: block !important;
+        padding-top: 80px;
+    }
+
+    .list__lessons--title {
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 150%;
+        text-align: center;
+        width: 100%;
+        color: var(--primary-alternaite-color);
+        margin-bottom: 40px;
+    }
+
+    .accordion-item1 {
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    .accordion {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    .accordion-item {
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    .accordion-toggle {
+        display: none;
+    }
+
+    .accordion-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .accordion-label:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .lesson-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--primary-color);
+        font-family: var(--font-family);
+        text-transform: uppercase;
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-left: 15px;
+    }
+
+    .icon::before, .icon::after {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color);
+        transition: var(--transition);
+    }
+
+    /* Горизонтальная линия плюса */
+    .icon::before {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        transform: translateY(-50%);
+    }
+
+    /* Вертикальная линия плюса */
+    .icon::after {
+        top: 0;
+        left: 50%;
+        width: 3px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    /* Анимация при открытии - превращаем плюс в минус */
+    .accordion-toggle:checked + .accordion-label .icon::after {
+        transform: translateX(-50%) rotate(90deg);
+        opacity: 0;
+    }
+
+    .accordion-toggle:checked + .accordion-label .icon::before {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 30px;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        background-color: var(--secondary-color);
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--primary-color);
+    }
+
+    /* Когда аккордеон открыт */
+    .accordion-toggle:checked ~ .accordion-content {
+        max-height: none;
+        height: auto;
+        padding: 10px 30px 25px;
+        overflow: visible;
+    }
+
+    .content-wrapper {
+        padding: 10px 0;
+    }
+
+    .list__lessons__content--items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .list__lessons__desc {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 150%;
+        color: var(--primary-color);
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        order: -1;
+    }
+
+    .lesson--title--number {
+        font-weight: 700;
+    }
+
+    .list__lessons__content--items img {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Тарифы участия */
+    .pricing {
+        background-color: var(--primary-color);
+        padding-top: 91px;
+        overflow-x: hidden;
+    }
+
+    .pricing__title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 26px;
+        text-align: center !important; /* Принудительно */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+
+    .pricing__content__card--wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pricing__content--card {
+        background-color: var(--background-color-card);
+        border-radius: var(--border-radius);
+        width: 300px;
+        padding: 57px 30px 0 36px;
+        position: relative;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .pricing__content__card--title {
+        font-size: 14px;
+    }
+
+    .pricing__content--desc {
+        font-size: 12px;
+    }
+
+    .pricing__content--duration {
+        font-size: 14px;
+    }
+
+    .pricing__content__condition--span {
+        font-weight: 700;
+        white-space: normal !important;
+    }
+
+    .pricing__price-block {
+        margin: 11px 0;
+    }
+
+    .pricing__content--condition,
+    .pricing__content--price {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: normal !important;
+        margin: 11px 0;
+    }
+
+    .pricing__content--button {
+        padding: 20px 75px;
+        margin-left: -30px;
+        margin-right: -26px;
+    }
+
+    .pricing__button-spacer {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .pricing__content--images {
+        width: 88px;
+        height: 88px;
+        position: absolute;
+        top: -30px;
+        left: 240px;
+        object-fit: cover;
+        transform: none !important;
+    }
+
+    .pricing__content--stories {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .pricing__content__images--gift {
+        transform: none !important;
+    }
+
+    .pricing__content__stories--text {
+        text-align: center;
+        font-size: 18px;
+        color: var(--secondary-color);
+        line-height: 1.6;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .container__stories {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .btn__stories {
+        margin-bottom: 0;
+        font-size: 18px;
+        padding: 22px 70px;
+    }
+
+    .short__name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 80px;
+        font-size: 16px;
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: var(--transition);
+    }
+
+    /* А такие вопросы могут быть у вас */
+    .questions {
+        display: block !important;
+        padding-top: 80px;
+    }
+
+    .questions__title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        width: 100%;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    .for-whom__content--items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 0;
+        padding-bottom: 0;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .questions__text {
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        margin-top: -20px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--primary-color);
+        text-transform: uppercase;
+    }
+
+    /* Подвал */
+    .footer {
+        display: block !important;
+        padding-top: 150px;
+        padding-bottom: 320px;
+        background-color: var(--background-color-footer);
+        width: 100%;
+        position: relative;
+    }
+
+    .footer__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .footer__content--item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 160px;
+    }
+
+    .footer__contracts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* Для предзаписи */
+    .form {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 30px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        box-sizing: border-box;
+    }
+
+    .form__container {
+        width: 100%;
+        padding: 30px;
+        background: var(--background-color-card);
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form__tabs--recording {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .form__tabs-recording--title {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 35px;
+        text-align: center;
+        padding: 0 20px;
+        font-weight: 700;
+        color: var(--background-color-footer);
+    }
+
+    .form__container--group {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .form__field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: transparent;
+    }
+
+    .label {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+    }
+
+    .form__field {
+        background-color: var(--input-color);
+        border-radius: var(--border-radius-btn-register-login);
+        padding: 5px 0 12px 20px;
+        border: 2px solid transparent;
+        transition: var(--transition);
+    }
+
+    .form__field input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-family: var(--font-family);
+        font-size: 18px;
+    }
+
+    .form__field:focus-within {
+        border-color: var(--primary-color-button);
+    }
+
+    .remembers__me {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        font-family: var(--font-family);
+        font-size: 14px;
+        color: var(--primary-color);
+        margin-top: 20px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .checkbox {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        margin-top: 2px;
+        accent-color: var(--primary-color-button);
+    }
+
+    .btn__pre--recording {
+        width: 100%;
+        padding: 22px 40px;
+        font-size: 16px;
+        margin-top: 30px;
+        background-color: var(--primary-color-button);
+        border: 2px solid var(--primary-color-button);
+        border-radius: 25px;
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .btn__pre--recording:hover {
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
+    }
+
     /* Файлы Cookie */
     .cookie__notifications {
         left: 50%;
@@ -1663,3 +2487,4 @@
         order: 2;
     }
 }
+
