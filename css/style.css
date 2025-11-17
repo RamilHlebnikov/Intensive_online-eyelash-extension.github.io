@@ -229,6 +229,8 @@
     opacity: 0;
     animation: textAppear 2s ease-in-out 1s forwards;
     font-family: var(--font-family);
+	white-space: nowrap; /* Запрет переноса на новую строку */
+    width: auto; /* Автоматическая ширина */
 }
 
 @keyframes textAppear {
@@ -1685,3 +1687,4 @@ html {
     border-color: var(--primary-color-button);
     box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
+
