@@ -20,4 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         });
     });
+
+    // Заполняем скрытое поле тарифом из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const tariff = urlParams.get('tariff');
+    
+    if (tariff) {
+        const tariffField = document.getElementById('tariff-field');
+        if (tariffField) {
+            tariffField.value = tariff;
+        }
+    }
 });
