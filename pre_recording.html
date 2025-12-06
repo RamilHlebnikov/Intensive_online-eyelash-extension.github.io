@@ -27,51 +27,62 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    <form action="/submit" class="form">
-
-        <!-- Скрытое поле для тарифа -->
-        <input type="hidden" name="tariff" id="tariff-field">
-
-        <div class="form__container">
-
-            <div class="form__tabs--recording">
-                <h3 class="form__tabs-recording--title">Предварительная запись на интенсив по скоростному наращиванию ресниц</h3>
-            </div>
-                
-            <div class="form__container--group">
-
-                <div class="form__field">
-                    <label for="name" class="label">Имя</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form__field">
-                    <label for="surname" class="label">Фамилия</label>
-                    <input type="text" id="surname" name="surname" required>
-                </div>
-
-                <div class="form__field">
-                    <label for="email" class="label">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form__field">
-                    <label for="telephone" class="label">Телефон</label>
-                    <input type="tel" id="telephone" name="telephone" required>
-                </div>
-
-                <div class="form__field">
-                    <label for="name__for-telegram" class="label">Укажи ник в Telegram</label>
-                    <input type="text" id="telegram-username" name="telegram_username" required>
-                </div>
-
-                <label for="policy-agreement" class="remembers__me"><input type="checkbox" id="policy-agreement" name="policy-agreement" required class="checkbox">Ознакомлен(а) с текстом Политики обработки персональных данных</label>
-
-                <label for="age-agreement" class="remembers__me"><input type="checkbox" id="age-agreement" name="age-agreement" required class="checkbox">Мне есть 18 лет, и я даю Согласие на обработку моих персональных данных</label>
-            </div>
-
-            <button type="submit" class="btn__pre--recording" aria-label="pre_recording">Предзапись</button>
+    <form hx-post="/api/register/"
+        hx-target="#result-container"
+        hx-swap="innerHTML"
+        class="form">
+    
+    <!-- Скрытое поле для тарифа -->
+    <input type="hidden" name="tariff" id="tariff-field">
+    
+    <div class="form__container">
+        <div class="form__tabs--recording">
+            <h3 class="form__tabs-recording--title">
+                Предварительная запись на интенсив по скоростному наращиванию ресниц
+            </h3>
         </div>
-    </form>
+            
+        <div class="form__container--group">
+            <div class="form__field">
+                <label for="name" class="label">Имя</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form__field">
+                <label for="surname" class="label">Фамилия</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+
+            <div class="form__field">
+                <label for="email" class="label">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form__field">
+                <label for="telephone" class="label">Телефон</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+
+            <div class="form__field">
+                <label for="telegram-username" class="label">Укажи ник в Telegram</label>
+                <input type="text" id="telegram-username" name="telegram_username" required>
+            </div>
+
+            <label for="policy-agreement" class="remembers__me">
+                <input type="checkbox" id="policy-agreement" name="policy-agreement" required class="checkbox">
+                Ознакомлен(а) с текстом Политики обработки персональных данных
+            </label>
+
+            <label for="age-agreement" class="remembers__me">
+                <input type="checkbox" id="age-agreement" name="age-agreement" required class="checkbox">
+                Мне есть 18 лет, и я даю Согласие на обработку моих персональных данных
+            </label>
+        </div>
+
+        <button type="submit" class="btn__pre--recording" aria-label="pre_recording">Предзапись</button>
+    </div>
+</form>
+
+<div id="result-container"></div>
 </body>
 </html>
