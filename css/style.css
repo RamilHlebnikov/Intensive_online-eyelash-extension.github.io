@@ -1602,12 +1602,10 @@ html {
 }
 
 .btn__pre--recording:hover {
-    border: 3px solid var(--primary-color);
-    background-color: var(--primary-color-button);
-    color: var(--secondary-color);
+    background-color: transparent;
+    color: var(--primary-color-button);
     border-color: var(--primary-color-button);
-    box-shadow: 0 0 15px rgba(163, 135, 196, 0.6), inset 0 0 15px rgba(163, 135, 196, 0.1);
-    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
+    box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
 
 /* Файлы Cookie */
@@ -1899,3 +1897,4 @@ html {
         transform: translateY(0);
     }
 }
+
