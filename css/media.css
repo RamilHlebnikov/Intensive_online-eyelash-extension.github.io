@@ -662,10 +662,43 @@
         margin-bottom: 25px;
     }
 
-    .about__indicators {
-        width: 399px;
-        position: relative;
-        margin-bottom: 28px;
+    /* Стили для индикаторов - Уменьшаем расстояние между колонками */
+    .indicators {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .indicator {
+        flex: 0 1 48%;
+    }
+
+    .indicator_title {
+        margin-bottom: 4px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: var(--secondary-color);
+    }
+
+    .indicator_text {
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 130%;
+        color: var(--secondary-color);
     }
 
     .about__text--footer {
@@ -1984,15 +2017,45 @@
         text-align: center;
     }
 
-    .about__indicators {
-        width: 100%;
-        max-width: 500px;
-        position: relative;
-        margin: 0 auto 35px;
+    /* Стили для индикаторов - Уменьшаем расстояние между колонками */
+    .indicators {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .indicator {
+        flex: 0 1 48%;
+    }
+
+    .indicator_title {
+        margin-bottom: 6px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 37px;
+        line-height: 36px;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .indicator_text {
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--secondary-color);
+        text-align: center;
     }
 
     .about__text--footer {
@@ -2995,15 +3058,45 @@
         text-align: center;
     }
 
-    .about__indicators {
-        width: 100%;
-        max-width: 600px;
-        position: relative;
-        margin: 0 auto 30px;
+    /* Стили для индикаторов - Уменьшаем расстояние между колонками */
+    .indicators {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: space-between;
+    }
+
+    .indicator {
+        flex: 0 1 48%;
+    }
+
+    .indicator_title {
+        margin-bottom: 7px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 39px;
+        line-height: 36px;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .indicator_text {
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        color: var(--secondary-color);
+        text-align: center;
     }
 
     .about__text--footer {
@@ -3977,15 +4070,43 @@
         text-align: center;
     }
 
-    .about__indicators {
-        width: 100%;
-        max-width: 700px;
-        position: relative;
-        margin: 0 auto 35px;
+    /* Стили для индикаторов - Уменьшаем расстояние между колонками */
+    .indicators {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .indicator {
+        flex: 0 1 49%;
+    }
+
+    .indicator_title {
+        margin-bottom: 7px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 46px;
+        color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .indicator_text {
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 140%;
+        color: var(--secondary-color);
+        text-align: center;
     }
 
     .about__text--footer {
@@ -4013,7 +4134,6 @@
     }
 
     /* Лист уроков интенсива */
-
     .list__lessons {
         padding-top: 100px;
     }
