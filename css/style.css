@@ -32,6 +32,8 @@
     --border-radius-btn-register-login: 7px;
 
     --background-color--btn-register-login: #985ACE;
+
+    --snowflake-color: #4D8AFF;
 }
 
 /* Подключение шрифта "Montserrat" */
@@ -1713,4 +1715,183 @@ html {
     color: var(--secondary-color);
     border-color: var(--primary-color-button);
     box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
+}
+
+/* СНЕГ КАК В КЛУБЕ РОМАНТИКИ */
+/* Скрытый checkbox */
+.snow-checkbox {
+    display: none;
+}
+
+/* Кнопка переключения снега - ПОЯВЛЯЕТСЯ ЧЕРЕЗ 4.5 секунды (после прелоадера) */
+.snow-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(30, 30, 40, 0.95); /* Темный круг всегда */
+    border-radius: var(--border-radius);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Изначально скрыта, появляется через 4.5s после начала загрузки */
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    animation: showSnowButton 0.5s ease-in-out 4.5s forwards; /* Задержка 4.5s как у контента */
+}
+
+/* Анимация появления кнопки */
+@keyframes showSnowButton {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+.snowflake-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.snowflake-svg {
+    width: 35px;
+    height: 35px;
+    color: #888888; /* Серый по умолчанию */
+    transition: color 0.3s ease;
+}
+
+/* Когда checkbox отмечен (снег включен) - снежинка СИНЯЯ */
+.snow-checkbox:checked ~ .snow-toggle-btn .snowflake-svg {
+    color: var(--snowflake-color); /* СИНИЙ цвет активной снежинки */
+}
+
+/* Контейнер для снега */
+.snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+    
+    /* Снег по умолчанию выключен */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Когда checkbox отмечен - показываем снег */
+.snow-checkbox:checked ~ .snow-container {
+    opacity: 1;
+}
+
+/* Снежинки как в Клубе Романтики */
+.snowflake {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    filter: blur(0.3px);
+    opacity: 0;
+    top: -20px;
+    
+    /* Анимация выключена по умолчанию */
+    animation: none;
+}
+
+/* Включаем анимацию только когда checkbox отмечен */
+.snow-checkbox:checked ~ .snow-container .snowflake {
+    opacity: 0.6;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Размеры снежинок */
+.snowflake.small {
+    width: 2px;
+    height: 2px;
+}
+.snowflake.medium {
+    width: 3px;
+    height: 3px;
+}
+.snowflake.large {
+    width: 4px;
+    height: 4px;
+}
+
+/* Анимация снега (быстрая) */
+@keyframes snowfall-kr {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(600px) translateX(15px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* Позиции и анимации для каждой снежинки */
+.snowflake.s1 { left: 5%; animation: snowfall-kr 6s linear infinite 0s; width: 2px; height: 2px; }
+.snowflake.s2 { left: 15%; animation: snowfall-kr 7s linear infinite 1s; width: 3px; height: 3px; }
+.snowflake.s3 { left: 25%; animation: snowfall-kr 5s linear infinite 0.5s; width: 2px; height: 2px; }
+.snowflake.s4 { left: 35%; animation: snowfall-kr 8s linear infinite 2s; width: 2px; height: 2px; }
+.snowflake.s5 { left: 45%; animation: snowfall-kr 4s linear infinite 1.5s; width: 4px; height: 4px; }
+.snowflake.s6 { left: 55%; animation: snowfall-kr 6.5s linear infinite 0.8s; width: 2px; height: 2px; }
+.snowflake.s7 { left: 65%; animation: snowfall-kr 5.5s linear infinite 2.5s; width: 3px; height: 3px; }
+.snowflake.s8 { left: 75%; animation: snowfall-kr 7.5s linear infinite 1.2s; width: 2px; height: 2px; }
+.snowflake.s9 { left: 85%; animation: snowfall-kr 4.5s linear infinite 3s; width: 2px; height: 2px; }
+.snowflake.s10 { left: 95%; animation: snowfall-kr 6s linear infinite 0.3s; width: 4px; height: 4px; }
+
+.snowflake.s11 { left: 8%; animation: snowfall-kr 5.2s linear infinite 1.8s; width: 3px; height: 3px; }
+.snowflake.s12 { left: 22%; animation: snowfall-kr 7.2s linear infinite 0.7s; width: 2px; height: 2px; }
+.snowflake.s13 { left: 38%; animation: snowfall-kr 4.8s linear infinite 2.3s; width: 2px; height: 2px; }
+.snowflake.s14 { left: 52%; animation: snowfall-kr 6.8s linear infinite 1.1s; width: 4px; height: 4px; }
+.snowflake.s15 { left: 68%; animation: snowfall-kr 5.8s linear infinite 0.4s; width: 2px; height: 2px; }
+.snowflake.s16 { left: 82%; animation: snowfall-kr 7.8s linear infinite 2.8s; width: 3px; height: 3px; }
+.snowflake.s17 { left: 12%; animation: snowfall-kr 4.2s linear infinite 1.4s; width: 2px; height: 2px; }
+.snowflake.s18 { left: 28%; animation: snowfall-kr 6.2s linear infinite 0.9s; width: 2px; height: 2px; }
+.snowflake.s19 { left: 42%; animation: snowfall-kr 5.1s linear infinite 2.1s; width: 4px; height: 4px; }
+.snowflake.s20 { left: 58%; animation: snowfall-kr 7.1s linear infinite 0.6s; width: 2px; height: 2px; }
+
+.snowflake.s21 { left: 72%; animation: snowfall-kr 4.9s linear infinite 1.9s; width: 3px; height: 3px; }
+.snowflake.s22 { left: 88%; animation: snowfall-kr 6.9s linear infinite 0.2s; width: 2px; height: 2px; }
+.snowflake.s23 { left: 18%; animation: snowfall-kr 5.4s linear infinite 2.4s; width: 2px; height: 2px; }
+.snowflake.s24 { left: 32%; animation: snowfall-kr 7.4s linear infinite 1.3s; width: 4px; height: 4px; }
+.snowflake.s25 { left: 48%; animation: snowfall-kr 4.4s linear infinite 0.1s; width: 2px; height: 2px; }
+.snowflake.s26 { left: 62%; animation: snowfall-kr 6.4s linear infinite 2.6s; width: 3px; height: 3px; }
+.snowflake.s27 { left: 78%; animation: snowfall-kr 5.6s linear infinite 1.7s; width: 2px; height: 2px; }
+.snowflake.s28 { left: 92%; animation: snowfall-kr 7.6s linear infinite 0.5s; width: 2px; height: 2px; }
+.snowflake.s29 { left: 2%; animation: snowfall-kr 4.6s linear infinite 2.2s; width: 4px; height: 4px; }
+.snowflake.s30 { left: 98%; animation: snowfall-kr 6.6s linear infinite 1.6s; width: 2px; height: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+    .snowflake {
+        animation: none !important;
+        display: none;
+    }
+    .snow-toggle-btn {
+        animation: none !important;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
