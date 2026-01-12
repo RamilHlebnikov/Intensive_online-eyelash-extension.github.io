@@ -583,6 +583,13 @@
         width: auto;
     }
 
+    .button__for-whom:hover {
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
+    }
+
     .super__woman--images {
         display: block;
         width: 180px;
@@ -1315,48 +1322,6 @@
         max-width: 100%;
         padding: 0;
     }
-
-    /* СНЕГ КАК В КЛУБЕ РОМАНТИКИ */
-    .snow-toggle-btn {
-        width: 45px;
-        height: 45px;
-        top: 10px;
-        right: 10px;
-    }
-    
-    .snowflake-svg {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .header .snow-container {
-        height: 350px;
-    }
-    
-    @keyframes snowfall {
-        100% {
-            transform: translateY(350px) translateX(6px) rotate(180deg);
-        }
-    }
-    
-    .header .snow-container .snowflake {
-        width: 1.2px;
-        height: 1.2px;
-        filter: blur(0.2px);
-    }
-    .header .snow-container .snowflake:nth-child(3n) {
-        width: 2px;
-        height: 2px;
-    }
-    .header .snow-container .snowflake:nth-child(5n) {
-        width: 3px;
-        height: 3px;
-    }
-    
-    /* Меньше снежинок на мобильных */
-    .header .snow-container .snowflake:nth-child(n+25) {
-        display: none; /* Скрываем последние 5 снежинок */
-    }
 }
 
 /* Медиазапрос для мобильных (от 481px до 768px) */
@@ -1915,6 +1880,13 @@
         text-align: center;
         text-decoration: none;
         width: auto;
+    }
+
+    .button__for-whom:hover {
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     .super__woman--images {
@@ -2625,42 +2597,6 @@
     .cookie__container--label {
         order: 2;
     }
-
-    /* СНЕГ КАК В КЛУБЕ РОМАНТИКИ */
-    .snow-toggle-btn {
-        width: 50px;
-        height: 50px;
-        top: 30px;
-        right: 47px;
-    }
-    
-    .snowflake-svg {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .header .snow-container {
-        height: 400px;
-    }
-    
-    @keyframes snowfall {
-        100% {
-            transform: translateY(400px) translateX(8px) rotate(180deg);
-        }
-    }
-    
-    .header .snow-container .snowflake {
-        width: 1.5px;
-        height: 1.5px;
-    }
-    .header .snow-container .snowflake:nth-child(3n) {
-        width: 2.5px;
-        height: 2.5px;
-    }
-    .header .snow-container .snowflake:nth-child(5n) {
-        width: 3.5px;
-        height: 3.5px;
-    }
 }
 
 /* Планшеты горизонтальные/ноутбуки 769px-968px */
@@ -2965,6 +2901,13 @@
         text-align: center;
         text-decoration: none;
         width: auto;
+    }
+
+    .button__for-whom:hover {
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     .super__woman--images {
@@ -3634,42 +3577,6 @@
     .cookie__container--label {
         order: 2;
     }
-
-    /* СНЕГ КАК В КЛУБЕ РОМАНТИКИ */
-    .snow-toggle-btn {
-        width: 50px;
-        height: 50px;
-        top: 30px;
-        right: 35px;
-    }
-    
-    .snowflake-svg {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .header .snow-container {
-        height: 500px;
-    }
-    
-    @keyframes snowfall {
-        100% {
-            transform: translateY(500px) translateX(10px) rotate(180deg);
-        }
-    }
-    
-    .header .snow-container .snowflake {
-        width: 1.8px;
-        height: 1.8px;
-    }
-    .header .snow-container .snowflake:nth-child(3n) {
-        width: 2.5px;
-        height: 2.5px;
-    }
-    .header .snow-container .snowflake:nth-child(5n) {
-        width: 3.5px;
-        height: 3.5px;
-    }
 }
 
 /* Ноутбуки 969px-1199px - лёгкая адаптация */
@@ -3969,6 +3876,13 @@
         text-align: center;
         text-decoration: none;
         width: auto;
+    }
+
+    .button__for-whom:hover {
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     .super__woman--images {
@@ -4687,28 +4601,5 @@
     .cookie__decline {
         padding: 10px 20px;
         font-size: 15px;
-    }
-
-    /* СНЕГ КАК В КЛУБЕ РОМАНТИКИ */
-    .snow-toggle-btn {
-        width: 55px;
-        height: 55px;
-        top: 15px;
-        right: 31px;
-    }
-    
-    .snowflake-svg {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .header .snow-container {
-        height: 550px;
-    }
-    
-    @keyframes snowfall {
-        100% {
-            transform: translateY(550px) translateX(12px) rotate(180deg);
-        }
     }
 }
