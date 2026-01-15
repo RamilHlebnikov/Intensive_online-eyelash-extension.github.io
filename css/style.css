@@ -308,6 +308,42 @@ html {
     }
 } */
 
+/* Основные стили для Material Symbols (вне медиазапросов) */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Базовые стили бургер-меню (скрыто по умолчанию для десктопа) */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Скрываем иконки по умолчанию */
+.burger-menu .menu-icon,
+.burger-menu .close-icon {
+    display: none;
+}
+
 /* Шапка */
 .header {
     padding-top: 105px;
@@ -1895,3 +1931,4 @@ html {
         transform: translateY(0);
     }
 }
+
