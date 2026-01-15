@@ -21,8 +21,22 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png" />
     <link rel="manifest" href="./images/icons/site.webmanifest" />
 
+    <!-- Material Symbols Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,close" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+
+    <!-- Для иконок с сайта Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+
+    <!-- Подключенные файлы css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -65,11 +79,10 @@
                     <a href="index.html" class="logo">Интенсив <br class="br"> Юлии Ворман</a>
                 </div>
 
-                <div class="burger-menu" id="burgerMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="burger-menu" id="burgerMenu" aria-label="Открыть меню">
+                    <span class="material-symbols-outlined menu-icon">menu</span>
+                    <span class="material-symbols-outlined close-icon">close</span>
+                </button>
 
                 <nav class="nav">
                     <ul class="nav__menu">
@@ -690,3 +703,4 @@
     <script src="./js/script.js"></script>
 </body>
 </html>
+
