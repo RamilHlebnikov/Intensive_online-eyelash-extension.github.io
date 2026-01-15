@@ -300,6 +300,45 @@ html {
     box-sizing: border-box;
 }
 
+/* ==================== БУРГЕР-МЕНЮ (БАЗОВЫЕ СТИЛИ) ==================== */
+.burger-menu {
+    display: none; /* Скрыто на десктопе по умолчанию */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1001;
+}
+
+.burger-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition);
+    fill: var(--secondary-color);
+}
+
+/* Иконка закрытия скрыта по умолчанию */
+.close-icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Когда меню открыто - показываем крестик, скрываем бургер */
+.burger-menu.active .menu-icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.burger-menu.active .close-icon {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Тёмная тема без JS
 @media (prefers-color-scheme: dark) {
     body {
@@ -307,43 +346,6 @@ html {
         color: var(--secondary-color);
     }
 } */
-
-/* Основные стили для Material Symbols (вне медиазапросов) */
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-	background-color: var(secondary-color);
-}
-
-/* Базовые стили бургер-меню (скрыто по умолчанию для десктопа) */
-.burger-menu {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-/* Скрываем иконки по умолчанию */
-.burger-menu .menu-icon,
-.burger-menu .close-icon {
-    display: none;
-}
 
 /* Шапка */
 .header {
@@ -1932,6 +1934,3 @@ html {
         transform: translateY(0);
     }
 }
-
-
-
