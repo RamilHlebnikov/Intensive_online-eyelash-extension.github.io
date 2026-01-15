@@ -249,56 +249,21 @@
         text-decoration: none;
     }
 
-    /* Бургер-меню с Material Symbols - ОБНОВЛЕНО */
+    /* Бургер меню */
     .burger-menu {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: none;
-        border: none;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        position: relative;
-        z-index: 1001;
+        width: 35px;
+        height: 35px;
     }
-
-    .burger-menu .menu-icon,
-    .burger-menu .close-icon {
-        font-size: 28px;
-        background-color: var(secondary-color);
-        transition: var(--transition);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    
+    .burger-icon {
+        width: 44px;
+        height: 44px;
     }
-
-    /* Иконка закрытия скрыта по умолчанию */
-    .burger-menu .close-icon {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    /* Когда меню открыто - показываем крестик, скрываем бургер */
-    .burger-menu.active .menu-icon {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .burger-menu.active .close-icon {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Эффект при наведении */
-    .burger-menu:hover .menu-icon,
-    .burger-menu:hover .close-icon {
-        background-color: var(--primary-color-button);
-    }
-        
-    /* Навигация - скрыта по умолчанию */
+    
+    /* Навигация */
     .nav {
         display: none;
         position: fixed;
@@ -307,18 +272,17 @@
         width: 100%;
         height: 100vh;
         background-color: var(--primary-color);
-        z-index: 999;
+        z-index: 1000;
         padding: 100px 20px 20px;
     }
-
-    /* Когда меню открыто */
+    
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
     }
-
+    
     .nav__menu {
         display: flex;
         flex-direction: column;
@@ -329,12 +293,12 @@
         margin: 0;
         padding: 0;
     }
-
+    
     .nav__list {
         width: 100%;
         text-align: center;
     }
-
+    
     .nav__item {
         display: block;
         font-family: var(--font-family);
@@ -347,13 +311,8 @@
         transition: var(--transition);
         border-bottom: 1px solid var(--primary-color-button);
         width: 100%;
-        text-align: center !important; /* Принудительно */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
     }
-
+    
     .nav__item:hover {
         color: var(--primary-color-button);
         background-color: rgba(163, 135, 196, 0.1);
@@ -1343,7 +1302,7 @@
     .snow-toggle-btn {
         width: 45px;
         height: 45px;
-        top: 10px;
+        top: 30px;
         right: 10px;
     }
     
@@ -1629,57 +1588,20 @@
         line-height: 22px;
     }
 
-    /* Бургер-меню */
-    /* Бургер-меню с Material Symbols - ОБНОВЛЕНО */
     .burger-menu {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: none;
-        border: none;
-        cursor: pointer;
         width: 44px;
         height: 44px;
-        padding: 0;
-        position: relative;
-        z-index: 1001;
-    }
-
-    .burger-menu .menu-icon,
-    .burger-menu .close-icon {
-        font-size: 32px;
-        background-color: var(secondary-color);
-        transition: var(--transition);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Иконка закрытия скрыта по умолчанию */
-    .burger-menu .close-icon {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    /* Когда меню открыто - показываем крестик, скрываем бургер */
-    .burger-menu.active .menu-icon {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .burger-menu.active .close-icon {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Эффект при наведении */
-    .burger-menu:hover .menu-icon,
-    .burger-menu:hover .close-icon {
-        background-color: var(--primary-color-button);
     }
     
-    /* Навигация - поверх всего */
+    .burger-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Навигация */
     .nav {
         display: none;
         position: fixed;
@@ -1692,14 +1614,14 @@
         padding: 80px 25px 25px;
         overflow-y: auto;
     }
-
+    
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
+    
     .nav__menu {
         display: flex;
         flex-direction: column;
@@ -1710,12 +1632,12 @@
         margin: 0;
         padding: 0;
     }
-
+    
     .nav__list {
         width: 100%;
         text-align: center;
     }
-
+    
     .nav__item {
         font-size: 17px;
         padding: 12px 0;
@@ -1723,6 +1645,17 @@
         display: block;
         width: 100%;
         border-bottom: 1px solid var(--primary-color-button);
+        font-family: var(--font-family);
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        transition: var(--transition);
+        text-decoration: none;
+    }
+    
+    .nav__item:hover {
+        color: var(--primary-color-button);
+        background-color: rgba(163, 135, 196, 0.1);
     }
 
     /* Главный экран */
@@ -2676,7 +2609,7 @@
         width: 50px;
         height: 50px;
         top: 30px;
-        right: 47px;
+        right: 51px;
     }
     
     .snowflake-svg {
@@ -2776,63 +2709,20 @@
         text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
-    /* Бургер-меню с Material Symbols - ОБНОВЛЕНО */
     .burger-menu {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        background: none;
-        border: none;
-        cursor: pointer;
         width: 44px;
         height: 44px;
-        padding: 0;
-        position: relative;
-        z-index: 1001;
-    }
-
-    .burger-menu .menu-icon,
-    .burger-menu .close-icon {
-        font-size: 32px;
-        background-color: var(--secondary-color);
-        transition: var(--transition);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Иконка закрытия скрыта по умолчанию */
-    .burger-menu .close-icon {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    /* Когда меню открыто - показываем крестик, скрываем бургер */
-    .burger-menu.active .menu-icon {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .burger-menu.active .close-icon {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Эффект при наведении */
-    .burger-menu:hover .menu-icon,
-    .burger-menu:hover .close-icon {
-        background-color: var(--primary-color-button);
-    }
-
-    /* === ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ НАВИГАЦИИ === */
-    
-    /* Скрываем обычное меню на этом разрешении */
-    .nav__menu {
-        display: none !important;
     }
     
-    /* Показываем навигацию как на мобильных, когда бургер активен */
+    .burger-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Показываем мобильную навигацию */
     .nav {
         display: none;
         position: fixed;
@@ -2845,14 +2735,14 @@
         padding: 80px 25px 25px;
         overflow-y: auto;
     }
-
+    
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
+    
     .nav__menu {
         display: flex;
         flex-direction: column;
@@ -2863,12 +2753,12 @@
         margin: 0;
         padding: 0;
     }
-
+    
     .nav__list {
         width: 100%;
         text-align: center;
     }
-
+    
     .nav__item {
         font-size: 17px;
         padding: 12px 0;
@@ -2881,10 +2771,9 @@
         color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
-        cursor: pointer;
         text-decoration: none;
     }
-
+    
     .nav__item:hover {
         color: var(--primary-color-button);
         background-color: rgba(163, 135, 196, 0.1);
@@ -3779,7 +3668,7 @@
         width: 50px;
         height: 50px;
         top: 30px;
-        right: 35px;
+        right: 38px;
     }
     
     .snowflake-svg {
@@ -3877,11 +3766,6 @@
     .logo:hover {
         color: var(--primary-color-button);
         text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
-    }
-
-    /* Скрываем бургер */
-    .burger-menu {
-        display: none !important;
     }
 
     .nav__menu {
@@ -4863,5 +4747,3 @@
         }
     }
 }
-
-
