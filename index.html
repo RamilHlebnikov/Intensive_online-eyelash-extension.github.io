@@ -21,16 +21,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png" />
     <link rel="manifest" href="./images/icons/site.webmanifest" />
 
-    <!-- Иконка меню (бургер) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    
-    <!-- Иконка закрытия (крестик) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
-
     <!-- Для иконок с сайта Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Подключенные файлы css -->
+    
+    <!-- Подключенные файлы CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -73,9 +67,17 @@
                     <a href="index.html" class="logo">Интенсив <br class="br"> Юлии Ворман</a>
                 </div>
 
+                <!-- Бургер-меню с SVG -->
                 <button class="burger-menu" id="burgerMenu" aria-label="Открыть меню">
-                    <span class="material-symbols-outlined menu-icon">menu</span>
-                    <span class="material-symbols-outlined close-icon">close</span>
+                    <!-- SVG для меню (бургер) -->
+                    <svg class="burger-icon menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                
+                    <!-- SVG для закрытия (крестик) -->
+                    <svg class="burger-icon close-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
                 </button>
 
                 <nav class="nav">
@@ -697,7 +699,3 @@
     <script src="./js/script.js"></script>
 </body>
 </html>
-
-
-
-
