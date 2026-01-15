@@ -300,7 +300,7 @@ html {
     box-sizing: border-box;
 }
 
-/* ==================== БУРГЕР-МЕНЮ (БАЗОВЫЕ СТИЛИ) ==================== */
+/* БУРГЕР-МЕНЮ (БАЗОВЫЕ СТИЛИ) */
 .burger-menu {
     display: none; /* Скрыто на десктопе по умолчанию */
     background: transparent;
@@ -1934,3 +1934,4 @@ html {
         transform: translateY(0);
     }
 }
+
