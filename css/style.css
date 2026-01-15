@@ -327,6 +327,7 @@ html {
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+	color: var(secondary-color);
 }
 
 /* Базовые стили бургер-меню (скрыто по умолчанию для десктопа) */
@@ -1931,4 +1932,5 @@ html {
         transform: translateY(0);
     }
 }
+
 
