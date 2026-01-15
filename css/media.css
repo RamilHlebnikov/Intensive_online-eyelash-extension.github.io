@@ -267,7 +267,7 @@
     .burger-menu .menu-icon,
     .burger-menu .close-icon {
         font-size: 28px;
-        color: var(--secondary-color);
+        background-color: var(secondary-color);
         transition: var(--transition);
         position: absolute;
         top: 50%;
@@ -295,7 +295,7 @@
     /* Эффект при наведении */
     .burger-menu:hover .menu-icon,
     .burger-menu:hover .close-icon {
-        color: var(--primary-color-button);
+        background-color: var(--primary-color-button);
     }
         
     /* Навигация - скрыта по умолчанию */
@@ -1648,7 +1648,7 @@
     .burger-menu .menu-icon,
     .burger-menu .close-icon {
         font-size: 32px;
-        color: var(--secondary-color);
+        background-color: var(secondary-color);
         transition: var(--transition);
         position: absolute;
         top: 50%;
@@ -1676,7 +1676,7 @@
     /* Эффект при наведении */
     .burger-menu:hover .menu-icon,
     .burger-menu:hover .close-icon {
-        color: var(--primary-color-button);
+        background-color: var(--primary-color-button);
     }
     
     /* Навигация - поверх всего */
@@ -2794,7 +2794,7 @@
     .burger-menu .menu-icon,
     .burger-menu .close-icon {
         font-size: 32px;
-        color: var(--secondary-color);
+        background-color: var(--secondary-color);
         transition: var(--transition);
         position: absolute;
         top: 50%;
@@ -2822,7 +2822,7 @@
     /* Эффект при наведении */
     .burger-menu:hover .menu-icon,
     .burger-menu:hover .close-icon {
-        color: var(--primary-color-button);
+        background-color: var(--primary-color-button);
     }
 
     /* === ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ НАВИГАЦИИ === */
@@ -4863,4 +4863,5 @@
         }
     }
 }
+
 
