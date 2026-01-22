@@ -585,7 +585,7 @@
     .super_woman-winter--images {
         display: block;
         width: 260px;
-        height: 260px;
+        height: 240px;
         margin: 0 auto;
         position: relative;
         top: 8px;
@@ -5428,3 +5428,4 @@
         animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
     }
 }
+
