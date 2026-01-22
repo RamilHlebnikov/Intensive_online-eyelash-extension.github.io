@@ -4837,9 +4837,9 @@
         color: var(--text-color-dark);
         text-transform: uppercase;
         margin: 0;
-        margin-right: 47px;
+        margin-right: 40px;
         text-align: center;
-        margin-bottom: 57px;
+        margin-bottom: 47px;
     }
 
     .pricing__content__condition--span {
@@ -5428,3 +5428,4 @@
         animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
     }
 }
+
