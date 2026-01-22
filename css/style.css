@@ -1133,8 +1133,8 @@ html {
 
 .lesson--title--number {
     font-weight: 700;
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--green-color);
+    text-shadow: 0 0 1px #00ff00;
 }
 
 /* Тарифы */
@@ -2281,3 +2281,4 @@ html {
 .snowflake.s31, .snowflake.s33, .snowflake.s35, .snowflake.s37, .snowflake.s39 {
     animation: snowfall-svg-very-slow1 18s linear infinite, twinkle-slow 6s ease-in-out infinite;
 }
+
