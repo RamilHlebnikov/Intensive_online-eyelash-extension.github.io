@@ -869,8 +869,8 @@
 
     .lesson--title--number {
         font-weight: 700;
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--green-color);
+        text-shadow: 0 0 1px #00ff00;
     }
 
     .list__lessons__content--items {
@@ -2326,8 +2326,8 @@
 
     .lesson--title--number {
         font-weight: 700;
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--green-color);
+        text-shadow: 0 0 1px #00ff00;
     }
 
     .list__lessons__content--items img {
@@ -4837,9 +4837,9 @@
         color: var(--text-color-dark);
         text-transform: uppercase;
         margin: 0;
-        margin-right: 50px;
+        margin-right: 47px;
         text-align: center;
-        margin-bottom: 47px;
+        margin-bottom: 57px;
     }
 
     .pricing__content__condition--span {
