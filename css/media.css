@@ -328,6 +328,23 @@
         text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
     }
 
+    .girland_new_year {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 47px;
+        transform: translateY(-50%);
+        width: 150px;
+        height: auto;
+        z-index: 1001;
+        pointer-events: none;
+    }
+
+    /* Показываем гирлянду только когда меню активно */
+    .nav.active .girland_new_year {
+        display: block;
+    }
+
     /* Главный экран */
     .banner {
         text-align: center;
@@ -585,7 +602,7 @@
     .super_woman-winter--images {
         display: block;
         width: 260px;
-        height: 240px;
+        height: 260px;
         margin: 0 auto;
         position: relative;
         top: 8px;
@@ -1761,6 +1778,23 @@
     .nav__item:hover {
         color: var(--first-color-dark);
         text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+    }
+
+    .girland_new_year {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 49px;
+        transform: translateY(-50%);
+        width: 160px;
+        height: auto;
+        z-index: 1001;
+        pointer-events: none;
+    }
+
+    /* Показываем гирлянду только когда меню активно */
+    .nav.active .girland_new_year {
+        display: block;
     }
 
     /* Главный экран */
@@ -2984,6 +3018,23 @@
     .nav__item:hover {
         color: var(--first-color-dark);
         text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+    }
+
+    .girland_new_year {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 49px;
+        transform: translateY(-50%);
+        width: 160px;
+        height: auto;
+        z-index: 1001;
+        pointer-events: none;
+    }
+
+    /* Показываем гирлянду только когда меню активно */
+    .nav.active .girland_new_year {
+        display: block;
     }
 
     /* Главный экран */
@@ -4837,9 +4888,9 @@
         color: var(--text-color-dark);
         text-transform: uppercase;
         margin: 0;
-        margin-right: 30px;
+        margin-right: 40px;
         text-align: center;
-        margin-bottom: 57px;
+        margin-bottom: 47px;
     }
 
     .pricing__content__condition--span {
@@ -5428,5 +5479,3 @@
         animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
     }
 }
-
-
