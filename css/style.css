@@ -358,6 +358,10 @@ html {
     background-color: var(--body-color-dark);
 }
 
+.girland_new_year {
+    display: none;
+}
+
 .santa_christmas {
     display: block;
     width: 800px;
@@ -2281,4 +2285,5 @@ html {
 .snowflake.s31, .snowflake.s33, .snowflake.s35, .snowflake.s37, .snowflake.s39 {
     animation: snowfall-svg-very-slow1 18s linear infinite, twinkle-slow 6s ease-in-out infinite;
 }
+
 
