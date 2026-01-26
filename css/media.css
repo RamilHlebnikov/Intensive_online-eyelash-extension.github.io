@@ -2320,7 +2320,8 @@
         line-height: 150%;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         margin-bottom: 40px;
     }
 
@@ -5681,3 +5682,4 @@
         animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
     }
 }
+
