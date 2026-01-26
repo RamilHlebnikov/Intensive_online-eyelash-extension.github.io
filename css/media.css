@@ -179,8 +179,8 @@
         bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
-        color: var(--first-color);
-        text-shadow: 0 0 5px var(--first-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         font-size: 14px;
         opacity: 0;
         animation: textAppearMobile 2s ease-in-out 1s forwards;
@@ -371,8 +371,8 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00, 0 0 4px #00ff00;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         margin-bottom: 27px;
         text-transform: uppercase;
         text-align: center !important;
@@ -643,7 +643,8 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         width: 319px;
     }
 
@@ -733,8 +734,8 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
-        color: var(--first-color);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .indicator_text {
@@ -778,7 +779,8 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .accordion-item1 {
@@ -908,7 +910,7 @@
     .lesson--title--number {
         font-weight: 700;
         color: var(--green-color);
-        text-shadow: 0 0 1px #00ff00;
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .list__lessons__content--items {
@@ -1082,7 +1084,7 @@
         justify-content: center;
         margin-top: 60px;
         font-size: 14px;
-        text-align: center !important; /* Принудительно */
+        text-align: center !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         font-family: var(--font-family);
@@ -1124,7 +1126,8 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .for-whom__content--items {
@@ -1227,7 +1230,8 @@
         text-align: center;
         padding: 0 10px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .form__container--group {
@@ -1362,7 +1366,8 @@
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 14px;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         line-height: 1.4;
         order: 2;
     }
@@ -1677,8 +1682,8 @@
         bottom: -35px;
         left: 50%;
         transform: translateX(-50%);
-        color: var(--first-color);
-        text-shadow: 0 0 5px var(--first-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         font-size: 12px;
         opacity: 0;
         animation: textAppearTablet 2s ease-in-out 1s forwards;
@@ -1865,8 +1870,8 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 20px;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00, 0 0 4px #00ff00;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         margin-bottom: 30px;
         text-transform: uppercase;
         text-align: center !important;
@@ -2155,7 +2160,8 @@
         font-size: 36px;
         text-align: center !important;
         width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
     }
 
@@ -2260,8 +2266,8 @@
         font-weight: 700;
         font-size: 37px;
         line-height: 36px;
-        color: var(--first-color);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-align: center;
     }
 
@@ -2451,7 +2457,7 @@
     .lesson--title--number {
         font-weight: 700;
         color: var(--green-color);
-        text-shadow: 0 0 1px #00ff00;
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .list__lessons__content--items img {
@@ -2602,8 +2608,8 @@
     }
 
     .short__name:hover {
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     /* А такие вопросы могут быть у вас */
@@ -2619,7 +2625,8 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
         margin-bottom: 50px;
     }
@@ -2733,7 +2740,8 @@
         text-align: center;
         padding: 0 20px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .form__container--group {
@@ -2845,7 +2853,8 @@
     .cookie__text {
         font-size: 12px;
         line-height: 1.5;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c;
     }
 
     .cookie_man {
@@ -3137,8 +3146,8 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 20px;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00, 0 0 4px #00ff00;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
     }
 
@@ -3414,7 +3423,8 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
     }
 
@@ -3526,8 +3536,8 @@
         font-weight: 700;
         font-size: 39px;
         line-height: 36px;
-        color: var(--first-color);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-align: center;
     }
 
@@ -3553,8 +3563,8 @@
     }
 
     .about__text--footer--span {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         font-weight: 700;
     }
 
@@ -3582,7 +3592,8 @@
         line-height: 150%;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         margin-bottom: 40px;
     }
 
@@ -3856,7 +3867,8 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
         margin-bottom: 40px;
         margin-top: -65px;
@@ -3970,7 +3982,8 @@
         text-align: center;
         padding: 0 20px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .form__container--group {
@@ -4083,6 +4096,8 @@
     .cookie__text {
         font-size: 14px;
         line-height: 1.5;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c;
     }
 
     .cookie_man {
@@ -4405,8 +4420,8 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 18px;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00, 0 0 4px #00ff00;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
     }
 
@@ -4691,7 +4706,8 @@
         font-size: 40px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
     }
 
@@ -4797,8 +4813,8 @@
         font-weight: 700;
         font-size: 45px;
         line-height: 46px;
-        color: var(--first-color);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-align: center;
     }
 
@@ -4849,7 +4865,8 @@
         line-height: 150%;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         margin-bottom: 45px;
     }
 
@@ -5045,7 +5062,8 @@
         font-weight: 700;
         font-size: 25px;
         flex-shrink: 0;
-        color: var(--first-color);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .pricing__content--duration {
@@ -5179,8 +5197,8 @@
     }
 
     .short__name:hover {
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     /* А такие вопросы могут быть у вас */
@@ -5190,7 +5208,8 @@
         font-size: 42px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         text-transform: uppercase;
         margin-bottom: 45px;
         margin-top: -40px;
@@ -5317,8 +5336,8 @@
     }
 
     .up__link:hover .bx.bx-up-arrow-alt {
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
         transform: scale(1.1);
     }
 
@@ -5389,6 +5408,8 @@
     .form__tabs-recording--title {
         font-size: 19px;
         margin-bottom: 40px;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .remembers__me {
@@ -5419,6 +5440,8 @@
     .cookie__text {
         font-size: 15px;
         line-height: 1.4;
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c;
     }
 
     .bx.bxs-cookie {
