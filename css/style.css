@@ -1251,6 +1251,7 @@ html {
     font-size: 25px;
     flex-shrink: 0;
     color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 .pricing__content--spans {
@@ -1258,6 +1259,7 @@ html {
     font-size: 25px;
     flex-shrink: 0;
     color: var(--first-color);
+    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
 }
 
 .pricing__content--duration {
@@ -1655,8 +1657,8 @@ html {
 }
 
 .up__link:hover .bx.bx-up-arrow-alt {
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     transform: scale(1.1);
 }
 
@@ -2338,4 +2340,3 @@ html {
 .snowflake.s31, .snowflake.s33, .snowflake.s35, .snowflake.s37, .snowflake.s39 {
     animation: snowfall-svg-very-slow1 18s linear infinite, twinkle-slow 6s ease-in-out infinite;
 }
-
