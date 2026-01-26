@@ -1096,8 +1096,8 @@
     }
 
     .short__name:hover {
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--green-color);
+        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     /* А такие вопросы могут быть у вас */
@@ -5682,4 +5682,5 @@
         animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
     }
 }
+
 
