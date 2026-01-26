@@ -234,14 +234,14 @@
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--first-color);
     font-size: 16px;
     opacity: 0;
     animation: textAppear 2s ease-in-out 1s forwards;
     font-family: var(--font-family);
     white-space: nowrap;
     width: auto;
-    text-shadow: 0 0 5px var(--first-color-dark);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 @keyframes textAppear {
@@ -2338,3 +2338,4 @@ html {
 .snowflake.s31, .snowflake.s33, .snowflake.s35, .snowflake.s37, .snowflake.s39 {
     animation: snowfall-svg-very-slow1 18s linear infinite, twinkle-slow 6s ease-in-out infinite;
 }
+
