@@ -15,7 +15,7 @@
 
     --text-color-dark: #E3D3C4;
 
-    --green-color: #008000;
+    --green-color: #35F102;
 
     --body-color-dark: #251819;
 
@@ -441,8 +441,8 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 20px;
-    color: var(--title-color-dark);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00, 0 0 4px #00ff00;
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     text-transform: uppercase;
 }
 
@@ -697,7 +697,8 @@ html {
 }
 
 .program__content--title {
-    color: var(--title-color-dark);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     font-family: var(--font-family);
     font-size: 50px;
     text-align: center;
@@ -853,7 +854,7 @@ html {
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg,  var(--first-color), var(--first-color-dark));
+    background: linear-gradient(90deg, var(--first-color), var(--first-color-dark));
     border-radius: 1px;
     animation: underline 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -937,8 +938,8 @@ html {
     font-weight: 700;
     font-size: 50px;
     line-height: 66px;
-    color: var(--first-color);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 .indicator_text {
@@ -962,8 +963,8 @@ html {
 }
 
 .about__text--footer--span {
-    color: var(--first-color-dark);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     font-weight: 700;
 }
 
@@ -1043,7 +1044,8 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 50px;
-    color: var(--title-color-dark);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 46px;
@@ -1174,7 +1176,7 @@ html {
 .lesson--title--number {
     font-weight: 700;
     color: var(--green-color);
-    text-shadow: 0 0 1px #00ff00;
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 /* Тарифы */
@@ -1401,8 +1403,8 @@ html {
 }
 
 .short__name:hover {
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 /* А такие вопросы могут возникнуть у вас */
@@ -1427,7 +1429,8 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 50px;
-    color: var(--title-color-dark);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 46px;
@@ -1546,8 +1549,8 @@ html {
 }
 
 .bx.bxl-telegram:hover {
-    color: var(--first-color-dark);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 .questions__text {
@@ -1905,7 +1908,8 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--title-color-dark);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
 }
 
 .remembers__me {
@@ -2000,7 +2004,8 @@ html {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
-    color: var(--title-color-dark);
+    color: var(--green-color);
+    text-shadow: 0 0 2px #2ce72c;
     line-height: 1.4;
 }
 
