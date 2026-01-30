@@ -536,10 +536,10 @@
     }
 
     .for-whom__images {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: absolute;
-        left: -25px;
+        left: -30px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -1037,8 +1037,8 @@
     }
 
     .pricing__content--images {
-        width: 88px;
-        height: 88px;
+        width: 95px;
+        height: 95px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -2549,8 +2549,8 @@
     }
 
     .pricing__content--images {
-        width: 88px;
-        height: 88px;
+        width: 100px;
+        height: 100px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -3333,10 +3333,10 @@
     }
 
     .for-whom__images {
-        width: 60px;
-        height: 60px;
+        width: 78px;
+        height: 78px;
         position: absolute;
-        left: -30px;
+        left: -38px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -3802,8 +3802,8 @@
     }
 
     .pricing__content--images {
-        width: 88px;
-        height: 88px;
+        width: 108px;
+        height: 108px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -4615,10 +4615,10 @@
     }
 
     .for-whom__images {
-        width: 70px;
-        height: 70px;
+        width: 85px;
+        height: 85px;
         position: absolute;
-        left: -35px;
+        left: -44px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -5132,8 +5132,8 @@
         position: absolute;
         top: -40px;
         left: 275px;
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
         transition: var(--transition);
         cursor: pointer;
@@ -5155,8 +5155,8 @@
     }
 
     .pricing__content__images--gift {
-        width: 85px;
-        height: 85px;
+        width: 120px;
+        height: 120px;
     }
 
     .pricing__content__stories--text {
@@ -5682,5 +5682,3 @@
         animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
     }
 }
-
-
