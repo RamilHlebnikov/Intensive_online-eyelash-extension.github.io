@@ -616,10 +616,10 @@ html {
 }
 
 .for-whom__images {
-    width: 84px;
-    height: 84px;
+    width: 90px;
+    height: 90px;
     position: absolute;
-    left: -42px;
+    left: -46px;
     top: 45%;
     transform: translateY(-50%);
     z-index: 2;
@@ -1350,8 +1350,8 @@ html {
 }
 
 .pricing__content__images--gift {
-    width: 67px;
-    height: 67px;
+    width: 100px;
+    height: 100px;
     transition: var(--transition);
     cursor: pointer;
 }
