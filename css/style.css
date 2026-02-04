@@ -1350,8 +1350,8 @@ html {
 }
 
 .pricing__content__images--gift {
-    width: 100px;
-    height: 100px;
+    width: 87px;
+    height: 87px;
     transition: var(--transition);
     cursor: pointer;
 }
