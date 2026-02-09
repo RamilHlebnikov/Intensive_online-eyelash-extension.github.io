@@ -437,10 +437,10 @@
     .images {
         margin: 0 auto;
         position: relative;
-        max-width: 329px;
+        max-width: 309px;
         top: -120px;
         left: auto;
-        right: 15px;
+        right: 0;
         transform: none !important;
     }
 
@@ -510,10 +510,10 @@
     }
 
     .for-whom__images {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: absolute;
-        left: -25px;
+        left: -30px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -992,8 +992,8 @@
     }
 
     .pricing__content--images {
-        width: 105px;
-        height: 105px;
+        width: 95px;
+        height: 95px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -1251,7 +1251,7 @@
     /* Файлы Cookie */
     .cookie__notifications {
         position: fixed;
-        bottom: 20px;
+        bottom: 30px;
         left: 49.5%;
         transform: translateX(-50%);
         width: calc(100% - 40px);
@@ -2502,8 +2502,8 @@
     }
 
     .pricing__content--images {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -3217,10 +3217,10 @@
     
     .images {
         position: absolute;
-        right: 3%; /* Процентный отступ вместо фиксированного */
+        right: 3%;
         left: auto;
-        top: -50px;
-        width: 39%; /* Процентная ширина изображения */
+        top: -40px;
+        width: 35%;
         z-index: 2;
         transform: none !important;
     }
@@ -3281,10 +3281,10 @@
     }
 
     .for-whom__images {
-        width: 60px;
-        height: 60px;
+        width: 78px;
+        height: 78px;
         position: absolute;
-        left: -30px;
+        left: -38px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -3742,8 +3742,8 @@
     }
 
     .pricing__content--images {
-        width: 120px;
-        height: 120px;
+        width: 108px;
+        height: 108px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -4274,10 +4274,10 @@
     
     .images {
         position: absolute;
-        right: 3%; /* Процентный отступ вместо фиксированного */
+        right: 3%;
         left: auto;
         top: -50px;
-        width: 34%; /* Процентная ширина изображения */
+        width: 30%;
         z-index: 2;
         transition: transform var(--transition);
         cursor: pointer;
@@ -4343,10 +4343,10 @@
     }
 
     .for-whom__images {
-        width: 70px;
-        height: 70px;
+        width: 85px;
+        height: 85px;
         position: absolute;
-        left: -35px;
+        left: -44px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -4856,8 +4856,8 @@
         position: absolute;
         top: -40px;
         left: 275px;
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
         transition: var(--transition);
         cursor: pointer;
