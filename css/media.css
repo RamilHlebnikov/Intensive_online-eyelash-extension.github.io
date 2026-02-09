@@ -9,7 +9,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,7 +32,7 @@
         transform: translateX(-50%);
         width: 64px;
         height: 96px;
-        background: linear-gradient(45deg, var(--container-color-dark), var(--body-color-dark));
+        background: linear-gradient(45deg, #2A1F40, #1A132D);
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),inset 0 -10px 20px rgba(255, 255, 255, 0.1);
     }
@@ -45,7 +45,7 @@
         transform: translateX(-50%);
         width: 48px;
         height: 20px;
-        background: linear-gradient(45deg, var(--first-color), var(--first-color-dark));
+        background: linear-gradient(45deg, #FF4081, #E91E63);
         border-radius: 4px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
@@ -64,7 +64,7 @@
     .brush-handle {
         width: 6px;
         height: 64px;
-        background: #000000;
+        background: var(--primary-alternaite-color);
         border-radius: 3px;
         position: relative;
     }
@@ -77,7 +77,7 @@
         transform: translateX(-50%);
         width: 20px;
         height: 24px;
-        background: linear-gradient(to bottom, var(--title-color-dark), var(--text-color-dark));
+        background: linear-gradient(to bottom, var(--secondary-color), #f0f0f0);
         border-radius: 50% 50% 0 0;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -91,7 +91,7 @@
         transform: translateX(-50%);
         width: 16px;
         height: 12px;
-        background: var(--title-color-dark);
+        background: var(--secondary-color);
         border-radius: 50% 50% 0 0;
     }
 
@@ -134,7 +134,7 @@
         position: absolute;
         width: 6px;
         height: 10px;
-        background: var(--first-color-dark);
+        background: #FF4081;
         border-radius: 50%;
         opacity: 0;
     }
@@ -179,8 +179,8 @@
         bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         font-size: 14px;
         opacity: 0;
         animation: textAppearMobile 2s ease-in-out 1s forwards;
@@ -221,7 +221,7 @@
 
     /* Шапка */
     .header {
-        padding-top: 69px;
+        padding-top: 89px;
     }
 
     .container {
@@ -238,21 +238,12 @@
         align-items: center;
     }
 
-    .santa_christmas {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: -40px;
-        display: block;
-    }
-
     .logo {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 19px;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
@@ -272,8 +263,8 @@
         width: 44px;
         height: 44px;
     }
-    
-    /* Навигация */
+
+    /* Навигация - скрыта по умолчанию */
     .nav {
         display: none;
         position: fixed;
@@ -281,18 +272,19 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: var(--body-color-dark);
-        z-index: 1000;
+        background-color: var(--primary-color);
+        z-index: 999;
         padding: 100px 20px 20px;
     }
-    
+
+    /* Когда меню открыто */
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
     }
-    
+
     .nav__menu {
         display: flex;
         flex-direction: column;
@@ -303,46 +295,34 @@
         margin: 0;
         padding: 0;
     }
-    
+
     .nav__list {
         width: 100%;
         text-align: center;
     }
-    
+
     .nav__item {
         display: block;
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         text-decoration: none;
         padding: 15px 0;
         transition: var(--transition);
-        border-bottom: 1px solid var(--green-color);
+        border-bottom: 1px solid var(--primary-color-button);
         width: 100%;
+        text-align: center !important; /* Принудительно */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
-    
+
     .nav__item:hover {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
-    }
-
-    .girland_new_year {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 47px;
-        transform: translateY(-50%);
-        width: 150px;
-        height: auto;
-        z-index: 1001;
-        pointer-events: none;
-    }
-
-    /* Показываем гирлянду только когда меню активно */
-    .nav.active .girland_new_year {
-        display: block;
+        color: var(--primary-color-button);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     /* Главный экран */
@@ -356,11 +336,11 @@
         font-weight: 700;
         font-size: 25px;
         line-height: 40px;
-        color: var(--first-color);
-        text-shadow: 0 0 2px var(--first-color), 0 0 5px var(--first-color);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         margin-bottom: 27px;
         text-transform: uppercase;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
@@ -371,11 +351,10 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         margin-bottom: 27px;
         text-transform: uppercase;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
@@ -387,12 +366,11 @@
         font-weight: 700;
         font-size: 19px;
         line-height: 150%;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 6px rgba(255, 240, 128, 0.6);
+        color: var(--secondary-color);
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 27px;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
@@ -413,22 +391,22 @@
         width: 100%;
         max-width: 300px;
 
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
         border-radius: var(--border-radius);
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
     }
 
     .button:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border: 3px solid var(--primary-color-button);
+        background: transparent;
+        color: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     .btn {
@@ -440,46 +418,39 @@
 
         border-radius: var(--border-radius);
         background-color: transparent;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         font-weight: 700;
         font-family: var(--font-family);
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-transform: uppercase;
         transition: var(--transition);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
     .btn:hover {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+        background-color: var(--primary-color-button);
+        color: var(--secondary-color);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     .images {
         margin: 0 auto;
         position: relative;
-        width: 309px;
+        max-width: 329px;
         top: -120px;
         left: auto;
-        right: 0;
+        right: 15px;
         transform: none !important;
     }
 
-    .Icicle_banner {
-        position: absolute;
-        top: -118px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 150px;
-        height: auto;
-        z-index: 1;
+    .bg-effect {
+        display: none;
     }
 
     /* Для кого */
     .for-whom {
         padding-top: 91px;
-        background-color: var(--container-color-dark);
     }
 
     .for-whom__title {
@@ -487,12 +458,13 @@
         font-weight: 700;
         font-size: 23px;
         line-height: 1.3;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-bottom: 30px;
         width: 100%;
@@ -517,8 +489,9 @@
     }
 
     .for-whom__card {
-        background: var(--body-color-dark);
-        border: 3px solid var(--title-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.1);
+        border: 3px solid var(--primary-color);
         border-radius: var(--border-radius);
         display: flex;
         align-items: center;
@@ -531,15 +504,16 @@
     }
 
     .for-whom__card:hover {
-        border-color: var(--first-color);
-        box-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--first-color) 5%, transparent);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 64, 129, 0.2);
+        border-color: var(--primary-alternaite-color);  
     }
 
     .for-whom__images {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         position: absolute;
-        left: -30px;
+        left: -25px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -550,7 +524,7 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 1.4;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
         margin: 0;
         padding-left: 0;
@@ -558,8 +532,8 @@
     }
 
     .for-whom__span {
-        color: var(--first-color);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         font-weight: 700;
     }
 
@@ -580,7 +554,7 @@
         font-size: 15px;
         line-height: 1.4;
         text-align: center;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         width: 100%;
         max-width: 280px;
         text-transform: uppercase;
@@ -588,47 +562,36 @@
     }
 
     .button__for-whom {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         border-radius: var(--border-radius);
         padding: 20px 65px;
         font-family: var(--font-family);
         font-size: 16px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-align: center;
         text-decoration: none;
         width: auto;
     }
 
     .button__for-whom:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border-color: var(--primary-color-button);
+        background: transparent;
+        color: var(--valentine-dark-pink);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
-    .super_woman-winter--images {
+    .super__woman--images {
         display: block;
         width: 180px;
         height: 180px;
         margin: 20px auto 0;
         position: relative;
         top: 0;
-    }
-
-    .Icicle {
-        position: absolute;
-        top: -140px;
-        left: 80%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 120px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
     }
 
     /* Что будет на интенсиве? */
@@ -643,8 +606,7 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         width: 319px;
     }
 
@@ -660,11 +622,19 @@
         align-items: center;
         gap: 9px;
         min-width: 0;
-        padding: 25px 20px;
-        background: var(--container-color-dark);
-        border: 2px solid transparent;
-        border-radius: calc(var(--border-radius) - 10px);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+    }
+
+    .program__content--list:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--primary-color-button);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .program__images {
@@ -678,7 +648,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
     }
 
@@ -692,7 +662,7 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         width: 314px;
     }
@@ -734,8 +704,8 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .indicator_text {
@@ -744,7 +714,7 @@
         font-weight: 500;
         font-size: 13px;
         line-height: 130%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
     }
 
     .about__text--footer {
@@ -762,7 +732,6 @@
         top: -165px;
         margin-bottom: -30px;
         border-radius: var(--border-radius);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(219, 77, 89, 0.1);
     }
 
     /* Лист уроков интенсива */
@@ -779,12 +748,12 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .accordion-item1 {
-        border-bottom: 3px solid var(--first-color) !important;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .accordion {
@@ -793,7 +762,7 @@
     }
 
     .accordion-item {
-        border-bottom: 3px solid var(--first-color) !important;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .accordion-toggle {
@@ -813,13 +782,13 @@
     }
 
     .accordion-label:hover {
-        background-color: transparent !important;
+        background: linear-gradient(135deg, #FFF5F9, #FFE4EC);
     }
 
     .lesson-title {
         font-size: 18px;
         font-weight: 500;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         font-family: var(--font-family);
         text-transform: uppercase;
     }
@@ -835,7 +804,7 @@
     .icon::before, .icon::after {
         content: '';
         position: absolute;
-        background-color: var(--title-color-dark) !important;
+        background-color: var(--primary-color);
         transition: var(--transition);
     }
 
@@ -858,7 +827,7 @@
     }
 
     /* Анимация при открытии - превращаем плюс в минус */
-    .accordion-toggle:checked + .accordion-label .icon::after {
+        .accordion-toggle:checked + .accordion-label .icon::after {
         transform: translateX(-50%) rotate(90deg);
         opacity: 0;
     }
@@ -872,10 +841,10 @@
         overflow: hidden;
         padding: 0 25px;
         transition: max-height 0.4s ease, padding 0.4s ease;
-        background-color: transparent !important;
+        background-color: var(--background-color-card);
         font-size: 15px;
         line-height: 1.6;
-        color: var(--title-color-dark) !important;
+        color: var(--primary-color);
     }
 
     /* Когда аккордеон открыт */
@@ -903,14 +872,13 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         width: 350px;
     }
 
     .lesson--title--number {
         font-weight: 700;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
     }
 
     .list__lessons__content--items {
@@ -937,21 +905,9 @@
         padding-bottom: 0 !important;
     }
 
-    .Icicle_lessons {
-        position: absolute;
-        top: -160px;
-        left: 75%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 150px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
     /* Тарифы участия */
     .pricing {
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         padding-top: 91px;
         overflow-x: hidden;
     }
@@ -965,7 +921,7 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-top: 0;
     }
@@ -980,7 +936,7 @@
     }
 
     .pricing__content--card {
-        background-color: var(--container-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
         border-radius: var(--border-radius);
         width: 300px;
         padding: 57px 30px 0 36px;
@@ -990,9 +946,9 @@
     }
 
     .pricing__content--card:hover {
-        transform: translateY(-3px);
-        border-color: var(--first-color);
-        box-shadow: 0 15px 35px color-mix(in srgb, var(--first-color) 20%, transparent), 0 5px 15px color-mix(in srgb, var(--first-color-dark) 15%, transparent);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(255, 64, 129, 0.3);
+        border-color: var(--primary-color-button);
     }
 
     .pricing__content__card--title {
@@ -1028,7 +984,6 @@
         padding: 20px 75px;
         margin-left: -30px;
         margin-right: -26px;
-        width: calc(100% + 30px) !important;
     }
 
     .pricing__button-spacer {
@@ -1037,8 +992,8 @@
     }
 
     .pricing__content--images {
-        width: 95px;
-        height: 95px;
+        width: 105px;
+        height: 105px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -1056,7 +1011,6 @@
 
     .pricing__content__images--gift {
         transform: none !important;
-        filter: none !important;
     }
 
     .pricing__content__stories--text {
@@ -1084,38 +1038,25 @@
         justify-content: center;
         margin-top: 60px;
         font-size: 14px;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-decoration: none;
         text-transform: uppercase;
         transition: var(--transition);
     }
 
     .short__name:hover {
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
     }
 
     /* А такие вопросы могут быть у вас */
     .questions {
         padding-top: 95px;
-        background-color: var(--container-color-dark);
-    }
-
-    .Icicle_questions {
-        position: absolute;
-        top: -122px;
-        left: 30%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 150px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
     }
 
     .questions__title {
@@ -1126,8 +1067,8 @@
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .for-whom__content--items {
@@ -1148,25 +1089,13 @@
         max-width: 100% !important;
         width: 263px;
         margin-top: -22px;
-        color: var(--text-color-dark);
-    }
-
-    .Snowman--images {
-        display: block;
-        width: 260px;
-        height: 240px;
-        margin: 0 auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
     }
 
     /* Подвал */
     .footer {
         padding-top: 125px;
         padding-bottom: 280px;
-        background-color: var(--body-color-dark);
+        background-color: var(--background-color-footer);
         width: 100%;
         position: relative;
     }
@@ -1211,10 +1140,9 @@
     .form__container {
         width: 100%;
         padding: 20px;
-        background: var(--container-color-dark);
+        background: var(--background-color-card);
         border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        border: 2px solid var(--title-color-dark);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .form__tabs--recording {
@@ -1230,8 +1158,7 @@
         text-align: center;
         padding: 0 10px;
         font-weight: 700;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-color);
     }
 
     .form__container--group {
@@ -1253,15 +1180,15 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 14px;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
     }
 
     .form__field {
-        background-color: var(--body-color-dark);
+        background-color: var(--input-color);
         border-radius: var(--border-radius-btn-register-login);
-        padding: 12px 16px;
-        border: 2px solid var(--text-color-dark);
+        padding: 2px 0 8px 16px;
+        border: 2px solid transparent;
         transition: var(--transition);
     }
 
@@ -1272,12 +1199,10 @@
         outline: none;
         font-family: var(--font-family);
         font-size: 16px;
-        color: var(--title-color-dark);
     }
 
     .form__field:focus-within {
-        border-color: var(--first-color);
-        box-shadow: 0 0 10px color-mix(in srgb, var(--first-color) 30%, transparent);
+        border-color: var(--primary-color-button);
     }
 
     .remembers__me {
@@ -1287,7 +1212,7 @@
         cursor: pointer;
         font-family: var(--font-family);
         font-size: 12px;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         margin-top: 15px;
         line-height: 1.4;
         text-align: left;
@@ -1298,9 +1223,7 @@
         height: 16px;
         min-width: 16px;
         margin-top: 2px;
-        accent-color: var(--first-color);
-        box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-        text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+        accent-color: var(--primary-color-button);
     }
 
     .btn__pre--recording {
@@ -1308,23 +1231,21 @@
         padding: 18px 30px;
         font-size: 14px;
         margin-top: 25px;
-        background: linear-gradient(145deg, var(--first-color), var(--first-color-dark));
-        border: 3px solid var(--first-color-dark);
-        border-radius: var(--border-radius);
+        background-color: var(--primary-color-button);
+        border: 2px solid var(--primary-color-button);
+        border-radius: 25px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
     }
 
     .btn__pre--recording:hover {
-        background: transparent;
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        border: 3px solid var(--first-color);
-        box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-        text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     /* Файлы Cookie */
@@ -1335,11 +1256,11 @@
         transform: translateX(-50%);
         width: calc(100% - 40px);
         max-width: 310px;
-        background: var(--container-color-dark);
-        border: 2px solid var(--title-color-dark);
+        background: var(--primary-color);
+        border: 2px solid var(--secondary-color);
         border-radius: 20px;
         padding: 15px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
         z-index: 10000;
         opacity: 0;
         transform: translateX(-50%) translateY(100px);
@@ -1366,17 +1287,20 @@
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 14px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         line-height: 1.4;
         order: 2;
     }
 
-    .cookie_man {
-        width: 84px;
-        height: auto;
+    .bx.bxs-cookie {
+        font-size: 48px;
         cursor: pointer;
         transform: none !important;
+        order: 1;
+    }
+
+    .bx.bxs-cookie:hover {
+        transform: scale(1.1) rotate(10deg);
     }
 
     .cookie__container--label {
@@ -1394,35 +1318,27 @@
         max-width: 200px;
         padding: 12px 20px;
         font-size: 14px;
-        border: 2px solid var(--first-color-dark);
+        border: 2px solid var(--primary-color-button);
     }
 
     .cookie__accept {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border: 3px solid var(--first-color-dark);
+        background-color: var(--primary-color-button);
         order: 1;
     }
 
     .cookie__decline {
         background-color: transparent;
-        color: var(--title-color-dark);
         order: 2;
     }
 
     .cookie__accept:hover {
-        border: 2px solid var(--first-color);
+        border: 2px solid var(--primary-color-button);
         background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
     }
 
     .cookie__decline:hover {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+        background-color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
     }
 
     /* Контейнер внутри cookie */
@@ -1431,75 +1347,162 @@
         padding: 0;
     }
 
-    /* Кнопка переключения снега */
-    .snow-toggle-btn {
+    /* ДЕНЬ СВЯТОГО ВАЛЕНТИНА */
+    .valentine-toggle-btn {
+        top: 10px;
+        right: 40px;
         width: 45px;
         height: 45px;
-        top: 30px;
-        right: 10px;
+        background: rgba(255, 64, 129, 0.95);
+        border: 2px solid #FFD700;
+        box-shadow: 0 3px 10px rgba(255, 64, 129, 0.5);
     }
     
-    .snowflake-svg {
-        width: 30px;
-        height: 30px;
+    .valentine-svg {
+        width: 26px;
+        height: 26px;
     }
     
-    /* Уменьшаем количество снежинок для производительности */
-    .snow-container .snowflake:nth-child(n+31) {
-        display: none; /* Скрываем часть снежинок на мобильных */
+    /* Оставляем 20 сердечек (каждое второе) */
+    .heart.h2, .heart.h4, .heart.h6, .heart.h8, .heart.h10,
+    .heart.h12, .heart.h14, .heart.h16, .heart.h18, .heart.h20,
+    .heart.h22, .heart.h24, .heart.h26, .heart.h28, .heart.h30,
+    .heart.h32, .heart.h34, .heart.h36, .heart.h38, .heart.h40 {
+        display: none;
     }
     
-    /* Уменьшаем размеры снежинок */
-    .snowflake.small svg {
-        width: 8px;
-        height: 8px;
-    }
-    .snowflake.medium svg {
-        width: 12px;
-        height: 12px;
-    }
-    .snowflake.large svg {
-        width: 16px;
-        height: 16px;
-    }
-    .snowflake.xlarge svg {
-        width: 20px;
-        height: 20px;
+    /* Размер сердечек для мобильных */
+    .heart {
+        width: 10px !important;
+        height: 10px !important;
     }
     
-    /* Увеличиваем скорость анимаций */
-    .snowflake.s1 { animation-duration: 14s !important; }
-    .snowflake.s2 { animation-duration: 12s !important; }
-    .snowflake.s3 { animation-duration: 13s !important; }
-    .snowflake.s4 { animation-duration: 11s !important; }
-    .snowflake.s5 { animation-duration: 15s !important; }
-    .snowflake.s6 { animation-duration: 13s !important; }
-    .snowflake.s7 { animation-duration: 10s !important; }
-    .snowflake.s8 { animation-duration: 14s !important; }
-    .snowflake.s9 { animation-duration: 9s !important; }
-    .snowflake.s10 { animation-duration: 15s !important; }
+    .heart::before,
+    .heart::after {
+        width: 10px !important;
+        height: 10px !important;
+    }
     
-    .snowflake.s11 { animation-duration: 10s !important; }
-    .snowflake.s12 { animation-duration: 9s !important; }
-    .snowflake.s13 { animation-duration: 8s !important; }
-    .snowflake.s14 { animation-duration: 7s !important; }
-    .snowflake.s15 { animation-duration: 11s !important; }
-    .snowflake.s16 { animation-duration: 6s !important; }
-    .snowflake.s17 { animation-duration: 10s !important; }
-    .snowflake.s18 { animation-duration: 5s !important; }
-    .snowflake.s19 { animation-duration: 8s !important; }
-    .snowflake.s20 { animation-duration: 9s !important; }
+    .heart::before {
+        top: -5px !important;
+    }
     
-    .snowflake.s21 { animation-duration: 8s !important; }
-    .snowflake.s22 { animation-duration: 5s !important; }
-    .snowflake.s23 { animation-duration: 6s !important; }
-    .snowflake.s24 { animation-duration: 5s !important; }
-    .snowflake.s25 { animation-duration: 7s !important; }
-    .snowflake.s26 { animation-duration: 6s !important; }
-    .snowflake.s27 { animation-duration: 4s !important; }
-    .snowflake.s28 { animation-duration: 8s !important; }
-    .snowflake.s29 { animation-duration: 5s !important; }
-    .snowflake.s30 { animation-duration: 7s !important; }
+    .heart::after {
+        left: -5px !important;
+    }
+    
+    /* ⚡ СКОРОСТЬ ПАДЕНИЯ - ЧУТЬ МЕДЛЕННЕЕ ⚡ */
+    /* От 7 до 10 секунд (вместо 4-7) - оптимальная скорость */
+    .heart.h1 { animation: heartFall 8s linear infinite 0s; }
+    .heart.h3 { animation: heartFall1 7s linear infinite 1s; }
+    .heart.h5 { animation: heartFall2 9s linear infinite 0.5s; }
+    .heart.h7 { animation: heartFall3 8s linear infinite 1.5s; }
+    .heart.h9 { animation: heartFall4 6.5s linear infinite 0.8s; }
+    .heart.h11 { animation: heartFall 8.2s linear infinite 1.8s; }
+    .heart.h13 { animation: heartFall1 9.5s linear infinite 0.3s; }
+    .heart.h15 { animation: heartFall2 7.8s linear infinite 2s; }
+    .heart.h17 { animation: heartFall3 8.8s linear infinite 1.2s; }
+    .heart.h19 { animation: heartFall4 9.2s linear infinite 0.7s; }
+    .heart.h21 { animation: heartFall 6.3s linear infinite 1.4s; }
+    .heart.h23 { animation: heartFall1 8.7s linear infinite 2.1s; }
+    .heart.h25 { animation: heartFall2 9.8s linear infinite 0.9s; }
+    .heart.h27 { animation: heartFall3 7.7s linear infinite 1.7s; }
+    .heart.h29 { animation: heartFall4 8.3s linear infinite 0.4s; }
+    .heart.h31 { animation: heartFall 9.3s linear infinite 2.3s; }
+    .heart.h33 { animation: heartFall1 7.9s linear infinite 1.1s; }
+    .heart.h35 { animation: heartFall2 8.9s linear infinite 0.6s; }
+    .heart.h37 { animation: heartFall3 9.4s linear infinite 1.9s; }
+    .heart.h39 { animation: heartFall4 8.1s linear infinite 0.2s; }
+    
+    /* УМЕНЬШАЕМ амплитуду бокового смещения для более плавного падения */
+    @keyframes heartFall {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(20px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall1 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(15px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall2 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(-10px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall3 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(25px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall4 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(-15px) rotate(45deg); opacity: 0; }
+    }
+    
+    /* Более яркие цвета для мобильных */
+    .heart.h1, .heart.h11, .heart.h21, .heart.h31 { background: #FF4081; }
+    .heart.h3, .heart.h13, .heart.h23, .heart.h33 { background: #E91E63; }
+    .heart.h5, .heart.h15, .heart.h25, .heart.h35 { background: #FF1744; }
+    .heart.h7, .heart.h17, .heart.h27, .heart.h37 { background: #FF4081; }
+    .heart.h9, .heart.h19, .heart.h29, .heart.h39 { background: #EC407A; }
+    
+    /* Усиливаем тень */
+    .heart {
+        filter: drop-shadow(0 2px 3px rgba(255, 64, 129, 0.6));
+    }
+    
+    /* Увеличиваем звездочки */
+    .sparkle {
+        width: 5px !important;
+        height: 5px !important;
+        box-shadow: 0 0 10px #FFF, 0 0 15px #FF4081;
+    }
+    
+    .sparkle.s1 { top: 15%; left: 10%; animation: sparkle 1.5s infinite 0s; }
+    .sparkle.s2 { top: 30%; left: 25%; animation: sparkle 1.8s infinite 0.5s; }
+    .sparkle.s3 { top: 45%; left: 60%; animation: sparkle 1.3s infinite 1s; }
+    .sparkle.s4 { top: 70%; left: 40%; animation: sparkle 1.7s infinite 0.3s; }
+    .sparkle.s5 { top: 85%; left: 80%; animation: sparkle 1.6s infinite 0.8s; }
+    .sparkle.s6 { top: 25%; left: 85%; animation: sparkle 1.4s infinite 1.5s; }
+    .sparkle.s7 { top: 65%; left: 15%; animation: sparkle 1.9s infinite 0.2s; }
+    .sparkle.s8 { top: 50%; left: 90%; animation: sparkle 1.2s infinite 1.2s; }
+    
+    /* Делаем мерцание звездочек НЕМНОГО МЕДЛЕННЕЕ */
+    @keyframes sparkle {
+        0%, 100% { 
+            opacity: 0.3; 
+            transform: scale(0.8); 
+        }
+        50% { 
+            opacity: 0.9; /* Чуть прозрачнее */
+            transform: scale(1.2); /* Меньше увеличение */
+        }
+    }
+    
+    /* Усиливаем градиентный фон */
+    .valentine-container::before {
+        background: linear-gradient(135deg, 
+            rgba(255, 182, 193, 0.08) 0%, 
+            rgba(255, 105, 180, 0.12) 50%,
+            rgba(255, 64, 129, 0.06) 100%);
+    }
+    
+    /* Делаем кнопку более заметной */
+    .valentine-toggle-btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0 5px 15px rgba(255, 64, 129, 0.7);
+    }
 }
 
 /* Медиазапрос для мобильных (от 481px до 768px) */
@@ -1512,7 +1515,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1535,9 +1538,9 @@
         transform: translateX(-50%);
         width: 50px;
         height: 80px;
-        background: linear-gradient(45deg, var(--container-color-dark), var(--body-color-dark));
+        background: linear-gradient(45deg, #2A1F40, #1A132D);
         border-radius: 6px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3), inset 0 -6px 12px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),inset 0 -10px 20px rgba(255, 255, 255, 0.1);
     }
 
     /* Крышка туши */
@@ -1548,9 +1551,9 @@
         transform: translateX(-50%);
         width: 40px;
         height: 16px;
-        background: linear-gradient(45deg, var(--first-color), var(--first-color-dark));
+        background: linear-gradient(45deg, #FF4081, #E91E63);
         border-radius: 3px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
 
     /* Щёточка */
@@ -1567,7 +1570,7 @@
     .brush-handle {
         width: 5px;
         height: 50px;
-        background: #000000;
+        background: var(--primary-alternaite-color);
         border-radius: 2px;
         position: relative;
     }
@@ -1580,10 +1583,10 @@
         transform: translateX(-50%);
         width: 16px;
         height: 20px;
-        background: linear-gradient(to bottom, var(--title-color-dark), var(--text-color-dark));
+        background: linear-gradient(to bottom, var(--secondary-color), #f0f0f0);
         border-radius: 50% 50% 0 0;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
 
     /* Ворсинки щёточки */
@@ -1594,7 +1597,7 @@
         transform: translateX(-50%);
         width: 14px;
         height: 10px;
-        background: var(--title-color-dark);
+        background: var(--secondary-color);
         border-radius: 50% 50% 0 0;
     }
 
@@ -1637,7 +1640,7 @@
         position: absolute;
         width: 5px;
         height: 8px;
-        background: var(--first-color-dark);
+        background: #FF4081;
         border-radius: 50%;
         opacity: 0;
     }
@@ -1682,15 +1685,15 @@
         bottom: -35px;
         left: 50%;
         transform: translateX(-50%);
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         font-size: 12px;
         opacity: 0;
         animation: textAppearTablet 2s ease-in-out 1s forwards;
         font-family: var(--font-family);
         text-align: center;
-        white-space: nowrap;
-        width: auto;
+        white-space: nowrap; /* Запрет переноса на новую строку */
+        width: auto; /* Автоматическая ширина */
     }
 
     @keyframes textAppearTablet {
@@ -1714,16 +1717,7 @@
 
     .header {
         display: block !important;
-        padding-top: 45px;
-    }
-
-    .santa_christmas {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: -30px;
-        display: block;
+        padding-top: 85px;
     }
 
     body {
@@ -1759,7 +1753,7 @@
         line-height: 22px;
     }
 
-    /* Бургер меню */
+    /* Бургер-меню */
     .burger-menu {
         display: flex;
         align-items: center;
@@ -1767,13 +1761,13 @@
         width: 44px;
         height: 44px;
     }
-    
+
     .burger-icon {
         width: 35px;
         height: 35px;
     }
-    
-    /* Навигация */
+
+    /* Навигация - поверх всего */
     .nav {
         display: none;
         position: fixed;
@@ -1781,19 +1775,19 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         z-index: 1000;
         padding: 80px 25px 25px;
         overflow-y: auto;
     }
-    
+
     .nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
+
     .nav__menu {
         display: flex;
         flex-direction: column;
@@ -1804,47 +1798,30 @@
         margin: 0;
         padding: 0;
     }
-    
+
     .nav__list {
         width: 100%;
         text-align: center;
     }
-    
+
     .nav__item {
         font-size: 17px;
         padding: 12px 0;
         text-align: center;
         display: block;
         width: 100%;
+        border-bottom: 1px solid var(--primary-color-button);
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
-        border-bottom: 1px solid var(--green-color);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
         text-decoration: none;
     }
-    
+
     .nav__item:hover {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
-    }
-
-    .girland_new_year {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 49px;
-        transform: translateY(-50%);
-        width: 160px;
-        height: auto;
-        z-index: 1001;
-        pointer-events: none;
-    }
-
-    /* Показываем гирлянду только когда меню активно */
-    .nav.active .girland_new_year {
-        display: block;
+        color: var(--primary-color-button);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     /* Главный экран */
@@ -1858,8 +1835,8 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 48px;
-        color: var(--first-color);
-        text-shadow: 0 0 2px var(--first-color), 0 0 5px var(--first-color);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         margin-bottom: 30px;
         text-transform: uppercase;
         text-align: center;
@@ -1870,11 +1847,10 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 20px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         margin-bottom: 30px;
         text-transform: uppercase;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         width: 100% !important;
     }
 
@@ -1883,12 +1859,11 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 150%;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 6px rgba(255, 240, 128, 0.6);
+        color: var(--secondary-color);
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 30px;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: auto;
         margin-right: auto;
         width: 100% !important;
@@ -1909,23 +1884,24 @@
         font-size: 18px;
         width: 100%;
         max-width: 350px;
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
         border-radius: var(--border-radius);
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         cursor: pointer;
     }
 
     .button:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border: 3px solid var(--primary-color-button);
+        background: transparent;
+        color: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     .btn {
@@ -1936,20 +1912,21 @@
         max-width: 350px;
         border-radius: var(--border-radius);
         background-color: transparent;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         font-weight: 700;
         font-family: var(--font-family);
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-transform: uppercase;
         transition: var(--transition);
         cursor: pointer;
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
     .btn:hover {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+        background-color: var(--primary-color-button);
+        color: var(--secondary-color);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     .images {
@@ -1962,57 +1939,13 @@
         transform: none !important;
     }
 
-    .Icicle_banner {
-        position: absolute;
-        top: -124px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 180px;
-        height: auto;
-        z-index: 1;
-    }
-
-    .Icicle {
-        position: absolute;
-        top: -115px;
-        left: 80%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 140px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .Icicle_lessons {
-        position: absolute;
-        top: -120px;
-        left: 75%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 150px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .Icicle_questions {
-        position: absolute;
-        top: -120px;
-        left: 30%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 150px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
+    .bg-effect {
+        display: none !important;
     }
 
     /* Для кого */
     .for-whom {
         padding-top: 91px;
-        background-color: var(--container-color-dark);
     }
 
     .for-whom__title {
@@ -2020,9 +1953,10 @@
         font-weight: 700;
         font-size: 35px;
         line-height: 1.3;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-bottom: 40px;
     }
@@ -2045,8 +1979,9 @@
     }
 
     .for-whom__card {
-        background: var(--body-color-dark);
-        border: 3px solid var(--title-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.1);
+        border: 3px solid var(--primary-color);
         border-radius: var(--border-radius);
         display: flex;
         align-items: center;
@@ -2059,8 +1994,9 @@
     }
 
     .for-whom__card:hover {
-        border-color: var(--first-color);
-        box-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--first-color) 5%, transparent);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 64, 129, 0.2);
+        border-color: var(--primary-alternaite-color);
     }
 
     .for-whom__images {
@@ -2078,7 +2014,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1.4;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
         margin: 0;
         padding-left: 0;
@@ -2086,9 +2022,9 @@
     }
 
     .for-whom__span {
-        color: var(--first-color);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
         font-weight: 700;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .for-whom__content--items {
@@ -2108,7 +2044,7 @@
         font-size: 19px;
         line-height: 1.4;
         text-align: center;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         width: 100%;
         max-width: 400px;
         text-transform: uppercase;
@@ -2116,29 +2052,30 @@
     }
 
     .button__for-whom {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         border-radius: var(--border-radius);
         padding: 20px 70px;
         font-family: var(--font-family);
         font-size: 18px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-align: center;
         text-decoration: none;
         width: auto;
     }
 
     .button__for-whom:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border-color: var(--primary-color-button);
+        background: transparent;
+        color: var(--valentine-dark-pink);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
-    .super_woman-winter--images {
+    .super__woman--images {
         display: block;
         width: 220px;
         height: 220px;
@@ -2158,10 +2095,9 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 36px;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         width: 100% !important;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         text-transform: uppercase;
     }
 
@@ -2177,6 +2113,18 @@
         align-items: center;
         gap: 9px;
         min-width: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--border-radius);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+    }
+
+    .program__content--list:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--primary-color-button);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .program__images {
@@ -2184,6 +2132,7 @@
         height: 60px;
         transform: none !important;
         flex-shrink: 0;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     }
 
     .program__desc {
@@ -2191,7 +2140,7 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin: 0;
     }
@@ -2212,7 +2161,7 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-bottom: 40px;
     }
@@ -2224,7 +2173,7 @@
         font-family: var(--font-family);
         font-size: 18px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -2266,8 +2215,8 @@
         font-weight: 700;
         font-size: 37px;
         line-height: 36px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-align: center;
     }
 
@@ -2277,7 +2226,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 130%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -2288,7 +2237,7 @@
         font-family: var(--font-family);
         font-size: 18px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -2308,7 +2257,6 @@
     /* Лист уроков интенсива */
     .list__lessons {
         display: block !important;
-        background-color: var(--container-color-dark);
         padding-top: 91px;
     }
 
@@ -2320,13 +2268,13 @@
         line-height: 150%;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         margin-bottom: 40px;
     }
 
     .accordion-item1 {
-        border-bottom: 3px solid var(--first-color) !important;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .accordion {
@@ -2337,7 +2285,7 @@
     }
 
     .accordion-item {
-        border-bottom: 3px solid var(--first-color) !important;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .accordion-toggle {
@@ -2350,17 +2298,17 @@
         align-items: center;
         padding: 25px 0;
         cursor: pointer;
-        transition: background-color var(--transition);
+        transition: background-color 0.3s;
     }
 
     .accordion-label:hover {
-        background-color: transparent !important;
+        background-color: var(--secondary-color);
     }
 
     .lesson-title {
         font-size: 20px;
         font-weight: 500;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         font-family: var(--font-family);
         text-transform: uppercase;
         flex: 1;
@@ -2378,7 +2326,7 @@
     .icon::before, .icon::after {
         content: '';
         position: absolute;
-        background-color: var(--title-color-dark) !important;
+        background-color: var(--primary-color);
         transition: var(--transition);
     }
 
@@ -2415,10 +2363,10 @@
         overflow: hidden;
         padding: 0 30px;
         transition: max-height 0.4s ease, padding 0.4s ease;
-        background-color: transparent !important;
+        background-color: var(--background-color-card);
         font-size: 16px;
         line-height: 1.6;
-        color: var(--title-color-dark) !important;
+        color: var(--primary-color);
     }
 
     /* Когда аккордеон открыт */
@@ -2448,7 +2396,7 @@
         font-weight: 700;
         font-size: 22px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-align: center;
         width: 100%;
         max-width: 500px;
@@ -2457,8 +2405,7 @@
 
     .lesson--title--number {
         font-weight: 700;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
     }
 
     .list__lessons__content--items img {
@@ -2470,7 +2417,7 @@
 
     /* Тарифы участия */
     .pricing {
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         padding-top: 91px;
         overflow-x: hidden;
     }
@@ -2479,12 +2426,12 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 35px;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-top: 0;
     }
@@ -2499,13 +2446,19 @@
     }
 
     .pricing__content--card {
-        background-color: var(--container-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
         border-radius: var(--border-radius);
         width: 300px;
         padding: 57px 30px 0 36px;
         position: relative;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+
+    .pricing__content--card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(255, 64, 129, 0.3);
+        border-color: var(--primary-color-button);
     }
 
     .pricing__content__card--title {
@@ -2549,8 +2502,8 @@
     }
 
     .pricing__content--images {
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -2568,13 +2521,12 @@
 
     .pricing__content__images--gift {
         transform: none !important;
-        filter: none !important;
     }
 
     .pricing__content__stories--text {
         text-align: center;
         font-size: 18px;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         line-height: 1.6;
         width: 100%;
         max-width: 450px;
@@ -2602,21 +2554,20 @@
         text-align: center;
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-decoration: none;
         text-transform: uppercase;
         transition: var(--transition);
     }
 
     .short__name:hover {
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
     }
 
     /* А такие вопросы могут быть у вас */
     .questions {
         display: block !important;
-        background-color: var(--container-color-dark);
         padding-top: 91px;
     }
 
@@ -2626,8 +2577,8 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-bottom: 50px;
     }
@@ -2654,19 +2605,8 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 1.5;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
-    }
-
-    .Snowman--images {
-        display: block;
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
     }
 
     /* Подвал */
@@ -2674,7 +2614,7 @@
         display: block !important;
         padding-top: 150px;
         padding-bottom: 320px;
-        background-color: var(--body-color-dark);
+        background-color: var(--background-color-footer);
         width: 100%;
         position: relative;
     }
@@ -2722,10 +2662,9 @@
     .form__container {
         width: 100%;
         padding: 30px;
-        background: var(--container-color-dark);
+        background: var(--background-color-card);
         border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        border: 2px solid var(--title-color-dark);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
 
     .form__tabs--recording {
@@ -2741,8 +2680,7 @@
         text-align: center;
         padding: 0 20px;
         font-weight: 700;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-color);
     }
 
     .form__container--group {
@@ -2764,15 +2702,15 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
     }
 
     .form__field {
-        background-color: var(--body-color-dark);
+        background-color: var(--input-color);
         border-radius: var(--border-radius-btn-register-login);
         padding: 5px 0 12px 20px;
-        border: 2px solid var(--text-color-dark);
+        border: 2px solid transparent;
         transition: var(--transition);
     }
 
@@ -2783,12 +2721,10 @@
         outline: none;
         font-family: var(--font-family);
         font-size: 18px;
-        color: var(--title-color-dark);
     }
 
     .form__field:focus-within {
-        border-color: var(--first-color);
-        box-shadow: 0 0 10px color-mix(in srgb, var(--first-color) 30%, transparent);
+        border-color: var(--primary-color-button);
     }
 
     .remembers__me {
@@ -2798,7 +2734,7 @@
         cursor: pointer;
         font-family: var(--font-family);
         font-size: 14px;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         margin-top: 20px;
         line-height: 1.5;
         text-align: left;
@@ -2809,9 +2745,7 @@
         height: 18px;
         min-width: 18px;
         margin-top: 2px;
-        accent-color: var(--first-color);
-        box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-        text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+        accent-color: var(--primary-color-button);
     }
 
     .btn__pre--recording {
@@ -2819,64 +2753,55 @@
         padding: 22px 40px;
         font-size: 16px;
         margin-top: 30px;
-        background: linear-gradient(145deg, var(--first-color), var(--first-color-dark));
-        border: 2px solid var(--first-color-dark);
+        background-color: var(--primary-color-button);
+        border: 2px solid var(--primary-color-button);
         border-radius: 25px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
     }
 
     .btn__pre--recording:hover {
-        background: transparent;
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        border: 3px solid var(--first-color);
-        box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-        text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     /* Файлы Cookie */
     .cookie__notifications {
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 60px);
-        max-width: 600px;
-        padding: 20px;
-        border-radius: 24px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-        background: var(--container-color-dark);
-        border: 2px solid var(--title-color-dark);
+        width: calc(100% - 60px); /* Больше отступы от краёв */
+        max-width: 600px; /* Максимальная ширина */
+        padding: 20px; /* Больше внутреннего пространства */
+        border-radius: 24px; /* Слегка округляем углы */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
 
     .cookie__text {
-        font-size: 12px;
+        font-size: 12px; /* Чуть крупнее текст */
         line-height: 1.5;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c;
     }
 
-    .cookie_man {
-        width: 64px;
-        height: auto;
-        cursor: pointer;
+    .bx.bxs-cookie {
+        font-size: 50px; /* Иконка побольше */
         transform: none !important;
     }
 
     .cookie__container--label {
-        gap: 16px;
+        gap: 16px; /* Больше пространства между кнопками */
         margin-top: 20px;
     }
 
     .cookie__accept,
     .cookie__decline {
-        max-width: 240px;
-        padding: 14px 24px;
-        font-size: 15px;
-        border-radius: var(--border-radius);
-        border: 2px solid var(--first-color-dark);
+        max-width: 240px; /* Кнопки шире, но не на всю ширину */
+        padding: 14px 24px; /* Больше таргет‑зона */
+        font-size: 15px; /* Шрифт кнопки */
+        border-radius: var(--border-radius); /* Слегка округляем кнопки */
     }
 
     /* Принудительный порядок элементов (на случай глюков flex) */
@@ -2887,90 +2812,178 @@
         order: 2;
     }
 
-    /* Кнопка переключения снега */
-    .snow-toggle-btn {
+    /* ДЕНЬ СВЯТОГО ВАЛЕНТИНА */
+    .valentine-toggle-btn {
+        top: 12px;
+        right: 45px;
         width: 50px;
         height: 50px;
-        top: 25px;
-        right: 15px;
+        background: rgba(255, 64, 129, 0.95);
+        border: 2px solid #FFD700;
+        box-shadow: 0 3px 12px rgba(255, 64, 129, 0.6);
     }
     
-    .snowflake-svg {
-        width: 32px;
-        height: 32px;
-        color: var(--text-color-dark); /* Добавляем цвет */
+    .valentine-svg {
+        width: 28px;
+        height: 28px;
     }
     
-    .snow-checkbox:checked ~ .snow-toggle-btn .snowflake-svg {
-        color: var(--snowflake-color); /* Цвет при активации */
+    /* Оставляем 25 сердечек (оптимальное количество для планшетов) */
+    .heart.h6, .heart.h7, .heart.h8, .heart.h9, .heart.h10,
+    .heart.h16, .heart.h17, .heart.h18, .heart.h19, .heart.h20,
+    .heart.h26, .heart.h27, .heart.h28, .heart.h29, .heart.h30 {
+        display: none;
     }
     
-    /* Немного уменьшаем количество снежинок */
-    .snow-container .snowflake:nth-child(n+36) {
-        display: none; /* Показываем 35 снежинок */
+    /* Размер сердечек для планшетов */
+    .heart {
+        width: 11px !important;
+        height: 11px !important;
     }
     
-    /* Оптимальные размеры снежинок для планшетов */
-    .snowflake.small svg {
-        width: 10px;
-        height: 10px;
-        opacity: 0.7;
-    }
-    .snowflake.medium svg {
-        width: 14px;
-        height: 14px;
-        opacity: 0.8;
-    }
-    .snowflake.large svg {
-        width: 18px;
-        height: 18px;
-        opacity: 0.9;
-    }
-    .snowflake.xlarge svg {
-        width: 22px;
-        height: 22px;
-        opacity: 1;
+    .heart::before,
+    .heart::after {
+        width: 11px !important;
+        height: 11px !important;
     }
     
-    /* Оптимизированная скорость анимаций для планшетов */
-    .snowflake.s1 { animation-duration: 16s !important; }
-    .snowflake.s2 { animation-duration: 14s !important; }
-    .snowflake.s3 { animation-duration: 15s !important; }
-    .snowflake.s4 { animation-duration: 13s !important; }
-    .snowflake.s5 { animation-duration: 17s !important; }
-    .snowflake.s6 { animation-duration: 15s !important; }
-    .snowflake.s7 { animation-duration: 12s !important; }
-    .snowflake.s8 { animation-duration: 16s !important; }
-    .snowflake.s9 { animation-duration: 11s !important; }
-    .snowflake.s10 { animation-duration: 17s !important; }
+    .heart::before {
+        top: -5.5px !important;
+    }
     
-    .snowflake.s11 { animation-duration: 12s !important; }
-    .snowflake.s12 { animation-duration: 11s !important; }
-    .snowflake.s13 { animation-duration: 10s !important; }
-    .snowflake.s14 { animation-duration: 9s !important; }
-    .snowflake.s15 { animation-duration: 13s !important; }
-    .snowflake.s16 { animation-duration: 8s !important; }
-    .snowflake.s17 { animation-duration: 12s !important; }
-    .snowflake.s18 { animation-duration: 7s !important; }
-    .snowflake.s19 { animation-duration: 10s !important; }
-    .snowflake.s20 { animation-duration: 11s !important; }
+    .heart::after {
+        left: -5.5px !important;
+    }
     
-    .snowflake.s21 { animation-duration: 10s !important; }
-    .snowflake.s22 { animation-duration: 7s !important; }
-    .snowflake.s23 { animation-duration: 8s !important; }
-    .snowflake.s24 { animation-duration: 7s !important; }
-    .snowflake.s25 { animation-duration: 9s !important; }
-    .snowflake.s26 { animation-duration: 8s !important; }
-    .snowflake.s27 { animation-duration: 6s !important; }
-    .snowflake.s28 { animation-duration: 10s !important; }
-    .snowflake.s29 { animation-duration: 7s !important; }
-    .snowflake.s30 { animation-duration: 9s !important; }
+    /* ⚡ СКОРОСТЬ ПАДЕНИЯ - ОПТИМАЛЬНАЯ ДЛЯ ПЛАНШЕТОВ ⚡ */
+    /* От 7.5 до 10.5 секунд - плавное, но не слишком медленное */
+    .heart.h1 { animation: heartFall 8.5s linear infinite 0s; }
+    .heart.h2 { animation: heartFall1 9s linear infinite 1s; }
+    .heart.h3 { animation: heartFall2 7.5s linear infinite 0.5s; }
+    .heart.h4 { animation: heartFall3 10s linear infinite 1.5s; }
+    .heart.h5 { animation: heartFall4 8s linear infinite 0.8s; }
     
-    .snowflake.s31 { animation-duration: 18s !important; }
-    .snowflake.s32 { animation-duration: 16s !important; }
-    .snowflake.s33 { animation-duration: 15s !important; }
-    .snowflake.s34 { animation-duration: 14s !important; }
-    .snowflake.s35 { animation-duration: 17s !important; }
+    .heart.h11 { animation: heartFall 9.5s linear infinite 1.8s; }
+    .heart.h12 { animation: heartFall1 7.8s linear infinite 0.3s; }
+    .heart.h13 { animation: heartFall2 10.2s linear infinite 2s; }
+    .heart.h14 { animation: heartFall3 8.2s linear infinite 1.2s; }
+    .heart.h15 { animation: heartFall4 9.2s linear infinite 0.7s; }
+    
+    .heart.h21 { animation: heartFall 7.7s linear infinite 1.4s; }
+    .heart.h22 { animation: heartFall1 10.5s linear infinite 0.2s; }
+    .heart.h23 { animation: heartFall2 8.7s linear infinite 2.1s; }
+    .heart.h24 { animation: heartFall3 9.7s linear infinite 1.1s; }
+    .heart.h25 { animation: heartFall4 7.9s linear infinite 0.6s; }
+    
+    .heart.h31 { animation: heartFall 10.3s linear infinite 1.9s; }
+    .heart.h32 { animation: heartFall1 8.3s linear infinite 0.4s; }
+    .heart.h33 { animation: heartFall2 9.3s linear infinite 2.2s; }
+    .heart.h34 { animation: heartFall3 7.6s linear infinite 1.3s; }
+    .heart.h35 { animation: heartFall4 10.1s linear infinite 0.9s; }
+    
+    .heart.h36 { animation: heartFall 8.8s linear infinite 2.3s; }
+    .heart.h37 { animation: heartFall1 9.8s linear infinite 1.6s; }
+    .heart.h38 { animation: heartFall2 7.4s linear infinite 0.1s; }
+    .heart.h39 { animation: heartFall3 10.4s linear infinite 2.4s; }
+    .heart.h40 { animation: heartFall4 8.4s linear infinite 1.7s; }
+    
+    /* ОПТИМИЗИРОВАННЫЕ АНИМАЦИИ ДЛЯ ПЛАНШЕТОВ */
+    @keyframes heartFall {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        15% { opacity: 0.9; }
+        85% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(25px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall1 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        15% { opacity: 0.9; }
+        85% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(-20px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall2 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        15% { opacity: 0.9; }
+        85% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(35px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall3 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        15% { opacity: 0.9; }
+        85% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(-25px) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes heartFall4 {
+        0% { transform: translateY(0) translateX(0) rotate(45deg); opacity: 0; }
+        15% { opacity: 0.9; }
+        85% { opacity: 0.9; }
+        100% { transform: translateY(100vh) translateX(30px) rotate(45deg); opacity: 0; }
+    }
+    
+    /* Более разнообразные цвета для планшетов */
+    .heart.h1, .heart.h11, .heart.h21, .heart.h31, .heart.h36 { background: #FF4081; }
+    .heart.h2, .heart.h12, .heart.h22, .heart.h32, .heart.h37 { background: #E91E63; }
+    .heart.h3, .heart.h13, .heart.h23, .heart.h33, .heart.h38 { background: #FF1744; }
+    .heart.h4, .heart.h14, .heart.h24, .heart.h34, .heart.h39 { background: #F48FB1; }
+    .heart.h5, .heart.h15, .heart.h25, .heart.h35, .heart.h40 { background: #EC407A; }
+    
+    /* Улучшенные тени для планшетов */
+    .heart {
+        filter: drop-shadow(0 2px 4px rgba(255, 64, 129, 0.7));
+    }
+    
+    /* Оптимизированные звездочки для планшетов */
+    .sparkle {
+        width: 6px !important;
+        height: 6px !important;
+        box-shadow: 0 0 12px #FFF, 0 0 18px #FF4081;
+    }
+    
+    .sparkle.s1 { top: 12%; left: 8%; animation: sparkle 1.8s infinite 0s; }
+    .sparkle.s2 { top: 28%; left: 22%; animation: sparkle 2.1s infinite 0.6s; }
+    .sparkle.s3 { top: 42%; left: 55%; animation: sparkle 1.5s infinite 1.2s; }
+    .sparkle.s4 { top: 65%; left: 35%; animation: sparkle 2s infinite 0.4s; }
+    .sparkle.s5 { top: 80%; left: 75%; animation: sparkle 1.9s infinite 0.9s; }
+    .sparkle.s6 { top: 22%; left: 82%; animation: sparkle 1.7s infinite 1.6s; }
+    .sparkle.s7 { top: 60%; left: 12%; animation: sparkle 2.2s infinite 0.3s; }
+    .sparkle.s8 { top: 45%; left: 88%; animation: sparkle 1.4s infinite 1.3s; }
+    
+    /* Плавное мерцание звездочек */
+    @keyframes sparkle {
+        0%, 100% { 
+            opacity: 0.4; 
+            transform: scale(0.85); 
+        }
+        50% { 
+            opacity: 0.95; 
+            transform: scale(1.25); 
+        }
+    }
+    
+    /* Улучшенный градиентный фон для планшетов */
+    .valentine-container::before {
+        background: linear-gradient(135deg, 
+            rgba(255, 182, 193, 0.1) 0%, 
+            rgba(255, 105, 180, 0.15) 40%,
+            rgba(255, 64, 129, 0.08) 80%,
+            rgba(233, 30, 99, 0.05) 100%);
+    }
+    
+    /* Улучшенные эффекты при наведении */
+    .valentine-toggle-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 18px rgba(255, 64, 129, 0.8);
+        transition: all 0.3s ease;
+    }
+    
+    /* Плавное появление сердечек на планшетах */
+    .valentine-checkbox:checked ~ .valentine-container .heart {
+        opacity: 0.85;
+        transition: opacity 0.5s ease;
+    }
 }
 
 /* Планшеты горизонтальные/ноутбуки 769px-968px */
@@ -3015,17 +3028,8 @@
 
     /* Шапка */
     .header {
-        padding-top: 40px;
-        background-color: var(--body-color-dark);
-    }
-
-    .santa_christmas {
-        width: 100%;
-        max-width: 550px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: -20px;
-        display: block;
+        padding-top: 80px;
+        background-color: var(--primary-color);
     }
 
     .header__wrapper {
@@ -3039,17 +3043,18 @@
         font-weight: 700;
         font-size: 14px;
         line-height: 19px;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
     }
 
     .logo:hover {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+        color: var(--primary-color-button);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
+    /* Бургер-меню */
     .burger-menu {
         display: flex !important;
         align-items: center;
@@ -3071,7 +3076,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         z-index: 1000;
         padding: 80px 25px 25px;
         overflow-y: auto;
@@ -3099,56 +3104,38 @@
         width: 100%;
         text-align: center;
     }
-    
+
     .nav__item {
         font-size: 17px;
         padding: 12px 0;
         text-align: center;
         display: block;
         width: 100%;
-        border-bottom: 1px solid var(--green-color);
+        border-bottom: 1px solid var(--primary-color-button);
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
         text-decoration: none;
     }
-    
+
     .nav__item:hover {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
-    }
-
-    .girland_new_year {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 49px;
-        transform: translateY(-50%);
-        width: 160px;
-        height: auto;
-        z-index: 1001;
-        pointer-events: none;
-    }
-
-    /* Показываем гирлянду только когда меню активно */
-    .nav.active .girland_new_year {
-        display: block;
+        color: var(--primary-color-button);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     /* Главный экран */
     .banner {
         padding-top: 100px;
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
     }
 
     .banner__mini--title {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 20px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         text-transform: uppercase;
     }
 
@@ -3158,8 +3145,8 @@
         font-size: 40px;
         line-height: 50px;
         max-width: 500px;
-        color: var(--first-color);
-        text-shadow: 0 0 2px var(--first-color), 0 0 5px var(--first-color);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-top: 15px;
     }
@@ -3169,8 +3156,7 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 6px rgba(255, 240, 128, 0.6);
+        color: var(--secondary-color);
         margin-top: 15px;
         max-width: 430px;
         text-transform: uppercase;
@@ -3181,119 +3167,79 @@
         align-items: center;
         column-gap: 24px;
         margin-top: 40px;
-        padding-bottom: 90px;
+        padding-bottom: 150px;
     }
 
     .button {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         border-radius: var(--border-radius);
         padding: 20px 65px;
         font-family: var(--font-family);
         font-size: 16px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-align: center;
     }
 
     .button:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border: 3px solid var(--primary-color-button);
+        background: transparent;
+        color: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     .btn {
         border-radius: var(--border-radius);
         background-color: transparent;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         padding: 20px 65px;
         font-weight: 700;
         font-family: var(--font-family);
         font-size: 16px;
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
         text-transform: uppercase;
         transition: var(--transition);
         text-align: center;
     }
 
     .btn:hover {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+        background-color: var(--primary-color-button);
+        color: var(--secondary-color);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
     
     .images {
         position: absolute;
-        right: 3%;
+        right: 3%; /* Процентный отступ вместо фиксированного */
         left: auto;
-        top: -40px;
-        width: 35%;
+        top: -50px;
+        width: 39%; /* Процентная ширина изображения */
         z-index: 2;
         transform: none !important;
     }
 
-    .Icicle_banner {
-        position: absolute;
-        top: -134px;
-        left: 17%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 180px;
-        height: auto;
-        z-index: 1;
-    }
-
-    .Icicle {
-        position: absolute;
-        top: -130px;
-        left: 80%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 170px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .Icicle_lessons {
-        position: absolute;
-        top: -125px;
-        left: 80%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 170px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .Icicle_questions {
-        position: absolute;
-        top: -123px;
-        left: 15%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 170px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
+    .bg-effect {
+        display: none;
     }
 
     /* Для кого? */
     .for-whom {
         padding-top: 100px;
-        background-color: var(--container-color-dark);
     }
 
     .for-whom__title {
         font-size: 36px;
         line-height: 1.3;
         margin-bottom: 40px;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .for-whom__content--item {
@@ -3307,15 +3253,16 @@
     }
 
     .for-whom__card-wrapper {
-        width: calc(50% - 15px);
+        width: calc(50% - 15px); /* Две карточки в ряд */
         margin-left: 0;
         display: flex;
         justify-content: center;
     }
 
     .for-whom__card {
-        background: var(--body-color-dark);
-        border: 3px solid var(--title-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.1);
+        border: 3px solid var(--primary-color);
         border-radius: var(--border-radius);
         display: flex;
         align-items: center;
@@ -3328,25 +3275,27 @@
     }
 
     .for-whom__card:hover {
-        border-color: var(--first-color);
-        box-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--first-color) 5%, transparent);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 64, 129, 0.2);
+        border-color: var(--primary-alternaite-color);
     }
 
     .for-whom__images {
-        width: 78px;
-        height: 78px;
+        width: 60px;
+        height: 60px;
         position: absolute;
-        left: -38px;
+        left: -30px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
     }
 
     .for-whom__desc {
-        color: var(--title-color-dark);
+        font-family: var(--font-family);
         font-weight: 500;
         font-size: 14px;
         line-height: 1.4;
+        color: var(--primary-color);
         text-transform: uppercase;
         margin: 0;
         padding-left: 0;
@@ -3354,9 +3303,9 @@
     }
 
     .for-whom__span {
-        color: var(--first-color);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
         font-weight: 700;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .for-whom__content--items {
@@ -3376,7 +3325,7 @@
         font-size: 18px;
         line-height: 1.4;
         text-align: center;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         width: 100%;
         max-width: 600px;
         text-transform: uppercase;
@@ -3384,29 +3333,30 @@
     }
 
     .button__for-whom {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         border-radius: var(--border-radius);
         padding: 20px 60px;
         font-family: var(--font-family);
         font-size: 16px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-align: center;
         text-decoration: none;
         width: auto;
     }
 
     .button__for-whom:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border-color: var(--primary-color-button);
+        background: transparent;
+        color: var(--valentine-dark-pink);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
-    .super_woman-winter--images {
+    .super__woman--images {
         display: block;
         width: 200px;
         height: 200px;
@@ -3424,8 +3374,7 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         text-transform: uppercase;
     }
 
@@ -3444,6 +3393,18 @@
         align-items: center;
         gap: 15px;
         min-width: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--border-radius);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+    }
+
+    .program__content--list:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--primary-color-button);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .program__images {
@@ -3451,6 +3412,7 @@
         height: 55px;
         flex-shrink: 0;
         transform: none !important;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     }
 
     .program__desc {
@@ -3470,7 +3432,7 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-bottom: 40px;
         margin-top: -50px;
@@ -3483,14 +3445,8 @@
         font-family: var(--font-family);
         font-size: 18px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
-    }
-
-    .about__text--span {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
-        font-weight: 700;
     }
 
     .about__text--item {
@@ -3500,14 +3456,8 @@
         font-family: var(--font-family);
         font-size: 18px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
-    }
-
-    .about__text--item--span {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
-        font-weight: 700;
     }
 
     /* Стили для индикаторов - Уменьшаем расстояние между колонками */
@@ -3537,8 +3487,8 @@
         font-weight: 700;
         font-size: 39px;
         line-height: 36px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-align: center;
     }
 
@@ -3548,7 +3498,7 @@
         font-weight: 500;
         font-size: 17px;
         line-height: 140%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -3559,14 +3509,8 @@
         font-family: var(--font-family);
         font-size: 17px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
-    }
-
-    .about__text--footer--span {
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
-        font-weight: 700;
     }
 
     .about__main--images {
@@ -3580,7 +3524,6 @@
         top: -150px;
         margin-bottom: 50px;
         border-radius: var(--border-radius);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(219, 77, 89, 0.1);
     }
 
     /* Лист уроков интенсива */
@@ -3593,8 +3536,8 @@
         line-height: 150%;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         margin-bottom: 40px;
     }
 
@@ -3606,7 +3549,7 @@
     }
 
     .accordion-item {
-        border-bottom: 3px solid var(--first-color) !important;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .accordion-toggle {
@@ -3625,7 +3568,7 @@
     .lesson-title {
         font-size: 20px;
         font-weight: 500;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         font-family: var(--font-family);
         text-transform: uppercase;
         flex: 1;
@@ -3643,7 +3586,7 @@
     .icon::before, .icon::after {
         content: '';
         position: absolute;
-        background-color: var(--title-color-dark) !important;
+        background-color: var(--primary-color);
         transition: var(--transition);
     }
 
@@ -3680,7 +3623,7 @@
         background-color: var(--secondary-color);
         font-size: 16px;
         line-height: 1.6;
-        color: var(--title-color-dark) !important;
+        color: var(--primary-color);
     }
 
     .accordion-toggle:checked ~ .accordion-content {
@@ -3705,7 +3648,7 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-align: center;
         width: 100%;
         max-width: 550px;
@@ -3714,7 +3657,7 @@
 
     /* Тарифы участия */
     .pricing {
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         padding-top: 91px;
         overflow-x: hidden;
     }
@@ -3723,12 +3666,12 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 36px;
-        text-align: center !important;
+        text-align: center !important; /* Принудительно */
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-top: 0;
     }
@@ -3743,9 +3686,8 @@
     }
 
     .pricing__content--card {
-        background-color: var(--container-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
         border-radius: var(--border-radius);
-        border: 3px solid var(--title-color-dark);
         width: 300px;
         padding: 57px 30px 0 36px;
         position: relative;
@@ -3755,14 +3697,12 @@
 
     .pricing__content--card:hover {
         transform: translateY(-5px);
-        border-color: var(--first-color);
-        box-shadow: 0 15px 35px color-mix(in srgb, var(--first-color) 20%, transparent), 0 5px 15px color-mix(in srgb, var(--first-color-dark) 15%, transparent);
+        box-shadow: 0 20px 40px rgba(255, 64, 129, 0.3);
+        border-color: var(--primary-color-button);
     }
 
     .pricing__content__card--title {
         font-size: 14px;
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
     }
 
     .pricing__content--desc {
@@ -3802,8 +3742,8 @@
     }
 
     .pricing__content--images {
-        width: 108px;
-        height: 108px;
+        width: 120px;
+        height: 120px;
         position: absolute;
         top: -30px;
         left: 240px;
@@ -3821,13 +3761,12 @@
 
     .pricing__content__images--gift {
         transform: none !important;
-        filter: none !important;
     }
 
     .pricing__content__stories--text {
         text-align: center;
         font-size: 18px;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         line-height: 1.6;
         width: 100%;
         max-width: 450px;
@@ -3855,10 +3794,15 @@
         text-align: center;
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-decoration: none;
         text-transform: uppercase;
         transition: var(--transition);
+    }
+
+    .short__name:hover {
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
     }
 
     /* А такие вопросы могут быть у вас */
@@ -3868,8 +3812,8 @@
         font-size: 36px;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-bottom: 40px;
         margin-top: -65px;
@@ -3897,26 +3841,15 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 1.5;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
-    }
-
-    .Snowman--images {
-        display: block;
-        width: 290px;
-        height: 290px;
-        margin: 0 auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
     }
 
     /* Подвал */
     .footer {
         padding-top: 120px;
         padding-bottom: 200px;
-        background-color: var(--body-color-dark);
+        background-color: var(--background-color-footer);
         width: 100%;
         position: relative;
     }
@@ -3964,10 +3897,9 @@
     .form__container {
         width: 100%;
         padding: 30px;
-        background-color: var(--container-color-dark);
+        background: var(--background-color-card);
         border-radius: 20px;
-        border: 2px solid var(--title-color-dark);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
 
     .form__tabs--recording {
@@ -3983,8 +3915,7 @@
         text-align: center;
         padding: 0 20px;
         font-weight: 700;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-color);
     }
 
     .form__container--group {
@@ -4006,15 +3937,15 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
     }
 
     .form__field {
-        background-color: var(--body-color-dark);
+        background-color: var(--input-color);
         border-radius: var(--border-radius-btn-register-login);
         padding: 6px 0 12px 20px;
-        border: 2px solid var(--text-color-dark);
+        border: 2px solid transparent;
         transition: var(--transition);
     }
 
@@ -4022,15 +3953,13 @@
         width: 100%;
         border: none;
         background: transparent;
-        color: var(--title-color-dark);
         outline: none;
         font-family: var(--font-family);
         font-size: 17px;
     }
 
     .form__field:focus-within {
-        border-color: var(--first-color);
-        box-shadow: 0 0 10px color-mix(in srgb, var(--first-color) 30%, transparent);
+        border-color: var(--primary-color-button);
     }
 
     .remembers__me {
@@ -4040,7 +3969,7 @@
         cursor: pointer;
         font-family: var(--font-family);
         font-size: 14px;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         margin-top: 20px;
         line-height: 1.5;
         text-align: left;
@@ -4051,9 +3980,7 @@
         height: 18px;
         min-width: 18px;
         margin-top: 2px;
-        accent-color: var(--first-color);
-        box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-        text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+        accent-color: var(--primary-color-button);
     }
 
     .btn__pre--recording {
@@ -4061,55 +3988,46 @@
         padding: 20px 40px;
         font-size: 16px;
         margin-top: 30px;
-        background: linear-gradient(145deg, var(--first-color), var(--first-color-dark));
-        border-radius: var(--border-radius);
-        border: 3px solid var(--first-color-dark);
+        background-color: var(--primary-color-button);
+        border: 2px solid var(--primary-color-button);
         border-radius: 25px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
     }
 
     .btn__pre--recording:hover {
-        background: transparent;
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        border: 3px solid var(--first-color);
-        box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-        text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+        background-color: transparent;
+        color: var(--primary-color-button);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
 
     /* Cookie файлы */
     .cookie__notifications {
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 60px);
-        max-width: 700px;
-        padding: 20px;
-        border-radius: 24px;
-        background: var(--container-color-dark);
-        border: 2px solid var(--title-color-dark);
+        width: calc(100% - 60px); /* Больше отступы от краёв */
+        max-width: 700px; /* Максимальная ширина */
+        padding: 20px; /* Больше внутреннего пространства */
+        border-radius: 24px; /* Слегка округляем углы */
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     }
 
     .cookie__text {
-        font-size: 14px;
+        font-size: 14px; /* Чуть крупнее текст */
         line-height: 1.5;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c;
     }
 
-    .cookie_man {
-        width: 70px;
-        height: auto;
-        cursor: pointer;
+    .bx.bxs-cookie {
+        font-size: 50px; /* Иконка побольше */
         transform: none !important;
     }
 
     .cookie__container--label {
-        gap: 16px;
+        gap: 16px; /* Больше пространства между кнопками */
         margin-top: 20px;
     }
 
@@ -4120,9 +4038,9 @@
         font-family: var(--font-family);
         font-weight: 700;
         text-transform: uppercase;
-        border: 2px solid var(--first-color-dark);
+        border: 2px solid var(--primary-color-button);
         transition: var(--transition);
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius); /* Слегка округляем кнопки */
     }
 
     /* Принудительный порядок элементов (на случай глюков flex) */
@@ -4133,182 +4051,44 @@
         order: 2;
     }
 
-    /* Кнопка переключения снега */
-    .snow-toggle-btn {
+    /* ДЕНЬ СВЯТОГО ВАЛЕНТИНА */
+    .valentine-toggle-btn {
+        top: 15px;
+        right: 35px;
         width: 55px;
         height: 55px;
-        top: 25px;
-        right: 25px;
     }
     
-    .snowflake-svg {
-        width: 32px;
-        height: 32px;
+    .valentine-svg {
+        width: 30px;
+        height: 30px;
     }
     
-    /* Оптимальное количество снежинок */
-    .snow-container .snowflake:nth-child(n+41) {
-        display: none; /* Показываем 40 снежинок */
+    /* Уменьшаем количество сердечек на планшетах */
+    .heart.h11, .heart.h12, .heart.h13, .heart.h14, .heart.h15,
+    .heart.h16, .heart.h17, .heart.h18, .heart.h19, .heart.h20,
+    .heart.h31, .heart.h32, .heart.h33, .heart.h34, .heart.h35 {
+        display: none;
     }
     
-    /* Уменьшаем размеры снежинок для лучшей производительности */
-    .snowflake.small svg {
-        width: 9px;
-        height: 9px;
-    }
-    .snowflake.medium svg {
-        width: 13px;
-        height: 13px;
-    }
-    .snowflake.large svg {
-        width: 17px;
-        height: 17px;
-    }
-    .snowflake.xlarge svg {
-        width: 21px;
-        height: 21px;
+    /* Уменьшаем размеры сердечек */
+    .heart {
+        width: 10px !important;
+        height: 10px !important;
     }
     
-    /* Оптимизируем анимации для средних экранов */
-    .snowflake.s1 { animation-duration: 20s !important; }
-    .snowflake.s2 { animation-duration: 18s !important; }
-    .snowflake.s3 { animation-duration: 19s !important; }
-    .snowflake.s4 { animation-duration: 17s !important; }
-    .snowflake.s5 { animation-duration: 21s !important; }
-    .snowflake.s6 { animation-duration: 19s !important; }
-    .snowflake.s7 { animation-duration: 16s !important; }
-    .snowflake.s8 { animation-duration: 20s !important; }
-    .snowflake.s9 { animation-duration: 15s !important; }
-    .snowflake.s10 { animation-duration: 21s !important; }
-    
-    .snowflake.s11 { animation-duration: 16s !important; }
-    .snowflake.s12 { animation-duration: 15s !important; }
-    .snowflake.s13 { animation-duration: 14s !important; }
-    .snowflake.s14 { animation-duration: 13s !important; }
-    .snowflake.s15 { animation-duration: 17s !important; }
-    .snowflake.s16 { animation-duration: 12s !important; }
-    .snowflake.s17 { animation-duration: 16s !important; }
-    .snowflake.s18 { animation-duration: 11s !important; }
-    .snowflake.s19 { animation-duration: 14s !important; }
-    .snowflake.s20 { animation-duration: 15s !important; }
-    
-    .snowflake.s21 { animation-duration: 14s !important; }
-    .snowflake.s22 { animation-duration: 11s !important; }
-    .snowflake.s23 { animation-duration: 12s !important; }
-    .snowflake.s24 { animation-duration: 11s !important; }
-    .snowflake.s25 { animation-duration: 13s !important; }
-    .snowflake.s26 { animation-duration: 12s !important; }
-    .snowflake.s27 { animation-duration: 10s !important; }
-    .snowflake.s28 { animation-duration: 14s !important; }
-    .snowflake.s29 { animation-duration: 11s !important; }
-    .snowflake.s30 { animation-duration: 13s !important; }
-    
-    .snowflake.s31 { animation-duration: 22s !important; }
-    .snowflake.s32 { animation-duration: 20s !important; }
-    .snowflake.s33 { animation-duration: 19s !important; }
-    .snowflake.s34 { animation-duration: 18s !important; }
-    .snowflake.s35 { animation-duration: 21s !important; }
-    .snowflake.s36 { animation-duration: 19s !important; }
-    .snowflake.s37 { animation-duration: 24s !important; }
-    .snowflake.s38 { animation-duration: 21s !important; }
-    .snowflake.s39 { animation-duration: 18s !important; }
-    .snowflake.s40 { animation-duration: 17s !important; }
-    
-    /* Уменьшаем разброс снежинок по горизонтали чтобы не было скролла */
-    .snowflake.s1 { left: 3%; }
-    .snowflake.s2 { left: 11%; }
-    .snowflake.s3 { left: 19%; }
-    .snowflake.s4 { left: 27%; }
-    .snowflake.s5 { left: 35%; }
-    .snowflake.s6 { left: 43%; }
-    .snowflake.s7 { left: 51%; }
-    .snowflake.s8 { left: 59%; }
-    .snowflake.s9 { left: 67%; }
-    .snowflake.s10 { left: 75%; }
-    .snowflake.s11 { left: 83%; }
-    .snowflake.s12 { left: 91%; }
-    
-    .snowflake.s13 { left: 5%; }
-    .snowflake.s14 { left: 13%; }
-    .snowflake.s15 { left: 21%; }
-    .snowflake.s16 { left: 29%; }
-    .snowflake.s17 { left: 37%; }
-    .snowflake.s18 { left: 45%; }
-    .snowflake.s19 { left: 53%; }
-    .snowflake.s20 { left: 61%; }
-    .snowflake.s21 { left: 69%; }
-    .snowflake.s22 { left: 77%; }
-    .snowflake.s23 { left: 85%; }
-    .snowflake.s24 { left: 93%; }
-    
-    .snowflake.s25 { left: 7%; }
-    .snowflake.s26 { left: 15%; }
-    .snowflake.s27 { left: 23%; }
-    .snowflake.s28 { left: 31%; }
-    .snowflake.s29 { left: 39%; }
-    .snowflake.s30 { left: 47%; }
-    .snowflake.s31 { left: 55%; }
-    .snowflake.s32 { left: 63%; }
-    .snowflake.s33 { left: 71%; }
-    .snowflake.s34 { left: 79%; }
-    .snowflake.s35 { left: 87%; }
-    .snowflake.s36 { left: 95%; }
-    
-    .snowflake.s37 { left: 9%; }
-    .snowflake.s38 { left: 17%; }
-    .snowflake.s39 { left: 25%; }
-    .snowflake.s40 { left: 33%; }
-    
-    /* Уменьшаем горизонтальное смещение в анимациях */
-    @keyframes snowfall-svg-slow1-tablet {
-        0% {
-            transform: translateY(-100px) translateX(0) rotate(0deg);
-            opacity: 0;
-        }
-        10% {
-            opacity: 0.7;
-        }
-        90% {
-            opacity: 0.7;
-        }
-        100% {
-            transform: translateY(100vh) translateX(15px) rotate(180deg); /* Меньше смещение */
-            opacity: 0;
-        }
+    .heart::before,
+    .heart::after {
+        width: 10px !important;
+        height: 10px !important;
     }
     
-    @keyframes snowfall-svg-slow2-tablet {
-        0% {
-            transform: translateY(-150px) translateX(-8px) rotate(0deg);
-            opacity: 0;
-        }
-        15% {
-            opacity: 0.6;
-        }
-        85% {
-            opacity: 0.6;
-        }
-        100% {
-            transform: translateY(100vh) translateX(12px) rotate(360deg); /* Меньше смещение */
-            opacity: 0;
-        }
+    .heart::before {
+        top: -5px !important;
     }
     
-    @keyframes snowfall-svg-very-slow1-tablet {
-        0% {
-            transform: translateY(-100px) translateX(0) rotate(0deg);
-            opacity: 0;
-        }
-        8% {
-            opacity: 0.6;
-        }
-        92% {
-            opacity: 0.6;
-        }
-        100% {
-            transform: translateY(100vh) translateX(10px) rotate(90deg); /* Меньше смещение */
-            opacity: 0;
-        }
+    .heart::after {
+        left: -5px !important;
     }
 }
 
@@ -4347,16 +4127,7 @@
     
     /* Шапка */
     .header {
-        padding-top: 45px;
-    }
-
-    .santa_christmas {
-        width: 100%;
-        max-width: 750px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: -30px;
-        display: block;
+        padding-top: 65px;
     }
     
     .container {
@@ -4378,15 +4149,15 @@
         font-weight: 700;
         font-size: 14px;
         line-height: 19px;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
     }
 
     .logo:hover {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
     }
 
     .nav__menu {
@@ -4400,29 +4171,28 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 14px;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
         cursor: pointer;
     }
 
     .nav__item:hover {
-        color: var(--first-color-dark);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+        color: var(--primary-color-button);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     /* Главный экран */
     .banner {
         padding-top: 100px;
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
     }
 
     .banner__mini--title {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 18px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         text-transform: uppercase;
     }
 
@@ -4432,8 +4202,8 @@
         font-size: 40px;
         line-height: 50px;
         max-width: 600px;
-        color: var(--first-color);
-        text-shadow: 0 0 2px var(--first-color), 0 0 5px var(--first-color);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-top: 15px;
     }
@@ -4443,8 +4213,7 @@
         font-weight: 700;
         font-size: 19px;
         line-height: 150%;
-        color: var(--title-color-dark);
-        text-shadow: 0 0 6px rgba(255, 240, 128, 0.6);
+        color: var(--secondary-color);
         margin-top: 15px;
         max-width: 430px;
         text-transform: uppercase;
@@ -4455,58 +4224,60 @@
         align-items: center;
         column-gap: 24px;
         margin-top: 30px;
-        padding-bottom: 130px;
+        padding-bottom: 150px;
     }
 
     .button {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         border-radius: var(--border-radius);
         padding: 20px 65px;
         font-family: var(--font-family);
         font-size: 16px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-align: center;
     }
 
     .button:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border: 3px solid var(--primary-color-button);
+        background: transparent;
+        color: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     .btn {
         border-radius: var(--border-radius);
         background-color: transparent;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         padding: 20px 65px;
         font-weight: 700;
         font-family: var(--font-family);
         font-size: 16px;
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
         text-transform: uppercase;
         transition: var(--transition);
         text-align: center;
     }
 
     .btn:hover {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+        background-color: var(--primary-color-button);
+        color: var(--secondary-color);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
     }
     
     .images {
         position: absolute;
-        right: 3%;
+        right: 3%; /* Процентный отступ вместо фиксированного */
         left: auto;
         top: -50px;
-        width: 30%;
+        width: 34%; /* Процентная ширина изображения */
         z-index: 2;
         transition: transform var(--transition);
         cursor: pointer;
@@ -4520,53 +4291,6 @@
         display: none;
     }
 
-    .Icicle_banner {
-        position: absolute;
-        top: -154px;
-        left: 14%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        z-index: 1;
-    }
-
-    .Icicle {
-        position: absolute;
-        top: -165px;
-        left: 80%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .Icicle_lessons {
-        position: absolute;
-        top: -138px;
-        left: 80%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .Icicle_questions {
-        position: absolute;
-        top: -154px;
-        left: 15%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        z-index: 1;
-        pointer-events: none;
-    }
-
     /* Для кого? */
     .for-whom {
         padding-top: 120px;
@@ -4576,6 +4300,8 @@
         font-size: 40px;
         line-height: 1.3;
         margin-bottom: 45px;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     }
 
     .for-whom__content--item {
@@ -4596,8 +4322,9 @@
     }
 
     .for-whom__card {
-        background: var(--body-color-dark);
-        border: 3px solid var(--title-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.1);
+        border: 3px solid var(--primary-color);
         border-radius: var(--border-radius);
         display: flex;
         align-items: center;
@@ -4610,15 +4337,16 @@
     }
 
     .for-whom__card:hover {
-        border-color: var(--first-color);
-        box-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--first-color) 5%, transparent);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 64, 129, 0.2);
+        border-color: var(--primary-alternaite-color);
     }
 
     .for-whom__images {
-        width: 85px;
-        height: 85px;
+        width: 70px;
+        height: 70px;
         position: absolute;
-        left: -44px;
+        left: -35px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
@@ -4629,7 +4357,7 @@
         font-weight: 500;
         font-size: 15px;
         line-height: 1.4;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
         margin: 0;
         padding-left: 0;
@@ -4637,8 +4365,8 @@
     }
 
     .for-whom__span {
-        color: var(--first-color);
-        text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         font-weight: 700;
     }
 
@@ -4659,7 +4387,7 @@
         font-size: 19px;
         line-height: 1.4;
         text-align: center;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         width: 100%;
         max-width: 650px;
         text-transform: uppercase;
@@ -4667,29 +4395,30 @@
     }
 
     .button__for-whom {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
         border-radius: var(--border-radius);
         padding: 21px 65px;
         font-family: var(--font-family);
         font-size: 17px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
-        border: 3px solid var(--first-color-dark);
+        border: 3px solid var(--primary-color-button);
         text-align: center;
         text-decoration: none;
         width: auto;
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
     }
 
     .button__for-whom:hover {
-        border: 3px solid var(--first-color);
-        background-color: transparent;
-        color: var(--title-color-dark);
-        box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-        text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+        border-color: var(--primary-color-button);
+        background: transparent;
+        color: var(--valentine-dark-pink);
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
-    .super_woman-winter--images {
+    .super__woman--images {
         display: block;
         width: 220px;
         height: 220px;
@@ -4707,8 +4436,7 @@
         font-size: 40px;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--secondary-color);
         text-transform: uppercase;
     }
 
@@ -4727,12 +4455,24 @@
         align-items: center;
         gap: 18px;
         min-width: 0;
+        border-radius: var(--border-radius);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+    }
+
+    .program__content--list:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--primary-color-button);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .program__images {
         width: 65px;
         height: 65px;
         flex-shrink: 0;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     }
 
     .program__desc {
@@ -4740,7 +4480,7 @@
         font-weight: 500;
         font-size: 19px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin: 0;
     }
@@ -4748,7 +4488,7 @@
     .program__span {
         font-size: 19px;
         line-height: 150%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         font-weight: 700;
         font-family: var(--font-family);
         text-transform: uppercase;
@@ -4761,7 +4501,7 @@
         font-size: 40px;
         text-align: center;
         width: 100%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-bottom: 45px;
         margin-top: -30px;
@@ -4774,7 +4514,7 @@
         font-family: var(--font-family);
         font-size: 19px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -4785,7 +4525,7 @@
         font-family: var(--font-family);
         font-size: 19px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -4814,8 +4554,8 @@
         font-weight: 700;
         font-size: 45px;
         line-height: 46px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-align: center;
     }
 
@@ -4825,7 +4565,7 @@
         font-weight: 500;
         font-size: 19px;
         line-height: 140%;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -4836,7 +4576,7 @@
         font-family: var(--font-family);
         font-size: 20px;
         line-height: 1.6;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-align: center;
     }
 
@@ -4866,8 +4606,8 @@
         line-height: 150%;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         margin-bottom: 45px;
     }
 
@@ -4879,7 +4619,7 @@
     }
 
     .accordion-item {
-        border-bottom: 3px solid var(--first-color) !important;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .accordion-toggle {
@@ -4898,7 +4638,7 @@
     .lesson-title {
         font-size: 21px;
         font-weight: 500;
-        color: var(--title-color-dark);
+        color: var(--primary-color);
         font-family: var(--font-family);
         text-transform: uppercase;
         flex: 1;
@@ -4916,7 +4656,7 @@
     .icon::before, .icon::after {
         content: '';
         position: absolute;
-        background-color: var(--title-color-dark) !important;
+        background-color: var(--primary-color);
         transition: var(--transition);
     }
 
@@ -4950,10 +4690,10 @@
         overflow: hidden;
         padding: 0 30px;
         transition: max-height 0.4s ease, padding 0.4s ease;
-        background-color: transparent !important;
+        background-color: var(--secondary-color);
         font-size: 17px;
         line-height: 1.6;
-        color: var(--title-color-dark) !important;
+        color: var(--primary-color);
     }
 
     .accordion-toggle:checked ~ .accordion-content {
@@ -4978,7 +4718,7 @@
         font-weight: 700;
         font-size: 21px;
         line-height: 150%;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-align: center;
         width: 100%;
         max-width: 650px;
@@ -4987,7 +4727,7 @@
 
     /* Тарифы участия */
     .pricing {
-        background-color: var(--body-color-dark);
+        background-color: var(--primary-color);
         padding-top: 120px;
     }
 
@@ -4996,7 +4736,7 @@
         font-weight: 700;
         font-size: 42px;
         text-align: center;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-bottom: 40px;
     }
@@ -5011,9 +4751,8 @@
     }
 
     .pricing__content--card {
-        background-color: var(--container-color-dark);
+        background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
         border-radius: var(--border-radius);
-        border: 3px solid var(--title-color-dark);
         width: 350px;
         padding: 60px 25px 0 30px;
         position: relative;
@@ -5021,16 +4760,15 @@
 
     .pricing__content--card:hover {
         transform: translateY(-5px);
-        border-color: var(--first-color);
-        box-shadow: 0 15px 35px color-mix(in srgb, var(--first-color) 20%, transparent), 0 5px 15px color-mix(in srgb, var(--first-color-dark) 15%, transparent);
+        box-shadow: 0 20px 40px rgba(255, 64, 129, 0.3);
+        border-color: var(--primary-color-button);
     }
 
     .pricing__content__card--title {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--primary-color);
         text-transform: uppercase;
         margin-bottom: 15px;
     }
@@ -5041,38 +4779,23 @@
         font-size: 14px;
         line-height: 150%;
         text-transform: uppercase;
-        color: var(--text-color-dark);
-        border-bottom: 1px dashed var(--text-color-dark);
+        color: var(--primary-color);
         margin-bottom: 8px;
         display: flex;
         gap: 8px;
-    }
-
-    .pricing__content--card:hover .pricing__content--desc {
-        color: var(--title-color-dark);
     }
 
     .pricing__content--span {
         font-weight: 700;
         font-size: 20px;
         flex-shrink: 0;
-        color: var(--green-color);
-    }
-
-    .pricing__content--spans {
-        font-weight: 700;
-        font-size: 25px;
-        flex-shrink: 0;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .pricing__content--duration {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 15px;
-        color: var(--first-color-dark);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--primary-color);
         text-transform: uppercase;
         margin-top: 15px;
         margin-bottom: 8px;
@@ -5083,17 +4806,16 @@
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 12px;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
         margin: 0;
-        margin-right: 40px;
+        margin-right: 47px;
         text-align: center;
-        margin-bottom: 47px;
+        margin-bottom: 57px;
     }
 
     .pricing__content__condition--span {
         font-weight: 700;
-        color: var(--first-color-dark);
     }
 
     .pricing__content--price {
@@ -5101,39 +4823,41 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--first-color-dark);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--primary-alternaite-color);
         margin: 0;
         text-align: center;
     }
 
     .pricing__content--button {
-        background-color: var(--first-color);
+        background: linear-gradient(15deg, #FF4081, #FF1744);
+        box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         border-radius: var(--border-radius);
         padding: 18px 65px;
         font-family: var(--font-family);
         font-size: 16px;
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
-        border: 3px solid var(--first-color);
+        border: 3px solid var(--primary-color-button);
         margin-left: 20px;
     }
 
     .pricing__content--button:hover {
-        background-color: var(--first-color);
-        color: var(--title-color-dark);
-        border-color: var(--first-color);
-        box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+        border: 3px solid var(--primary-color);
+        background-color: var(--primary-color-button);
+        color: var(--secondary-color);
+        border-color: var(--primary-color-button);
+        box-shadow: 0 0 15px rgba(163, 135, 196, 0.6), inset 0 0 15px rgba(163, 135, 196, 0.1);
+        text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
     }
 
     .pricing__content--images {
         position: absolute;
         top: -40px;
         left: 275px;
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
         object-fit: cover;
         transition: var(--transition);
         cursor: pointer;
@@ -5155,14 +4879,14 @@
     }
 
     .pricing__content__images--gift {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .pricing__content__stories--text {
         text-align: center;
         font-size: 17px;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         line-height: 1.6;
         width: 100%;
         max-width: 500px;
@@ -5190,7 +4914,7 @@
         text-align: center;
         font-family: var(--font-family);
         font-weight: 700;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-decoration: none;
         text-transform: uppercase;
         transition: var(--transition);
@@ -5198,8 +4922,8 @@
     }
 
     .short__name:hover {
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
     }
 
     /* А такие вопросы могут быть у вас */
@@ -5209,8 +4933,8 @@
         font-size: 42px;
         text-align: center;
         width: 100%;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-alternaite-color);
+        text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
         text-transform: uppercase;
         margin-bottom: 45px;
         margin-top: -40px;
@@ -5238,26 +4962,15 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 1.5;
-        color: var(--text-color-dark);
+        color: var(--primary-color);
         text-transform: uppercase;
-    }
-
-    .Snowman--images {
-        display: block;
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
     }
 
     /* Подвал */
     .footer {
         padding-top: 125px;
         padding-bottom: 109px;
-        background-color: var(--body-color-dark);
+        background-color: var(--background-color-footer);
         width: 100%;
         position: relative;
     }
@@ -5277,22 +4990,21 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         cursor: pointer;
         transition: var(--transition);
     }
 
     .footer__logo:hover {
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--primary-color);
     }
 
     .inn {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -5302,7 +5014,7 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         line-height: 1.4;
     }
@@ -5326,7 +5038,7 @@
 
     .up__link {
         text-decoration: none;
-        color: var(--title-color-dark);
+        color: var(--secondary-color);
         display: block;
         transition: var(--transition);
     }
@@ -5337,8 +5049,7 @@
     }
 
     .up__link:hover .bx.bx-up-arrow-alt {
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+        color: var(--primary-color);
         transform: scale(1.1);
     }
 
@@ -5356,21 +5067,18 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid var(--title-color-dark);
-        background-color: var(--title-color-dark);
+        background-color: rgba(255, 255, 255, 0.1);
         transition: var(--transition);
     }
 
     .social__icons a:hover {
-        background-color: transparent;
-        border: 2px solid var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        background-color: var(--primary-color);
         transform: scale(1.1);
     }
 
     .social__icons i {
         font-size: 20px;
-        color: var(--first-color);
+        color: var(--secondary-color);
     }
 
     .social__icons svg {
@@ -5390,14 +5098,13 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 16px;
-        color: var(--text-color-dark);
+        color: var(--secondary-color);
         text-transform: uppercase;
         transition: var(--transition);
     }
 
     .political__confidencial:hover, .oferta:hover, .hire__me:hover {
-        color: var(--first-color);
-        text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+        color: var(--primary-color);
     }
 
     .social__icons {
@@ -5409,8 +5116,6 @@
     .form__tabs-recording--title {
         font-size: 19px;
         margin-bottom: 40px;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     }
 
     .remembers__me {
@@ -5441,8 +5146,6 @@
     .cookie__text {
         font-size: 15px;
         line-height: 1.4;
-        color: var(--green-color);
-        text-shadow: 0 0 2px #2ce72c;
     }
 
     .bx.bxs-cookie {
@@ -5460,225 +5163,30 @@
         font-size: 15px;
     }
 
-    /* Кнопка переключения снега */
-    .snow-toggle-btn {
-        width: 58px;
-        height: 58px;
-        top: 30px;
-        right: 30px;
+    /* ДЕНЬ СВЯТОГО ВАЛЕНТИНА */
+    .valentine-toggle-btn {
+        right: 35px;
+        width: 48px;
+        height: 48px;
     }
     
-    .snowflake-svg {
-        width: 34px;
-        height: 34px;
+    /* Немного уменьшаем сердечки */
+    .heart {
+        width: 11px !important;
+        height: 11px !important;
     }
     
-    /* Используем все 40 снежинок */
-    .snow-container .snowflake:nth-child(n+41) {
-        display: none; /* Показываем все 40 снежинок */
+    .heart::before,
+    .heart::after {
+        width: 11px !important;
+        height: 11px !important;
     }
     
-    /* Оптимальные размеры снежинок для больших экранов */
-    .snowflake.small svg {
-        width: 11px;
-        height: 11px;
-        opacity: 0.7;
-    }
-    .snowflake.medium svg {
-        width: 16px;
-        height: 16px;
-        opacity: 0.85;
-    }
-    .snowflake.large svg {
-        width: 21px;
-        height: 21px;
-        opacity: 0.95;
-    }
-    .snowflake.xlarge svg {
-        width: 26px;
-        height: 26px;
-        opacity: 1;
+    .heart::before {
+        top: -5.5px !important;
     }
     
-    /* Оптимизируем скорость анимаций для больших экранов */
-    .snowflake.s1 { animation-duration: 22s !important; }
-    .snowflake.s2 { animation-duration: 20s !important; }
-    .snowflake.s3 { animation-duration: 21s !important; }
-    .snowflake.s4 { animation-duration: 19s !important; }
-    .snowflake.s5 { animation-duration: 23s !important; }
-    .snowflake.s6 { animation-duration: 21s !important; }
-    .snowflake.s7 { animation-duration: 18s !important; }
-    .snowflake.s8 { animation-duration: 22s !important; }
-    .snowflake.s9 { animation-duration: 17s !important; }
-    .snowflake.s10 { animation-duration: 23s !important; }
-    
-    .snowflake.s11 { animation-duration: 18s !important; }
-    .snowflake.s12 { animation-duration: 17s !important; }
-    .snowflake.s13 { animation-duration: 16s !important; }
-    .snowflake.s14 { animation-duration: 15s !important; }
-    .snowflake.s15 { animation-duration: 19s !important; }
-    .snowflake.s16 { animation-duration: 14s !important; }
-    .snowflake.s17 { animation-duration: 18s !important; }
-    .snowflake.s18 { animation-duration: 13s !important; }
-    .snowflake.s19 { animation-duration: 16s !important; }
-    .snowflake.s20 { animation-duration: 17s !important; }
-    
-    .snowflake.s21 { animation-duration: 16s !important; }
-    .snowflake.s22 { animation-duration: 13s !important; }
-    .snowflake.s23 { animation-duration: 14s !important; }
-    .snowflake.s24 { animation-duration: 13s !important; }
-    .snowflake.s25 { animation-duration: 15s !important; }
-    .snowflake.s26 { animation-duration: 14s !important; }
-    .snowflake.s27 { animation-duration: 12s !important; }
-    .snowflake.s28 { animation-duration: 16s !important; }
-    .snowflake.s29 { animation-duration: 13s !important; }
-    .snowflake.s30 { animation-duration: 15s !important; }
-    
-    .snowflake.s31 { animation-duration: 24s !important; }
-    .snowflake.s32 { animation-duration: 22s !important; }
-    .snowflake.s33 { animation-duration: 21s !important; }
-    .snowflake.s34 { animation-duration: 20s !important; }
-    .snowflake.s35 { animation-duration: 23s !important; }
-    .snowflake.s36 { animation-duration: 21s !important; }
-    .snowflake.s37 { animation-duration: 26s !important; }
-    .snowflake.s38 { animation-duration: 23s !important; }
-    .snowflake.s39 { animation-duration: 20s !important; }
-    .snowflake.s40 { animation-duration: 19s !important; }
-    
-    /* Добавляем несколько дополнительных снежинок для плотности */
-    .snowflake.s41 {
-        display: block !important;
-        left: 6%;
-        animation: snowfall-svg-very-slow1 25s linear infinite 40s;
-    }
-    .snowflake.s42 {
-        display: block !important;
-        left: 16%;
-        animation: snowfall-svg-very-slow2 23s linear infinite 41s;
-    }
-    .snowflake.s43 {
-        display: block !important;
-        left: 26%;
-        animation: snowfall-svg-very-slow1 27s linear infinite 42s;
-    }
-    .snowflake.s44 {
-        display: block !important;
-        left: 36%;
-        animation: snowfall-svg-very-slow2 24s linear infinite 43s;
-    }
-    .snowflake.s45 {
-        display: block !important;
-        left: 46%;
-        animation: snowfall-svg-slow1 19s linear infinite 44s;
-    }
-    .snowflake.s46 {
-        display: block !important;
-        left: 56%;
-        animation: snowfall-svg-slow2 17s linear infinite 45s;
-    }
-    .snowflake.s47 {
-        display: block !important;
-        left: 66%;
-        animation: snowfall-svg-slow3 20s linear infinite 46s;
-    }
-    .snowflake.s48 {
-        display: block !important;
-        left: 76%;
-        animation: snowfall-svg-slow4 18s linear infinite 47s;
-    }
-    .snowflake.s49 {
-        display: block !important;
-        left: 86%;
-        animation: snowfall-svg-slow1 21s linear infinite 48s;
-    }
-    .snowflake.s50 {
-        display: block !important;
-        left: 96%;
-        animation: snowfall-svg-slow2 22s linear infinite 49s;
-    }
-    
-    /* Стили для дополнительных снежинок */
-    .snowflake.s41, .snowflake.s42, .snowflake.s43, .snowflake.s44 {
-        opacity: 0;
-        top: -100px;
-    }
-    
-    .snow-checkbox:checked ~ .snow-container .snowflake.s41,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s42,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s43,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s44,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s45,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s46,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s47,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s48,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s49,
-    .snow-checkbox:checked ~ .snow-container .snowflake.s50 {
-        opacity: 0.8;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    
-    /* Размеры дополнительных снежинок */
-    .snowflake.s41.small svg, .snowflake.s42.small svg,
-    .snowflake.s43.small svg, .snowflake.s44.small svg {
-        width: 9px; height: 9px; opacity: 0.6;
-    }
-    .snowflake.s45.medium svg, .snowflake.s46.medium svg,
-    .snowflake.s47.medium svg, .snowflake.s48.medium svg {
-        width: 14px; height: 14px; opacity: 0.75;
-    }
-    .snowflake.s49.large svg, .snowflake.s50.large svg {
-        width: 19px; height: 19px; opacity: 0.9;
-    }
-    
-    /* Улучшаем распределение снежинок */
-    .snowflake.s1 { left: 4%; }
-    .snowflake.s2 { left: 12%; }
-    .snowflake.s3 { left: 20%; }
-    .snowflake.s4 { left: 28%; }
-    .snowflake.s5 { left: 36%; }
-    .snowflake.s6 { left: 44%; }
-    .snowflake.s7 { left: 52%; }
-    .snowflake.s8 { left: 60%; }
-    .snowflake.s9 { left: 68%; }
-    .snowflake.s10 { left: 76%; }
-    .snowflake.s11 { left: 84%; }
-    .snowflake.s12 { left: 92%; }
-    
-    .snowflake.s13 { left: 8%; }
-    .snowflake.s14 { left: 16%; }
-    .snowflake.s15 { left: 24%; }
-    .snowflake.s16 { left: 32%; }
-    .snowflake.s17 { left: 40%; }
-    .snowflake.s18 { left: 48%; }
-    .snowflake.s19 { left: 56%; }
-    .snowflake.s20 { left: 64%; }
-    .snowflake.s21 { left: 72%; }
-    .snowflake.s22 { left: 80%; }
-    .snowflake.s23 { left: 88%; }
-    .snowflake.s24 { left: 96%; }
-    
-    /* Оптимизация прозрачности для лучшего визуала */
-    .snow-checkbox:checked ~ .snow-container .snowflake {
-        opacity: 0.85;
-    }
-    
-    /* Улучшаем видимость на темном фоне */
-    .snowflake svg {
-        filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.4));
-    }
-    
-    /* Предотвращаем выход за границы экрана */
-    .snow-container {
-        overflow: hidden;
-    }
-    
-    .snowflake {
-        max-width: 30px;
-    }
-    
-    /* Анимация мерцания для дополнительных снежинок */
-    .snowflake.s41, .snowflake.s43 {
-        animation: snowfall-svg-very-slow1 25s linear infinite, twinkle-slow 7s ease-in-out infinite !important;
+    .heart::after {
+        left: -5.5px !important;
     }
 }
