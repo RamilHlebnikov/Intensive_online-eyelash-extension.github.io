@@ -7,23 +7,15 @@
 
 /* Объявление переменной root для свойств */
 :root {
-    --first-color: #DC3845;
+    --primary-color: #2a0f2a;
 
-    --first-color-dark: #DB4D59;
+    --primary-alternaite-color: #E91E63;
 
-    --title-color-dark: #F3F2F2;
-
-    --text-color-dark: #E3D3C4;
-
-    --green-color: #35F102;
-
-    --body-color-dark: #251819;
-
-    --container-color-dark: #2F2223;
-
-    --secondary-color: #FFFFFF;
+    --secondary-color: #ffe0f0;
 
     --border-radius: 30px;
+
+    --primary-color-button: #FF4081;
 
     --transition: 0.3s ease;
 
@@ -31,13 +23,27 @@
 
     --font-family: 'Montserrat', system-ui, sans-serif;
 
-    --background-color-card: #F2EEF7;
+    --background-color-card: #FFF5F9;
 
-    --input-color: #F8F1FF;
+    --background-color-footer: #D81B60;
+
+    --input-color: #FFF0F5;
 
     --border-radius-btn-register-login: 7px;
 
-    --snowflake-color: #4D8AFF;
+    --background-color--btn-register-login: #985ACE;
+
+    --valentine-light-pink: #F8BBD0;
+
+    --valentine-medium-pink: #F48FB1;
+
+    --valentine-dark-pink: #EC407A;
+
+    --valentine-red: #FF1744;
+
+    --valentine-gold: #FFD700;
+
+    --valentine-gradient: linear-gradient(45deg, #FF4081, #E91E63, #F48FB1);
 }
 
 /* Подключение шрифта "Montserrat" */
@@ -64,7 +70,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--body-color-dark);
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +93,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 120px;
-    background: linear-gradient(45deg, var(--container-color-dark), var(--body-color-dark));
+    background: linear-gradient(45deg, #2A1F40, #1A132D);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),inset 0 -10px 20px rgba(255, 255, 255, 0.1);
 }
@@ -100,7 +106,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 25px;
-    background: linear-gradient(45deg, var(--first-color), var(--first-color-dark));
+    background: linear-gradient(45deg, #FF4081, #E91E63);
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -119,7 +125,7 @@
 .brush-handle {
     width: 8px;
     height: 80px;
-    background: #000000;
+    background: var(--primary-alternaite-color);
     border-radius: 4px;
     position: relative;
 }
@@ -132,7 +138,7 @@
     transform: translateX(-50%);
     width: 25px;
     height: 30px;
-    background: linear-gradient(to bottom, var(--title-color-dark), var(--text-color-dark));
+    background: linear-gradient(to bottom, var(--secondary-color), #f0f0f0);
     border-radius: 50% 50% 0 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -146,7 +152,7 @@
     transform: translateX(-50%);
     width: 20px;
     height: 15px;
-    background: var(--title-color-dark);
+    background: var(--secondary-color);
     border-radius: 50% 50% 0 0;
 }
 
@@ -189,7 +195,7 @@
     position: absolute;
     width: 8px;
     height: 12px;
-    background: var(--first-color-dark);
+    background: #FF4081;
     border-radius: 50%;
     opacity: 0;
 }
@@ -234,14 +240,14 @@
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     font-size: 16px;
     opacity: 0;
     animation: textAppear 2s ease-in-out 1s forwards;
     font-family: var(--font-family);
-    white-space: nowrap;
-    width: auto;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    white-space: nowrap; /* Запрет переноса на новую строку */
+    width: auto; /* Автоматическая ширина */
 }
 
 @keyframes textAppear {
@@ -355,22 +361,7 @@ html {
 /* Шапка */
 .header {
     padding-top: 105px;
-    background-color: var(--body-color-dark);
-}
-
-.girland_new_year {
-    display: none;
-}
-
-.santa_christmas {
-    display: block;
-    width: 800px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    margin-top: -95px;
-    margin-bottom: -20px;
-    z-index: 1;
+    background-color: var(--primary-color);
 }
 
 .header__wrapper {
@@ -379,34 +370,20 @@ html {
     justify-content: space-between;
 }
 
-.header__logo {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.header_logo svg {
-    width: 34px;
-    height: 34px;
-    flex-shrink: 0;
-    object-fit: contain;
-}
-
 .logo {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     cursor: pointer;
     transition: var(--transition);
-    margin: 0;
 }
 
 .logo:hover {
-    color: var(--first-color-dark);
-    text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
 }
 
 .nav__menu {
@@ -420,29 +397,28 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 14px;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
     cursor: pointer;
 }
 
 .nav__item:hover {
-    color: var(--first-color-dark);
-    text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 20px rgba(219, 77, 89, 0.3);
+    color: var(--primary-color-button);
+    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
 }
 
 /* Главный экран */
 .banner {
     padding-top: 103px;
-    background-color: var(--body-color-dark);
+    background-color: var(--primary-color);
 }
 
 .banner__mini--title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 20px;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--secondary-color);
     text-transform: uppercase;
 }
 
@@ -451,8 +427,8 @@ html {
     font-weight: 700;
     font-size: 50px;
     line-height: 66px;
-    color: var(--first-color);
-    text-shadow: 0 0 2px var(--first-color), 0 0 5px var(--first-color);
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     text-transform: uppercase;
     max-width: 761px;
     margin-top: 19px;
@@ -463,8 +439,7 @@ html {
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--title-color-dark);
-    text-shadow: 0 0 6px rgba(255, 240, 128, 0.6);
+    color: var(--secondary-color);
     margin-top: 29px;
     max-width: 485px;
     text-transform: uppercase;
@@ -475,58 +450,59 @@ html {
 	align-items: center;
 	column-gap: 24px;
     margin-top: 44px;
-    padding-bottom: 140px;
+    padding-bottom: 182px;
 }
 
 .button {
-    background-color: var(--first-color);
+    background: linear-gradient(15deg, #FF4081, #FF1744);
     border-radius: var(--border-radius);
     padding: 20px 65px;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
     text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
 }
 
 .button:hover {
-    border: 3px solid var(--first-color);
-    background-color: transparent;
-    color: var(--title-color-dark);
-    box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+    border: 3px solid var(--primary-color-button);
+    background: transparent;
+    color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
 }
 
 .btn {
     border-radius: var(--border-radius);
     background-color: transparent;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     padding: 20px 65px;
     font-weight: 700;
     font-family: var(--font-family);
     font-size: 16px;
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
     text-transform: uppercase;
     transition: var(--transition);
     text-align: center;
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .btn:hover {
-    background-color: var(--first-color);
-    color: var(--title-color-dark);
-    border-color: var(--first-color);
-    box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+    background-color: var(--primary-color-button);
+    color: var(--secondary-color);
+    border-color: var(--primary-color-button);
+    box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
 
 .images {
     position: absolute;
     right: 0;
-    top: -47px;
-    width: 423px;
-    max-width: 100%;
+    top: -57px;
+    width: 452px;
     z-index: 2;
     transition: transform var(--transition);
     cursor: pointer;
@@ -536,34 +512,23 @@ html {
     transform: scale(1.1);
 }
 
-.Icicle_banner {
+.bg-effect {
     position: absolute;
-    top: -205px;
-    left: 9%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+    width: 718px;
+    height: 800px;
+    left: 50%;
+    top: -120px;
+    border-radius: 50%;
+    filter: blur(30px);
     z-index: 1;
-    pointer-events: none;
+    left: 75%;
+    transform: translateX(-50%);
+    max-width: 80vw;
 }
 
 /* Для кого? */
 .for-whom {
     padding-top: 167px;
-    background-color: var(--container-color-dark);
-}
-
-.Icicle {
-    position: absolute;
-    top: -215px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    z-index: 1;
-    pointer-events: none;
 }
 
 .for-whom__title {
@@ -572,7 +537,8 @@ html {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    color: var(--title-color-dark);
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     margin-bottom: 46px;
 }
 
@@ -587,25 +553,27 @@ html {
 /* Обертка для карточки чтобы изображение не обрезалось */
 .for-whom__card-wrapper {
     position: relative;
-    margin-left: 42px;
+    margin-left: 42px; /* компенсация выступа у изображения */
 }
 
 .for-whom__card {
-    background: var(--body-color-dark);
-    border: 3px solid var(--title-color-dark);
+    background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
+    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
     width: 341px;
     min-height: 138px;
-    padding: 20px 20px 20px 60px;
+    padding: 20px 20px 20px 60px; /* увеличен правый отступ */
     position: relative;
     display: flex;
     align-items: center;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.1);
     transition: var(--transition);
 }
 
 .for-whom__card:hover {
-    border-color: var(--first-color);
-    box-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--first-color) 5%, transparent);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 64, 129, 0.2);
+    border-color: var(--primary-alternaite-color);
 }
 
 .for-whom__card--between {
@@ -616,17 +584,17 @@ html {
 }
 
 .for-whom__images {
-    width: 90px;
-    height: 90px;
+    width: 94px;
+    height: 94px;
     position: absolute;
-    left: -46px;
+    left: -49px;
     top: 45%;
     transform: translateY(-50%);
     z-index: 2;
 }
 
 .for-whom__desc {
-    color: var(--title-color-dark);
+    color: var(--primary-color);
     font-size: 16px;
     font-family: var(--font-family);
     line-height: 130%;
@@ -637,8 +605,8 @@ html {
 }
 
 .for-whom__span {
-    color: var(--first-color);
-    text-shadow: 0 0 10px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     font-weight: 700;
 }
 
@@ -655,34 +623,35 @@ html {
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--text-color-dark);
+    color: var(--primary-color);
     text-transform: uppercase;
     width: 511px;
 }
 
 .button__for-whom {
-    background-color: var(--first-color);
+    background: linear-gradient(15deg, #FF4081, #FF1744);
     border-radius: var(--border-radius);
     padding: 20px 65px;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
     text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
 }
 
 .button__for-whom:hover {
-    border: 3px solid var(--first-color);
-    background-color: transparent;
-    color: var(--title-color-dark);
-    box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+    border-color: var(--primary-color-button);
+    background: transparent;
+    color: var(--valentine-dark-pink);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
 }
 
-.super_woman-winter--images {
+.super__woman--images {
     position: absolute;
     right: 0;
     top: 1px;
@@ -692,21 +661,18 @@ html {
 
 /* Что будет на интенсиве? */
 .program {
-    background-color: var(--body-color-dark);
+    background-color: var(--primary-color);
     padding-top: 168px;
 }
 
 .program__content--title {
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--secondary-color);
     font-family: var(--font-family);
     font-size: 50px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 38px;
-    position: relative;
-    padding-bottom: 20px;
 }
 
 .program__content--menu {
@@ -721,160 +687,64 @@ html {
     align-items: center;
     gap: 23px;
     min-width: 0;
-    padding: 25px 20px;
-    background: var(--container-color-dark);
-    border: 2px solid transparent;
-    border-radius: calc(var(--border-radius) - 10px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
 }
 
-/* Создаем градиентную границу через псевдоэлемент */
-.program__content--list::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--first-color), var(--first-color-dark), var(--first-color));
-    border-radius: calc(var(--border-radius) - 8px);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity var(--transition);
-}
-
-.program__content--list:hover::before {
-    opacity: 1;
-}
-
-/* Внутренний фон при наведении */
-.program__content--list::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: var(--container-color-dark);
-    border-radius: calc(var(--border-radius) - 12px);
-    z-index: -1;
-    transition: background 0.4s ease;
-}
-
-.program__content--list:hover::after {
-    background: linear-gradient(145deg, color-mix(in srgb, var(--container-color-dark) 95%, var(--first-color)), var(--container-color-dark));
+.program__content--list:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-color-button);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .program__images {
     width: 58px;
     height: 58px;
     flex-shrink: 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition);
     cursor: pointer;
-    filter: brightness(0.9);
-    position: relative;
-    z-index: 2;
-    border-radius: calc(var(--border-radius) - 15px);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.program__content--list:hover .program__images {
-    transform: scale(1.15) rotate(5deg);
-    filter: brightness(1.1) drop-shadow(0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent));
-}
-
-/* Специальный эффект для иконок подарков */
-.program__content--list:nth-child(4) .program__images,
-.program__content--list:nth-child(5) .program__images,
-.program__content--list:nth-child(6) .program__images {
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
-
-.program__content--list:nth-child(4):hover .program__images,
-.program__content--list:nth-child(5):hover .program__images,
-.program__content--list:nth-child(6):hover .program__images {
-    animation: gift-spin 0.6s ease-in-out;
-}
-
-@keyframes gift-spin {
-    0% { transform: scale(1.15) rotate(5deg); }
-    50% { transform: scale(1.2) rotate(25deg); }
-    100% { transform: scale(1.15) rotate(5deg); }
+.program__images:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .program__desc {
     font-size: 16px;
     line-height: 150%;
-    color: var(--text-color-dark);
+    color: var(--secondary-color);
     font-weight: 500;
     font-family: var(--font-family);
     text-transform: uppercase;
     margin: 0;
-    transition: all 0.4s ease;
-    position: relative;
-    z-index: 2;
-}
-
-.program__content--list:hover .program__desc {
-    color: var(--title-color-dark);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .program__span {
     font-size: 16px;
     line-height: 150%;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     font-weight: 700;
     font-family: var(--font-family);
     text-transform: uppercase;
-    transition: all 0.4s ease;
-    position: relative;
-    display: inline-block;
-    z-index: 2;
-}
-
-.program__content--list:hover .program__span {
-    color: var(--first-color-dark);
-    transform: translateY(-1px);
-    text-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 50%, transparent);
-}
-
-/* Эффект подчеркивания для спанов при наведении */
-.program__content--list:hover .program__span::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--first-color), var(--first-color-dark));
-    border-radius: 1px;
-    animation: underline 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes underline {
-    0% { width: 0; left: 50%; }
-    100% { width: 100%; left: 0; }
 }
 
 /* О Юлии Ворман */
 .about {
     padding-top: 146px;
-    background-color: var(--body-color-dark);
+    background-color: var(--primary-color);
 }
 
 .about__title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 50px;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 31px;
@@ -887,14 +757,14 @@ html {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     margin-bottom: 38px;
 }
 
 .about__text--span {
-    color: var(--first-color-dark);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
     font-weight: 700;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
 }
 
 .about__text--item {
@@ -904,14 +774,14 @@ html {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
 .about__text--item--span {
-    color: var(--first-color-dark);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 5px rgba(219, 77, 89, 0.3);
     font-weight: 700;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
 }
 
 /* Стили для индикаторов - Уменьшаем расстояние между колонками */
@@ -938,8 +808,8 @@ html {
     font-weight: 700;
     font-size: 50px;
     line-height: 66px;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
 }
 
 .indicator_text {
@@ -948,7 +818,7 @@ html {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
 }
 
 .about__text--footer {
@@ -956,16 +826,16 @@ html {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     width: 645px;
     text-transform: uppercase;
     padding-bottom: 176px;
 }
 
 .about__text--footer--span {
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
     font-weight: 700;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
 }
 
 .about__main--images {
@@ -975,84 +845,26 @@ html {
     width: 349px;
     height: 451px;
     border-radius: var(--border-radius);
-    overflow: hidden;
-    z-index: 1;
-    transition: all 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(219, 77, 89, 0.1);
-}
-
-.about__main--images:hover {
-    transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px color-mix(in srgb, var(--first-color) 20%, transparent), 0 0 0 2px rgba(219, 77, 89, 0.2);
-}
-
-/* Градиентная рамка для изображения */
-.about__main--images::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--first-color), var(--first-color-dark), var(--first-color));
-    border-radius: calc(var(--border-radius) + 2px);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.about__main--images:hover::before {
-    opacity: 1;
-}
-
-/* Блеск на изображении */
-.about__main--images::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: skewX(-15deg);
-    transition: left 0.7s ease;
-}
-
-.about__main--images:hover::after {
-    left: 150%;
 }
 
 /* Лист уроков интенсива */
 .list__lessons {
     padding-top: 168px;
-    background-color: var(--container-color-dark);
-}
-
-.Icicle_lessons {
-    position: absolute;
-    top: -205px;
-    left: 90%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    z-index: 1;
-    pointer-events: none;
 }
 
 .list__lessons--title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 50px;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 46px;
 }
 
 .accordion-item1 {
-    border-bottom: 3px solid var(--first-color) !important;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .accordion {
@@ -1061,7 +873,7 @@ html {
 }
 
 .accordion-item {
-    border-bottom: 3px solid var(--first-color) !important;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .accordion-toggle {
@@ -1077,17 +889,17 @@ html {
     padding-left: 0;
     padding-right: 8px;
     cursor: pointer;
-    transition: background-color var(--transition);
+    transition: background-color 0.3s;
 }
 
 .accordion-label:hover {
-    background-color: transparent !important;
+    background: linear-gradient(135deg, #FFF5F9, #FFE4EC);
 }
 
 .lesson-title {
     font-size: 18px;
     font-weight: 500;
-    color: var(--title-color-dark);
+    color: var(--primary-color);
     font-family: var(--font-family);
     text-transform: uppercase;
 }
@@ -1103,7 +915,7 @@ html {
 .icon::before, .icon::after {
     content: '';
     position: absolute;
-    background-color: var(--title-color-dark) !important;
+    background-color: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -1140,10 +952,10 @@ html {
     overflow: hidden;
     padding: 0 25px;
     transition: max-height 0.4s ease, padding 0.4s ease;
-    background-color: transparent !important;
+    background-color: var(--background-color-card);
     font-size: 15px;
     line-height: 1.6;
-    color: var(--title-color-dark) !important;
+    color: var(--primary-color);
 }
 
 /* Когда аккордеон открыт */
@@ -1169,19 +981,18 @@ html {
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--text-color-dark);
+    color: var(--primary-color);
     width: 350px;
 }
 
 .lesson--title--number {
     font-weight: 700;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-alternaite-color);
 }
 
 /* Тарифы */
 .pricing {
-    background-color: var(--body-color-dark);
+    background-color: var(--primary-color);
     padding-top: 168px;
 }
 
@@ -1190,7 +1001,7 @@ html {
     font-weight: 700;
     font-size: 50px;
     text-align: center;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     margin-bottom: 46px;
 }
@@ -1202,27 +1013,26 @@ html {
 }
 
 .pricing__content--card {
-    background-color: var(--container-color-dark);
+    background: linear-gradient(135deg, #FFFFFF, var(--background-color-card));
     border-radius: var(--border-radius);
     width: 375px;
     padding: 57px 30px 0 36px;
     position: relative;
-    border: 3px solid var(--title-color-dark);
+    border: 3px solid var(--primary-color);
     transition: var(--transition);
 }
 
 .pricing__content--card:hover {
     transform: translateY(-5px);
-    border-color: var(--first-color);
-    box-shadow: 0 15px 35px color-mix(in srgb, var(--first-color) 20%, transparent), 0 5px 15px color-mix(in srgb, var(--first-color-dark) 15%, transparent);
+    box-shadow: 0 20px 40px rgba(255, 64, 129, 0.3);
+    border-color: var(--primary-color-button);
 }
 
 .pricing__content__card--title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--primary-color);
     text-transform: uppercase;
     margin-bottom: 15px;
 }
@@ -1233,47 +1043,27 @@ html {
     font-size: 15px;
     line-height: 150%;
     text-transform: uppercase;
-    color: var(--text-color-dark);
+    color: var(--primary-color);
     margin-bottom: 8px;
     display: flex;
     gap: 8px;
-    align-self: center;
-    padding: 5px 0;
-    border-bottom: 1px dashed var(--text-color-dark);
-}
-
-.pricing__content--card:hover .pricing__content--desc {
-    color: var(--title-color-dark);
 }
 
 .pricing__content--span {
     font-weight: 700;
     font-size: 25px;
     flex-shrink: 0;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
-}
-
-.pricing__content--spans {
-    font-weight: 700;
-    font-size: 25px;
-    flex-shrink: 0;
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--primary-alternaite-color);
 }
 
 .pricing__content--duration {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--first-color-dark);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--primary-color);
     text-transform: uppercase;
     margin-top: 18px;
     margin-bottom: 8px;
-    background: var(--body-color-dark);
-    border-radius: 10px;
-    padding: 10px 15px;
 }
 
 .pricing__content--condition {
@@ -1281,7 +1071,7 @@ html {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 12px;
-    color: var(--text-color-dark);
+    color: var(--primary-color);
     text-transform: uppercase;
     margin: 0;
     margin-right: 50px;
@@ -1290,8 +1080,8 @@ html {
 }
 
 .pricing__content__condition--span {
-    color: var(--first-color-dark);
     font-weight: 700;
+    color: var(--primary-alternaite-color);
 }
 
 .pricing__content--price {
@@ -1299,39 +1089,41 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--first-color-dark);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--valentine-dark-pink);
     margin: 0;
     text-align: center;
 }
 
 .pricing__content--button {
-    background-color: var(--first-color);
+    background: linear-gradient(15deg, #FF4081, #FF1744);
     border-radius: var(--border-radius);
     padding: 20px 75px;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
-    border: 3px solid var(--first-color);
+    border: 3px solid var(--primary-color-button);
     margin-left: 10px;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
 }
 
 .pricing__content--button:hover {
-    background-color: var(--first-color);
-    color: var(--title-color-dark);
-    border-color: var(--first-color);
-    box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+    border: 3px solid var(--primary-color);
+    background-color: var(--primary-color-button);
+    color: var(--secondary-color);
+    border-color: var(--primary-color-button);
+    box-shadow: 0 0 15px rgba(163, 135, 196, 0.6), inset 0 0 15px rgba(163, 135, 196, 0.1);
+    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
 }
 
 .pricing__content--images {
     position: absolute;
     top: -40px;
     left: 275px;
-    width: 128px;
-    height: 128px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     transition: var(--transition);
     cursor: pointer;
@@ -1350,15 +1142,14 @@ html {
 }
 
 .pricing__content__images--gift {
-    width: 87px;
-    height: 87px;
+    width: 75px;
+    height: 75px;
     transition: var(--transition);
     cursor: pointer;
 }
 
 .pricing__content__images--gift:hover {
-    transform: scale(1.15) rotate(-10deg);
-    filter: drop-shadow(0 0 20px var(--first-color)) brightness(1.1);
+    transform: scale(1.1);
 }
 
 .pricing__content__stories--text {
@@ -1367,14 +1158,14 @@ html {
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
-    color: var(--text-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
 }
 
 .btn__stories {
-    border: 4px solid var(--first-color-dark);
+    border: 4px solid var(--primary-color-button);
     background-color: transparent;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     padding: 20px 40px;
     text-align: center;
     border-radius: var(--border-radius);
@@ -1387,15 +1178,15 @@ html {
 }
 
 .btn__stories:hover {
-    background-color: var(--first-color);
-    color: var(--title-color-dark);
-    border-color: var(--first-color);
-    box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+    background-color: var(--primary-color-button);
+    color: var(--secondary-color);
+    border-color: var(--primary-color-button);
+    box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
 
 .short__name {
     text-transform: uppercase;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     font-size: 16px;
     font-weight: 700;
     font-family: var(--font-family);
@@ -1405,34 +1196,21 @@ html {
 }
 
 .short__name:hover {
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
 }
 
 /* А такие вопросы могут возникнуть у вас */
 .questions {
     padding-top: 156px;
-    background-color: var(--container-color-dark);
-}
-
-.Icicle_questions {
-    position: absolute;
-    top: -192px;
-    left: 9%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    z-index: 1;
-    pointer-events: none;
 }
 
 .questions__title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 50px;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 46px;
@@ -1444,11 +1222,11 @@ html {
 }
 
 .accordion-item1 {
-    border-bottom: 3px solid var(--first-color) !important;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .accordion-item {
-    border-bottom: 3px solid var(--first-color) !important;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .accordion-toggle {
@@ -1468,13 +1246,13 @@ html {
 }
 
 .accordion-label:hover {
-    background-color: transparent !important;
+    background-color: var(--secondary-color);
 }
 
 .question-title {
     font-size: 18px;
     font-weight: 500;
-    color: var(--title-color-dark);
+    color: var(--primary-color);
     font-family: var(--font-family);
     text-transform: uppercase;
 }
@@ -1490,7 +1268,7 @@ html {
 .icon::before, .icon::after {
     content: '';
     position: absolute;
-    background-color: var(--title-color-dark) !important;
+    background-color: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -1533,10 +1311,10 @@ html {
     overflow: hidden;
     padding: 0 25px;
     transition: max-height 0.4s ease, padding 0.4s ease;
-    background-color: transparent !important;
+    background-color: var(--secondary-color);
     font-size: 15px;
     line-height: 1.6;
-    color: var(--title-color-dark);
+    color: var(--primary-color);
 }
 
 .content-wrapper {
@@ -1544,15 +1322,16 @@ html {
 }
 
 .bx.bxl-telegram {
-    color: var(--first-color);
+    color: var(--primary-color);
     font-size: 50px;
     cursor: pointer;
     transition: var(--transition);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .bx.bxl-telegram:hover {
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-alternaite-color);
+    transform: scale(1.1);
 }
 
 .questions__text {
@@ -1560,24 +1339,16 @@ html {
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--text-color-dark);
+    color: var(--primary-color);
     text-transform: uppercase;
     width: 399px;
-}
-
-.Snowman--images {
-    position: absolute;
-    right: 0;
-    top: -46px;
-    width: 290px;
-    height: 290px;
 }
 
 /* Подвал */
 .footer {
     padding-top: 125px;
     padding-bottom: 109px;
-    background-color: var(--body-color-dark);
+    background-color: var(--background-color-footer);
     width: 100%;
     position: relative;
 }
@@ -1597,22 +1368,21 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     cursor: pointer;
     transition: var(--transition);
 }
 
 .footer__logo:hover {
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--primary-color);
 }
 
 .inn {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--text-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -1622,7 +1392,7 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--text-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     line-height: 1.4;
 }
@@ -1646,7 +1416,7 @@ html {
 
 .up__link {
     text-decoration: none;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     display: block;
     transition: var(--transition);
 }
@@ -1657,8 +1427,7 @@ html {
 }
 
 .up__link:hover .bx.bx-up-arrow-alt {
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -1676,21 +1445,18 @@ html {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--title-color-dark);
-    background-color: var(--title-color-dark);
+    background-color: rgba(255, 255, 255, 0.1);
     transition: var(--transition);
 }
 
 .social__icons a:hover {
-    background-color: transparent;
-    border: 2px solid var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    background-color: var(--primary-color);
     transform: scale(1.1);
 }
 
 .social__icons i {
     font-size: 20px;
-    color: var(--first-color);
+    color: var(--secondary-color);
 }
 
 .social__icons svg {
@@ -1710,14 +1476,13 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
-    color: var(--text-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
 }
 
 .political__confidencial:hover, .oferta:hover, .hire__me:hover {
-    color: var(--first-color);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--primary-color);
 }
 
 .social__icons {
@@ -1731,21 +1496,19 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--body-color-dark);
+    background-color: var(--primary-color);
 }
 
 .form__container {
     display: flex;
     justify-content: center;
     padding: 60px;
-    background-color: var(--container-color-dark);
+    background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     width: 100%;
     max-width: 460px;
     margin: 0 20px;
     flex-direction: column;
-    border: 2px solid var(--title-color-dark);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .form__tabs {
@@ -1760,20 +1523,17 @@ html {
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
-    color: var(--text-color-dark);
+    color: var(--prefers-color-scheme);
     cursor: pointer;
     transition: var(--transition);
 }
 
 .form__tab:hover {
-    color: var(--first-color);
-    text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 40%, transparent);
+    color: var(--primary-color);
 }
 
 .form__tab--active {
-    color: var(--first-color);
-    -webkit-text-stroke: 0.5px var(--first-color-dark);
-    filter: drop-shadow(0 0 1px var(--first-color));
+    color: var(--primary-color);
 }
 
 .form__container--group {
@@ -1783,10 +1543,10 @@ html {
 }
 
 .form__field {
-    background-color: var(--body-color-dark);
+    background-color: var(--input-color);
     border-radius: var(--border-radius-btn-register-login);
     padding: 2px 0 8px 16px;
-    border: 2px solid var(--text-color-dark);
+    border: 2px solid transparent;
     transition: var(--transition);
 }
 
@@ -1797,32 +1557,30 @@ html {
     outline: none;
     font-family: var(--font-family);
     font-size: 16px;
-    color: var(--title-color-dark);
 }
 
 .form__field:focus-within {
-    border-color: var(--first-color);
-    box-shadow: 0 0 10px color-mix(in srgb, var(--first-color) 30%, transparent);
+    border-color: var(--primary-color-button);
 }
 
 .label {
     display: flex;
     margin: 2px 0;
     opacity: 0.6;
-    color: var(--title-color-dark);
+    color: #403A4B;
 }
 
 .btn__register {
-    background-color: var(--first-color);
+    background-color: var(--primary-color-button);
     border-radius: var(--border-radius);
     padding: 16px;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
     text-align: center;
     width: 100%;
     margin-bottom: 21px;
@@ -1831,15 +1589,16 @@ html {
 }
 
 .btn__register:hover {
-    border: 3px solid var(--first-color);
-    background-color: transparent;
-    color: var(--first-color-dark);
-    box-shadow: 0 0 15px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 15px color-mix(in srgb, var(--first-color) 10%, transparent);
-    text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+    border: 3px solid var(--primary-color-button);
+    background-color: var(--primary-color-button);
+    color: var(--secondary-color);
+    border-color: var(--primary-color-button);
+    box-shadow: 0 0 15px rgba(163, 135, 196, 0.6), inset 0 0 15px rgba(163, 135, 196, 0.1);
+    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
 }
 
 .hr {
-    border-bottom: 1px solid var(--text-color-dark);
+    border-bottom: 1px solid var(--prefers-color-scheme);
 }
 
 .btn__continue {
@@ -1848,10 +1607,10 @@ html {
     justify-content: center;
     column-gap: 9px;
     background: transparent;
-    border: 3px solid var(--first-color);
+    border-radius: var(--border-radius);
     border: 3px solid var(--primary-color-button);
     padding: 16px;
-    color: var(--text-color-dark);
+    color: var(--prefers-color-scheme);
     font-family: var(--font-family);
     font-weight: 500;
     margin-top: 21px;
@@ -1860,15 +1619,13 @@ html {
 }
 
 .btn__continue:hover {
-    background-color: var(--first-color);
-    color: var(--title-color-dark);
-    border: 3px solid var(--first-color-dark);
-    box-shadow: 0 5px 15px color-mix(in srgb, var(--first-color) 25%, transparent);
+    background-color: var(--primary-color-button);
+    color: var(--secondary-color);
+    border: 3px solid var(--primary-color-button);
 }
 
 .bx.bxl-google {
     font-size: 20px;
-    color: var(--first-color);
 }
 
 /* Для входа в аккаунт */
@@ -1878,19 +1635,18 @@ html {
     column-gap: 9px;
     cursor: pointer;
     font-family: var(--font-family);
-    color: var(--text-color-dark);
+    color: var(--prefers-color-scheme);
 }
 
 .checkbox {
     width: 18px;
     height: 18px;
-    accent-color: var(--first-color);
 }
 
 .forgot__password {
     text-align: center;
     text-decoration: none;
-    color: var(--text-color-dark);
+    color: var(--prefers-color-scheme);
     font-size: 12px;
     margin-top: 5px;
     font-family: var(--font-family);
@@ -1898,8 +1654,7 @@ html {
 }
 
 .forgot__password:hover {
-    color: var(--first-color);
-    text-shadow: 0 0 3px color-mix(in srgb, var(--first-color) 30%, transparent);
+    color: var(--primary-color);
 }
 
 /* Для предзаписи */
@@ -1910,8 +1665,7 @@ html {
     font-family: var(--font-family);
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c, 0 0 2px #00ff00;
+    color: var(--primary-color);
 }
 
 .remembers__me {
@@ -1920,7 +1674,7 @@ html {
     column-gap: 9px;
     cursor: pointer;
     font-family: var(--font-family);
-    color: var(--text-color-dark);
+    color: var(--primary-color);
     margin-top: 21px;
 }
 
@@ -1929,34 +1683,30 @@ html {
     height: 18px;
     min-width: 16px;
     margin-top: 2px;
-    accent-color: var(--first-color);
-    box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-    text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+    accent-color: var(--primary-color-button);
 }
 
 .btn__pre--recording {
-    background: linear-gradient(145deg, var(--first-color), var(--first-color-dark));
+    background-color: var(--primary-color-button);
     border-radius: var(--border-radius);
     padding: 20px 65px;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
     text-align: center;
     width: 100%;
     margin-top: 37px;
 }
 
 .btn__pre--recording:hover {
-    background: transparent;
-    color: var(--title-color-dark);
-    border-color: var(--first-color);
-    border: 3px solid var(--first-color);
-    box-shadow: 0 0 20px color-mix(in srgb, var(--first-color) 40%, transparent), 0 8px 25px color-mix(in srgb, var(--first-color-dark) 20%, transparent);
-    text-shadow: 0 0 5px color-mix(in srgb, var(--first-color) 30%, transparent);
+    background-color: transparent;
+    color: var(--primary-color-button);
+    border-color: var(--primary-color-button);
+    box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
 
 /* Файлы Cookie */
@@ -1970,13 +1720,13 @@ html {
 
 .cookie__notifications {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     max-width: 600px;
-    background: var(--container-color-dark);
-    border: 3px solid var(--title-color-dark);
+    background: var(--primary-color);
+    border: 3px solid var(--primary-alternaite-color);
     border-radius: var(--border-radius);
     padding: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
@@ -2006,19 +1756,19 @@ html {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
-    color: var(--green-color);
-    text-shadow: 0 0 2px #2ce72c;
+    color: var(--secondary-color);
     line-height: 1.4;
 }
 
-.cookie_man {
-    width: 84px;
-    height: auto;
+.bx.bxs-heart {
+    font-size: 64px;
     cursor: pointer;
     transition: var(--transition);
+    color: var(--primary-alternaite-color);
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);;
 }
 
-.cookie_man:hover {
+.bx.bxs-heart:hover {
     transform: scale(1.1) rotate(10deg);
 }
 
@@ -2030,78 +1780,81 @@ html {
 }
 
 .cookie__accept {
-    background-color: var(--first-color);
+    background: linear-gradient(15deg, #FF4081, #FF1744);
     border-radius: var(--border-radius);
     padding: 8px 16px;
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     text-transform: uppercase;
     transition: var(--transition);
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
     text-align: center;
 }
 
 .cookie__accept:hover {
-    border: 3px solid var(--first-color);
-    background-color: transparent;
-    color: var(--title-color-dark);
-    box-shadow: 0 0 15px rgba(219, 77, 89, 0.6), inset 0 0 15px rgba(219, 77, 89, 0.1);
-    text-shadow: 0 0 5px rgba(219, 77, 89, 0.5), 0 0 10px rgba(219, 77, 89, 0.3);
+    border: 3px solid var(--primary-color-button);
+    background: transparent;
+    color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px rgba(163, 135, 196, 0.3);
 }
 
 .cookie__decline {
     border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
     background-color: transparent;
-    color: var(--title-color-dark);
+    color: var(--secondary-color);
     padding: 8px 16px;
     font-weight: 700;
     font-family: var(--font-family);
     font-size: 16px;
-    border: 3px solid var(--first-color-dark);
+    border: 3px solid var(--primary-color-button);
     text-transform: uppercase;
     transition: var(--transition);
     text-align: center;
 }
 
 .cookie__decline:hover {
-    background-color: var(--first-color);
-    color: var(--title-color-dark);
-    border-color: var(--first-color);
-    box-shadow: 0 8px 25px color-mix(in srgb, var(--first-color) 40%, transparent), inset 0 0 20px color-mix(in srgb, white 20%, transparent);
+    background-color: var(--primary-color-button);
+    color: var(--secondary-color);
+    border-color: var(--primary-color-button);
+    box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
 
-/* СНЕГ ИЗ SVG ИКОНОК */
+/* ДЕНЬ СВЯТОГО ВАЛЕНТИНА */
 /* Скрытый checkbox */
-.snow-checkbox {
+.valentine-checkbox {
     display: none;
 }
 
-/* Кнопка переключения снега */
-.snow-toggle-btn {
+/* Кнопка переключения валентинки - ПОЯВЛЯЕТСЯ ЧЕРЕЗ 4.5 секунды (после прелоадера) */
+.valentine-toggle-btn {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 90px; /* Сдвигаем правее снежинки */
     width: 60px;
     height: 60px;
-    background: rgba(30, 30, 40, 0.95);
+    background: rgba(255, 64, 129, 0.95);
     border-radius: var(--border-radius);
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 215, 0, 0.3);
     cursor: pointer;
     z-index: 10001;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 15px rgba(255, 64, 129, 0.4);
     
+    /* Изначально скрыта, появляется через 4.5s */
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
-    animation: showSnowButton 0.5s ease-in-out 4.5s forwards;
+    animation: showValentineButton 0.5s ease-in-out 4.5s forwards;
 }
 
-@keyframes showSnowButton {
+@keyframes showValentineButton {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2109,7 +1862,13 @@ html {
     }
 }
 
-.snowflake-icon {
+.valentine-toggle-btn:hover {
+    background: rgba(233, 30, 99, 0.95);
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 64, 129, 0.6);
+}
+
+.valentine-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2118,225 +1877,287 @@ html {
     cursor: pointer;
 }
 
-.snowflake-svg {
-    width: 35px;
-    height: 35px;
-    color: #888888;
+.valentine-svg {
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
     transition: color 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.snow-checkbox:checked ~ .snow-toggle-btn .snowflake-svg {
-    color: var(--snowflake-color);
+/* Когда checkbox отмечен (эффект включен) - сердечко мерцает */
+.valentine-checkbox:checked ~ .valentine-toggle-btn {
+    background: rgba(233, 30, 99, 0.95);
+    border-color: #FFD700;
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.8);
 }
 
-/* Контейнер для снега */
-.snow-container {
+.valentine-checkbox:checked ~ .valentine-toggle-btn .valentine-svg {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Контейнер для валентинского эффекта */
+.valentine-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    z-index: 9997;
+    z-index: 9998;
     overflow: hidden;
+    
+    /* Эффект по умолчанию выключен */
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-.snow-checkbox:checked ~ .snow-container {
+/* Когда checkbox отмечен - показываем эффект */
+.valentine-checkbox:checked ~ .valentine-container {
     opacity: 1;
 }
 
-/* SVG снежинки */
-.snowflake {
+/* Падающие сердечки */
+.valentine-container .heart {
     position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #FF4081;
+    transform: rotate(45deg);
+    top: -20px;
     opacity: 0;
-    top: -100px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    
+    /* Анимация выключена по умолчанию */
     animation: none;
 }
 
-.snow-checkbox:checked ~ .snow-container .snowflake {
-    opacity: 0.9;
-    animation-timing-function: linear;
+.valentine-container .heart::before,
+.valentine-container .heart::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.valentine-container .heart::before {
+    top: -6px;
+    left: 0;
+}
+
+.valentine-container .heart::after {
+    top: 0;
+    left: -6px;
+}
+
+/* Включаем анимацию только когда checkbox отмечен */
+.valentine-checkbox:checked ~ .valentine-container .heart {
+    opacity: 0.8;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
-/* Размеры снежинок */
-.snowflake.small svg {
-    width: 10px;
-    height: 10px;
-    opacity: 0.6;
+/* Размеры сердечек */
+.heart.small {
+    width: 8px;
+    height: 8px;
 }
-.snowflake.medium svg {
-    width: 15px;
-    height: 15px;
-    opacity: 0.8;
+.heart.small::before,
+.heart.small::after {
+    width: 8px;
+    height: 8px;
 }
-.snowflake.large svg {
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-}
-.snowflake.xlarge svg {
-    width: 25px;
-    height: 25px;
-    opacity: 1;
+.heart.small::before { top: -4px; }
+.heart.small::after { left: -4px; }
+
+.heart.medium {
+    width: 12px;
+    height: 12px;
 }
 
-/* ЗАМЕДЛЕННЫЕ АНИМАЦИИ ДЛЯ СНЕЖИНОК */
-@keyframes snowfall-svg-slow1 {
+.heart.large {
+    width: 16px;
+    height: 16px;
+}
+.heart.large::before,
+.heart.large::after {
+    width: 16px;
+    height: 16px;
+}
+.heart.large::before { top: -8px; }
+.heart.large::after { left: -8px; }
+
+/* Мерцающие звездочки */
+.valentine-container .sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #FFF;
+    opacity: 0;
+    
+    /* Анимация выключена по умолчанию */
+    animation: none;
+}
+
+.valentine-checkbox:checked ~ .valentine-container .sparkle {
+    opacity: 0;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(0.8); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.3); 
+    }
+}
+
+/* Анимация падения сердечек */
+@keyframes heartFall {
     0% {
-        transform: translateY(-100px) translateX(0) rotate(0deg);
+        transform: translateY(0) translateX(0) rotate(45deg);
         opacity: 0;
     }
-    10% {
-        opacity: 0.7;
-    }
-    90% {
-        opacity: 0.7;
-    }
+    10% { opacity: 0.9; }
+    90% { opacity: 0.9; }
     100% {
-        transform: translateY(100vh) translateX(30px) rotate(180deg);
+        transform: translateY(100vh) translateX(30px) rotate(45deg);
         opacity: 0;
     }
 }
 
-@keyframes snowfall-svg-slow2 {
+/* Варианты анимаций сердечек */
+@keyframes heartFall1 {
     0% {
-        transform: translateY(-150px) translateX(-15px) rotate(0deg);
+        transform: translateY(0) translateX(0) rotate(45deg);
         opacity: 0;
     }
-    15% {
-        opacity: 0.6;
-    }
-    85% {
-        opacity: 0.6;
-    }
+    10% { opacity: 0.9; }
+    90% { opacity: 0.9; }
     100% {
-        transform: translateY(100vh) translateX(25px) rotate(360deg);
+        transform: translateY(100vh) translateX(50px) rotate(45deg);
         opacity: 0;
     }
 }
 
-@keyframes snowfall-svg-slow3 {
+@keyframes heartFall2 {
     0% {
-        transform: translateY(-200px) translateX(10px) rotate(0deg);
+        transform: translateY(0) translateX(0) rotate(45deg);
         opacity: 0;
     }
-    5% {
-        opacity: 0.5;
-    }
-    95% {
-        opacity: 0.5;
-    }
+    10% { opacity: 0.9; }
+    90% { opacity: 0.9; }
     100% {
-        transform: translateY(100vh) translateX(-20px) rotate(540deg);
+        transform: translateY(100vh) translateX(-30px) rotate(45deg);
         opacity: 0;
     }
 }
 
-@keyframes snowfall-svg-slow4 {
+@keyframes heartFall3 {
     0% {
-        transform: translateY(-120px) translateX(-5px) rotate(0deg);
+        transform: translateY(0) translateX(0) rotate(45deg);
         opacity: 0;
     }
-    12% {
-        opacity: 0.8;
-    }
-    88% {
-        opacity: 0.8;
-    }
+    10% { opacity: 0.9; }
+    90% { opacity: 0.9; }
     100% {
-        transform: translateY(100vh) translateX(15px) rotate(270deg);
+        transform: translateY(100vh) translateX(70px) rotate(45deg);
         opacity: 0;
     }
 }
 
-/* ОЧЕНЬ МЕДЛЕННЫЕ АНИМАЦИИ */
-@keyframes snowfall-svg-very-slow1 {
+@keyframes heartFall4 {
     0% {
-        transform: translateY(-100px) translateX(0) rotate(0deg);
+        transform: translateY(0) translateX(0) rotate(45deg);
         opacity: 0;
     }
-    8% {
-        opacity: 0.6;
-    }
-    92% {
-        opacity: 0.6;
-    }
+    10% { opacity: 0.9; }
+    90% { opacity: 0.9; }
     100% {
-        transform: translateY(100vh) translateX(20px) rotate(90deg);
+        transform: translateY(100vh) translateX(-50px) rotate(45deg);
         opacity: 0;
     }
 }
 
-@keyframes snowfall-svg-very-slow2 {
-    0% {
-        transform: translateY(-80px) translateX(-8px) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.7;
-    }
-    90% {
-        opacity: 0.7;
-    }
-    100% {
-        transform: translateY(100vh) translateX(12px) rotate(180deg);
-        opacity: 0;
-    }
-}
+/* Позиции и анимации для каждого сердечка */
+.heart.h1 { left: 2%; animation: heartFall 8s linear infinite 0s; background: #FF4081; width: 10px; height: 10px; }
+.heart.h2 { left: 8%; animation: heartFall1 12s linear infinite 2s; background: #E91E63; width: 14px; height: 14px; }
+.heart.h3 { left: 15%; animation: heartFall2 9s linear infinite 1s; background: #FF4081; width: 8px; height: 8px; }
+.heart.h4 { left: 22%; animation: heartFall3 11s linear infinite 3s; background: #F48FB1; width: 12px; height: 12px; }
+.heart.h5 { left: 30%; animation: heartFall4 10s linear infinite 0.5s; background: #FF4081; width: 9px; height: 9px; }
+.heart.h6 { left: 38%; animation: heartFall 13s linear infinite 4s; background: #EC407A; width: 11px; height: 11px; }
+.heart.h7 { left: 45%; animation: heartFall1 7s linear infinite 1.5s; background: #FF4081; width: 13px; height: 13px; }
+.heart.h8 { left: 52%; animation: heartFall2 14s linear infinite 2.5s; background: #F06292; width: 7px; height: 7px; }
+.heart.h9 { left: 60%; animation: heartFall3 8.5s linear infinite 0.8s; background: #FF4081; width: 15px; height: 15px; }
+.heart.h10 { left: 68%; animation: heartFall4 9.5s linear infinite 3.2s; background: #D81B60; width: 10px; height: 10px; }
 
-/* Распределение снежинок с разными СРЕДНИМИ анимациями */
-/* Группа 1: медленные (12-18 секунд) */
-.snowflake.s1 { left: 5%; animation: snowfall-svg-very-slow1 18s linear infinite 0s; }
-.snowflake.s2 { left: 15%; animation: snowfall-svg-very-slow2 15s linear infinite 2s; }
-.snowflake.s3 { left: 25%; animation: snowfall-svg-very-slow1 16s linear infinite 4s; }
-.snowflake.s4 { left: 35%; animation: snowfall-svg-very-slow2 14s linear infinite 1s; }
-.snowflake.s5 { left: 45%; animation: snowfall-svg-very-slow1 17s linear infinite 3s; }
-.snowflake.s6 { left: 55%; animation: snowfall-svg-very-slow2 16s linear infinite 5s; }
-.snowflake.s7 { left: 65%; animation: snowfall-svg-very-slow1 13s linear infinite 0.5s; }
-.snowflake.s8 { left: 75%; animation: snowfall-svg-very-slow2 18s linear infinite 6s; }
-.snowflake.s9 { left: 85%; animation: snowfall-svg-very-slow1 12s linear infinite 7s; }
-.snowflake.s10 { left: 95%; animation: snowfall-svg-very-slow2 19s linear infinite 8s; }
+.heart.h11 { left: 75%; animation: heartFall 11.5s linear infinite 1.8s; background: #FF4081; width: 12px; height: 12px; }
+.heart.h12 { left: 82%; animation: heartFall1 10.2s linear infinite 0.3s; background: #AD1457; width: 8px; height: 8px; }
+.heart.h13 { left: 88%; animation: heartFall2 12.8s linear infinite 2.8s; background: #FF4081; width: 14px; height: 14px; }
+.heart.h14 { left: 95%; animation: heartFall3 8.8s linear infinite 1.2s; background: #C2185B; width: 9px; height: 9px; }
+.heart.h15 { left: 5%; animation: heartFall4 13.2s linear infinite 4.5s; background: #FF4081; width: 11px; height: 11px; }
+.heart.h16 { left: 12%; animation: heartFall 9.2s linear infinite 0.7s; background: #880E4F; width: 13px; height: 13px; }
+.heart.h17 { left: 18%; animation: heartFall1 11.8s linear infinite 3.5s; background: #FF4081; width: 7px; height: 7px; }
+.heart.h18 { left: 25%; animation: heartFall2 10.5s linear infinite 1.9s; background: #F8BBD0; width: 15px; height: 15px; }
+.heart.h19 { left: 32%; animation: heartFall3 12.5s linear infinite 0.4s; background: #FF4081; width: 10px; height: 10px; }
+.heart.h20 { left: 40%; animation: heartFall4 8.2s linear infinite 2.2s; background: #FF80AB; width: 12px; height: 12px; }
 
-/* Группа 2: средние (8-12 секунд) */
-.snowflake.s11 { left: 8%; animation: snowfall-svg-slow1 12s linear infinite 9s; }
-.snowflake.s12 { left: 18%; animation: snowfall-svg-slow2 11s linear infinite 10s; }
-.snowflake.s13 { left: 28%; animation: snowfall-svg-slow3 10s linear infinite 11s; }
-.snowflake.s14 { left: 38%; animation: snowfall-svg-slow4 9s linear infinite 12s; }
-.snowflake.s15 { left: 48%; animation: snowfall-svg-slow1 13s linear infinite 13s; }
-.snowflake.s16 { left: 58%; animation: snowfall-svg-slow2 8s linear infinite 14s; }
-.snowflake.s17 { left: 68%; animation: snowfall-svg-slow3 12s linear infinite 15s; }
-.snowflake.s18 { left: 78%; animation: snowfall-svg-slow4 7s linear infinite 16s; }
-.snowflake.s19 { left: 88%; animation: snowfall-svg-slow1 10s linear infinite 17s; }
-.snowflake.s20 { left: 98%; animation: snowfall-svg-slow2 11s linear infinite 18s; }
+.heart.h21 { left: 48%; animation: heartFall 14.5s linear infinite 3.8s; background: #FF4081; width: 8px; height: 8px; }
+.heart.h22 { left: 55%; animation: heartFall1 9.8s linear infinite 1.1s; background: #F50057; width: 14px; height: 14px; }
+.heart.h23 { left: 62%; animation: heartFall2 11.2s linear infinite 0.6s; background: #FF4081; width: 9px; height: 9px; }
+.heart.h24 { left: 70%; animation: heartFall3 10.8s linear infinite 2.9s; background: #FF4081; width: 11px; height: 11px; }
+.heart.h25 { left: 78%; animation: heartFall4 13.8s linear infinite 4.2s; background: #FF4081; width: 13px; height: 13px; }
+.heart.h26 { left: 85%; animation: heartFall 8.7s linear infinite 1.4s; background: #FF4081; width: 7px; height: 7px; }
+.heart.h27 { left: 92%; animation: heartFall1 12.2s linear infinite 0.9s; background: #FF4081; width: 15px; height: 15px; }
+.heart.h28 { left: 98%; animation: heartFall2 9.3s linear infinite 3.1s; background: #FF4081; width: 10px; height: 10px; }
+.heart.h29 { left: 3%; animation: heartFall3 11.7s linear infinite 1.7s; background: #FF4081; width: 12px; height: 12px; }
+.heart.h30 { left: 10%; animation: heartFall4 10.3s linear infinite 0.2s; background: #FF4081; width: 8px; height: 8px; }
 
-/* Группа 3: быстрее средних (6-10 секунд) */
-.snowflake.s21 { left: 3%; animation: snowfall-svg-slow3 10s linear infinite 19s; }
-.snowflake.s22 { left: 13%; animation: snowfall-svg-slow4 6s linear infinite 20s; }
-.snowflake.s23 { left: 23%; animation: snowfall-svg-slow1 8s linear infinite 21s; }
-.snowflake.s24 { left: 33%; animation: snowfall-svg-slow2 7s linear infinite 22s; }
-.snowflake.s25 { left: 43%; animation: snowfall-svg-slow3 9s linear infinite 23s; }
-.snowflake.s26 { left: 53%; animation: snowfall-svg-slow4 8s linear infinite 24s; }
-.snowflake.s27 { left: 63%; animation: snowfall-svg-slow1 6s linear infinite 25s; }
-.snowflake.s28 { left: 73%; animation: snowfall-svg-slow2 10s linear infinite 26s; }
-.snowflake.s29 { left: 83%; animation: snowfall-svg-slow3 7s linear infinite 27s; }
-.snowflake.s30 { left: 93%; animation: snowfall-svg-slow4 9s linear infinite 28s; }
+.heart.h31 { left: 20%; animation: heartFall 13.5s linear infinite 2.4s; background: #FF4081; width: 14px; height: 14px; }
+.heart.h32 { left: 28%; animation: heartFall1 8.9s linear infinite 4.1s; background: #FF4081; width: 9px; height: 9px; }
+.heart.h33 { left: 35%; animation: heartFall2 11.9s linear infinite 1.3s; background: #FF4081; width: 11px; height: 11px; }
+.heart.h34 { left: 42%; animation: heartFall3 10.1s linear infinite 3.9s; background: #FF4081; width: 13px; height: 13px; }
+.heart.h35 { left: 50%; animation: heartFall4 12.9s linear infinite 0.1s; background: #FF4081; width: 7px; height: 7px; }
+.heart.h36 { left: 58%; animation: heartFall 9.1s linear infinite 2.6s; background: #FF4081; width: 15px; height: 15px; }
+.heart.h37 { left: 65%; animation: heartFall1 14.2s linear infinite 1.6s; background: #FF4081; width: 10px; height: 10px; }
+.heart.h38 { left: 72%; animation: heartFall2 10.9s linear infinite 4.3s; background: #FF4081; width: 12px; height: 12px; }
+.heart.h39 { left: 80%; animation: heartFall3 8.6s linear infinite 0.9s; background: #FF4081; width: 8px; height: 8px; }
+.heart.h40 { left: 90%; animation: heartFall4 13.1s linear infinite 2.1s; background: #FF4081; width: 14px; height: 14px; }
 
-/* Группа 4: медленные (15-22 секунды) */
-.snowflake.s31 { left: 2%; animation: snowfall-svg-very-slow1 22s linear infinite 29s; }
-.snowflake.s32 { left: 12%; animation: snowfall-svg-very-slow2 20s linear infinite 30s; }
-.snowflake.s33 { left: 22%; animation: snowfall-svg-very-slow1 18s linear infinite 31s; }
-.snowflake.s34 { left: 32%; animation: snowfall-svg-very-slow2 16s linear infinite 32s; }
-.snowflake.s35 { left: 42%; animation: snowfall-svg-very-slow1 20s linear infinite 33s; }
-.snowflake.s36 { left: 52%; animation: snowfall-svg-very-slow2 17s linear infinite 34s; }
-.snowflake.s37 { left: 62%; animation: snowfall-svg-very-slow1 22s linear infinite 35s; }
-.snowflake.s38 { left: 72%; animation: snowfall-svg-very-slow2 19s linear infinite 36s; }
-.snowflake.s39 { left: 82%; animation: snowfall-svg-very-slow1 16s linear infinite 37s; }
-.snowflake.s40 { left: 92%; animation: snowfall-svg-very-slow2 15s linear infinite 38s; }
+/* Позиции и анимации для звездочек */
+.sparkle.s1 { top: 10%; left: 15%; animation-delay: 0s; }
+.sparkle.s2 { top: 25%; left: 35%; animation-delay: 0.5s; }
+.sparkle.s3 { top: 40%; left: 55%; animation-delay: 1s; }
+.sparkle.s4 { top: 60%; left: 75%; animation-delay: 0.3s; }
+.sparkle.s5 { top: 80%; left: 90%; animation-delay: 0.8s; }
+.sparkle.s6 { top: 30%; left: 10%; animation-delay: 1.5s; }
+.sparkle.s7 { top: 70%; left: 30%; animation-delay: 0.2s; }
+.sparkle.s8 { top: 50%; left: 85%; animation-delay: 1.2s; }
 
-/* Эффект легкого мерцания для медленных снежинок */
-.snowflake.s31, .snowflake.s33, .snowflake.s35, .snowflake.s37, .snowflake.s39 {
-    animation: snowfall-svg-very-slow1 18s linear infinite, twinkle-slow 6s ease-in-out infinite;
+/* Нежный розовый градиент на фоне */
+.valentine-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(255, 182, 193, 0.05) 0%, 
+        rgba(255, 105, 180, 0.08) 50%,
+        rgba(255, 64, 129, 0.03) 100%);
+    pointer-events: none;
+    z-index: -1;
 }
