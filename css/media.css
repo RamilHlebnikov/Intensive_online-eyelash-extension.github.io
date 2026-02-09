@@ -440,7 +440,7 @@
         max-width: 309px;
         top: -120px;
         left: auto;
-        right: 0;
+        right: 5%;
         transform: none !important;
     }
 
@@ -4809,9 +4809,9 @@
         color: var(--primary-color);
         text-transform: uppercase;
         margin: 0;
-        margin-right: 47px;
+        margin-right: 40px;
         text-align: center;
-        margin-bottom: 57px;
+        margin-bottom: 47px;
     }
 
     .pricing__content__condition--span {
@@ -5190,3 +5190,4 @@
         left: -5.5px !important;
     }
 }
+
