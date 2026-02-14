@@ -27,10 +27,7 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    <form hx-post="/api/register/"
-        hx-target="#result-container"
-        hx-swap="innerHTML"
-        class="form">
+    <form class="form" id="pre-recording-form">
     
     <!-- Скрытое поле для тарифа -->
     <input type="hidden" name="tariff" id="tariff-field">
@@ -83,7 +80,26 @@
     </div>
 </form>
 
+<!-- Модалка -->
+<div class="modal-overlay" id="success-modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" type="button" aria-label="Закрыть">×</button>
+
+        <div class="form__success">
+            <h3 class="form__success-title">Заявка принята ✅</h3>
+            <p class="form__success-text">Перейдите в Telegram-бота и отправьте код подтверждения:</p>
+
+            <div class="form__code-wrapper">
+                <div class="form__code" id="confirm-code">000000</div>
+                <a href="https://t.me/Lash_course_bot" target="_blank" class="form__bot-btn">Перейти в бота</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="result-container"></div>
+
+<script src="js/script.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>
-
