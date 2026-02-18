@@ -1754,6 +1754,50 @@ html {
     box-shadow: 0 5px 15px rgba(163, 135, 196, 0.4);
 }
 
+/* КНОПКА ДОКУМЕНТАЦИИ */
+.doc_toggle--btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(30, 30, 40, 0.95);
+    border-radius: var(--border-radius);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    z-index: 10001;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    animation: showDocButton 0.5s ease-in-out 4.5s forwards;
+}
+
+@keyframes showDocButton {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+/* Иконка файла */
+.doc_toggle--btn i {
+    font-size: 34px;
+    color: #888888;
+    transition: var(--transition);
+}
+
+/* Hover эффект */
+.doc_toggle--btn:hover i {
+    color: var(--primary-color-button);
+}
+
 /* Модалка */
 .modal-overlay {
     position: fixed;
@@ -1877,3 +1921,4 @@ html {
     background-color: transparent;
     color: var(--primary-color-button);
 }
+
