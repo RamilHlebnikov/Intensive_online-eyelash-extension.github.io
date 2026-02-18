@@ -880,7 +880,7 @@
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 26px;
-        text-align: center !important; /* Принудительно */
+        text-align: center !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
@@ -1296,6 +1296,41 @@
     .cookie__notifications .container {
         max-width: 100%;
         padding: 0;
+    }
+
+    /* КНОПКА ДОКУМЕНТАЦИИ */
+    .doc_toggle--btn {
+        width: 45px;
+        height: 45px;
+        top: 30px;
+        right: 42px;
+        background: rgba(30, 30, 40, 0.95);
+        border-radius: var(--border-radius);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        z-index: 10001;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        animation: showDocButton 0.5s ease-in-out 4.5s forwards;
+    }
+    
+    /* Иконка файла */
+    .doc_toggle--btn i {
+        font-size: 24px;
+        color: #888888;
+        transition: var(--transition);
+    }
+    
+    /* Hover эффект */
+    .doc_toggle--btn:hover i {
+        color: var(--primary-color-button);
     }
 }
 
@@ -2562,6 +2597,41 @@
     .cookie__container--label {
         order: 2;
     }
+
+    /* КНОПКА ДОКУМЕНТАЦИИ */
+    .doc_toggle--btn {
+        width: 50px;
+        height: 50px;
+        top: 25px;
+        right: 57px;
+        background: rgba(30, 30, 40, 0.95);
+        border-radius: var(--border-radius);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        z-index: 10001;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        animation: showDocButton 0.5s ease-in-out 4.5s forwards;
+    }
+    
+    /* Иконка файла */
+    .doc_toggle--btn i {
+        font-size: 27px;
+        color: #888888;
+        transition: var(--transition);
+    }
+    
+    /* Hover эффект */
+    .doc_toggle--btn:hover i {
+        color: var(--primary-color-button);
+    }
 }
 
 /* Планшеты горизонтальные/ноутбуки 769px-968px */
@@ -3584,6 +3654,41 @@
     }
     .cookie__container--label {
         order: 2;
+    }
+
+    /* КНОПКА ДОКУМЕНТАЦИИ */
+    .doc_toggle--btn {
+        width: 55px;
+        height: 55px;
+        top: 25px;
+        right: 40px;
+        background: rgba(30, 30, 40, 0.95);
+        border-radius: var(--border-radius);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        z-index: 10001;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        animation: showDocButton 0.5s ease-in-out 4.5s forwards;
+    }
+    
+    /* Иконка файла */
+    .doc_toggle--btn i {
+        font-size: 29px;
+        color: #888888;
+        transition: var(--transition);
+    }
+    
+    /* Hover эффект */
+    .doc_toggle--btn:hover i {
+        color: var(--primary-color-button);
     }
 }
 
@@ -4610,4 +4715,40 @@
         padding: 10px 20px;
         font-size: 15px;
     }
+
+    /* КНОПКА ДОКУМЕНТАЦИИ */
+    .doc_toggle--btn {
+        width: 58px;
+        height: 58px;
+        top: 17px;
+        right: 33px;
+        background: rgba(30, 30, 40, 0.95);
+        border-radius: var(--border-radius);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        z-index: 10001;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        animation: showDocButton 0.5s ease-in-out 4.5s forwards;
+    }
+    
+    /* Иконка файла */
+    .doc_toggle--btn i {
+        font-size: 32px;
+        color: #888888;
+        transition: var(--transition);
+    }
+    
+    /* Hover эффект */
+    .doc_toggle--btn:hover i {
+        color: var(--primary-color-button);
+    }
 }
+
