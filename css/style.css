@@ -233,8 +233,8 @@
     opacity: 0;
     animation: textAppear 2s ease-in-out 1s forwards;
     font-family: var(--font-family);
-    white-space: nowrap; /* Запрет переноса на новую строку */
-    width: auto; /* Автоматическая ширина */
+    white-space: nowrap;
+    width: auto;
 }
 
 @keyframes textAppear {
@@ -326,7 +326,7 @@ html {
     visibility: hidden;
 }
 
-/* Когда меню открыто - показываем крестик, скрываем бургер */
+/* Когда меню открыто - показан крестик, скрыт бургер */
 .burger-menu.active .menu-icon {
     opacity: 0;
     visibility: hidden;
@@ -739,7 +739,7 @@ html {
     font-weight: 700;
 }
 
-/* Стили для индикаторов - Уменьшаем расстояние между колонками */
+/* Стили для индикаторов - Уменьшено расстояние между колонками */
 .indicators {
     display: flex;
     flex-direction: column;
