@@ -1,6 +1,6 @@
 // JavaScript для работы бургер-меню и снега
 document.addEventListener('DOMContentLoaded', function() {
-    // ====================== БУРГЕР-МЕНЮ ======================
+    // БУРГЕР-МЕНЮ
     const burgerMenu = document.getElementById('burgerMenu');
     const nav = document.querySelector('.nav');
     
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ====================== ТАРИФЫ ИЗ URL ======================
+    // ТАРИФЫ ИЗ URL
     const urlParams = new URLSearchParams(window.location.search);
     const tariff = urlParams.get('tariff');
     
@@ -32,3 +32,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
