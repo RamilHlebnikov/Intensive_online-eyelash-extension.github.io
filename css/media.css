@@ -281,6 +281,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        overflow-behavior: none;
     }
     
     .nav__menu {
@@ -1614,6 +1615,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow-y: auto;
+        overflow-behavior: none;
     }
     
     .nav__menu {
@@ -4751,3 +4754,4 @@
         color: var(--primary-color-button);
     }
 }
+
