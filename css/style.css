@@ -852,7 +852,7 @@ html {
 }
 
 .accordion-label:hover {
-    background-color: var(--secondary-color);
+    background-color: transparent !important;
 }
 
 .lesson-title {
@@ -911,7 +911,7 @@ html {
     overflow: hidden;
     padding: 0 25px;
     transition: max-height 0.4s ease, padding 0.4s ease;
-    background-color: var(--secondary-color);
+    background-color: transparent !important;
     font-size: 15px;
     line-height: 1.6;
     color: var(--primary-color);
@@ -1191,7 +1191,7 @@ html {
 }
 
 .accordion-label:hover {
-    background-color: var(--secondary-color);
+    background-color: transparent !important;
 }
 
 .question-title {
@@ -1814,7 +1814,8 @@ html {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     z-index: 9999;
     pointer-events: none;
 }
