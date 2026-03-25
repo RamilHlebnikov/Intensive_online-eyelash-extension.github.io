@@ -334,7 +334,7 @@ html {
     visibility: hidden;
 }
 
-/* Когда меню открыто - показан крестик, скрыт бургер */
+/* Когда меню открыто - показан крестик, а бургер скрыт */
 .burger-menu.active .menu-icon {
     opacity: 0;
     visibility: hidden;
@@ -896,7 +896,7 @@ html {
     transform: translateX(-50%);
 }
 
-/* Анимация при открытии - превращаем плюс в минус */
+/* Анимация при открытии - превращение плюса в минус */
 .accordion-toggle:checked + .accordion-label .icon::after {
     transform: translateX(-50%) rotate(90deg);
     opacity: 0;
@@ -1235,7 +1235,7 @@ html {
     transform: translateX(-50%);
 }
 
-/* Анимация при открытии - превращаем плюс в минус */
+/* Анимация при открытии - превращение плюса в минус */
 .accordion-toggle:checked + .accordion-label .icon::after {
     transform: translateX(-50%) rotate(90deg);
     opacity: 0;
@@ -1794,14 +1794,12 @@ html {
     }
 }
 
-/* Иконка файла */
 .doc_toggle--btn i {
     font-size: 34px;
     color: #888888;
     transition: var(--transition);
 }
 
-/* Hover эффект */
 .doc_toggle--btn:hover i {
     color: var(--primary-color-button);
 }

@@ -28,7 +28,7 @@ function closeModal() {
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
 
-    // дождаться анимации и спрятать
+    // Анимация заканчивается и пропадает
     setTimeout(() => {
         modal.hidden = true;
     }, 200);
@@ -46,7 +46,7 @@ document.addEventListener("keydown", (e) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     
-    // если не заполнено — пусть браузер покажет
+    // Если не заполнено то браузер покажет
     if (!form.checkValidity()) {
         form.reportValidity();
         return;
@@ -54,15 +54,15 @@ form.addEventListener("submit", (e) => {
     
     const code = generateCode();
 
-    // сохранить tariff перед reset
+    // Сохранить tariff перед reset (сбросом)
     const tariffField = document.getElementById("tariff-field");
     const tariffValue = tariffField ? tariffField.value : "";
     
-    // ✅ очистка полей формы
+    // Очистка полей формы
     form.reset();
     if (tariffField) tariffField.value = tariffValue;
 
-    // ✅ открыть модалку
+    // Открыть модалку
     openModal(code);
 });
 });

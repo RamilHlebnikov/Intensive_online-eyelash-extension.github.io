@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Заполняем скрытое поле тарифом из URL
+    // Заполняется скрытое поле тарифом из URL
     const urlParams = new URLSearchParams(window.location.search);
     const tariff = urlParams.get('tariff');
     

@@ -95,7 +95,7 @@
         border-radius: 50% 50% 0 0;
     }
 
-    /* Анимация движения щёточки для мобильных */
+    /* Анимация движения щёточки */
     @keyframes brushMoveMobile {
         0% {
             transform: translateX(-50%) translateY(0) rotate(0deg);
@@ -791,7 +791,7 @@
         transform: translateX(-50%);
     }
 
-    /* Анимация при открытии - превращаем плюс в минус */
+    /* Анимация при открытии - превращение плюса в минус */
         .accordion-toggle:checked + .accordion-label .icon::after {
         transform: translateX(-50%) rotate(90deg);
         opacity: 0;
@@ -1320,15 +1320,13 @@
         pointer-events: none;
         animation: showDocButton 0.5s ease-in-out 4.5s forwards;
     }
-    
-    /* Иконка файла */
+
     .doc_toggle--btn i {
         font-size: 24px;
         color: #888888;
         transition: var(--transition);
     }
     
-    /* Hover эффект */
     .doc_toggle--btn:hover i {
         color: var(--primary-color-button);
     }
@@ -1430,7 +1428,7 @@
         border-radius: 50% 50% 0 0;
     }
 
-    /* Анимация движения щёточки для планшетов */
+    /* Анимация движения щёточки */
     @keyframes brushMoveTablet {
         0% {
             transform: translateX(-50%) translateY(0) rotate(0deg);
@@ -1508,7 +1506,7 @@
         }
     }
 
-    /* Текст загрузки - ВСЕ НА ОДНОЙ СТРОКЕ */
+    /* Текст загрузки */
     .loading-text {
         position: absolute;
         bottom: -35px;
@@ -1570,7 +1568,7 @@
         transition: opacity 0.3s ease;
     }
 
-    /* Скрываем логотип когда меню открыто */
+    /* Логотип скрыт когда меню открыто */
     .nav.active ~ .container .header__logo {
         opacity: 0;
         pointer-events: none;
@@ -2147,7 +2145,7 @@
         transform: translateX(-50%);
     }
 
-    /* Анимация при открытии - превращаем плюс в минус */
+    /* Анимация при открытии - превращение плюса в минус */
     .accordion-toggle:checked + .accordion-label .icon::after {
         transform: translateX(-50%) rotate(90deg);
         opacity: 0;
@@ -2621,14 +2619,12 @@
         animation: showDocButton 0.5s ease-in-out 4.5s forwards;
     }
     
-    /* Иконка файла */
     .doc_toggle--btn i {
         font-size: 27px;
         color: #888888;
         transition: var(--transition);
     }
     
-    /* Hover эффект */
     .doc_toggle--btn:hover i {
         color: var(--primary-color-button);
     }
@@ -3679,14 +3675,12 @@
         animation: showDocButton 0.5s ease-in-out 4.5s forwards;
     }
     
-    /* Иконка файла */
     .doc_toggle--btn i {
         font-size: 29px;
         color: #888888;
         transition: var(--transition);
     }
     
-    /* Hover эффект */
     .doc_toggle--btn:hover i {
         color: var(--primary-color-button);
     }
@@ -4739,14 +4733,12 @@
         animation: showDocButton 0.5s ease-in-out 4.5s forwards;
     }
     
-    /* Иконка файла */
     .doc_toggle--btn i {
         font-size: 32px;
         color: #888888;
         transition: var(--transition);
     }
     
-    /* Hover эффект */
     .doc_toggle--btn:hover i {
         color: var(--primary-color-button);
     }
